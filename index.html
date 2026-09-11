@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>viJEMIn daily booster</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- ================= HEADER ================= -->
+    <header class="hero">
+
+      <div class="title-wrap">
+        <h1>
+          vi<span>JEM</span>In
+        </h1>
+
+        <div class="subtitle-title">
+          daily booster
+        </div>
+      </div>
+
+      <p class="intro">
+        a little something for whatever today needs.
+      </p>
+
+      <p class="take-note">
+        take what you need today ♡
+      </p>
+
+    </header>
+
+
+    <!-- ================= JARS ================= -->
+    <section class="jar-grid">
+
+      <!-- RED -->
+      <article class="jar-card red-card">
+
+        <div class="jar-info">
+          <h2>when life sucks</h2>
+
+          <p>
+            if the world feels too cruel<br>
+            or you need a little comfort.
+          </p>
+        </div>
+
+        <button
+          class="jar-button"
+          data-jar="comfort"
+          aria-label="Open when life sucks jar"
+        >
+
+          <div class="jar">
+
+            <div class="jar-lid">
+              <div class="lid-top"></div>
+              <div class="lid-line"></div>
+            </div>
+
+            <div class="jar-body">
+
+              <div class="glass-shine"></div>
+
+              <div class="paper paper-one"></div>
+              <div class="paper paper-two"></div>
+              <div class="paper paper-three"></div>
+              <div class="paper paper-four"></div>
+              <div class="paper paper-five"></div>
+
+              <div class="jar-label">
+                <span>♡</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        <div class="jar-status" data-status="comfort"></div>
+
+      </article>
+
+
+      <!-- ORANGE -->
+      <article class="jar-card orange-card">
+
+        <div class="jar-info">
+          <h2>get your ass up</h2>
+
+          <p>
+            even if you don't feel like doing anything,<br>
+            c'mon. do something.
+          </p>
+        </div>
+
+        <button
+          class="jar-button"
+          data-jar="motivation"
+          aria-label="Open get your ass up jar"
+        >
+
+          <div class="jar">
+
+            <div class="jar-lid">
+              <div class="lid-top"></div>
+              <div class="lid-line"></div>
+            </div>
+
+            <div class="jar-body">
+
+              <div class="glass-shine"></div>
+
+              <div class="paper paper-one"></div>
+              <div class="paper paper-two"></div>
+              <div class="paper paper-three"></div>
+              <div class="paper paper-four"></div>
+              <div class="paper paper-five"></div>
+
+              <div class="jar-label">
+                <span>↑</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        <div class="jar-status" data-status="motivation"></div>
+
+      </article>
+
+
+      <!-- PINK -->
+      <article class="jar-card pink-card">
+
+        <div class="jar-info">
+          <h2>miss me, huh?</h2>
+
+          <p>
+            i'll always make time for you.<br>
+            but just in case i'm not around,<br>
+            here's a little something.
+          </p>
+        </div>
+
+        <button
+          class="jar-button"
+          data-jar="missyou"
+          aria-label="Open miss me huh jar"
+        >
+
+          <div class="jar">
+
+            <div class="jar-lid">
+              <div class="lid-top"></div>
+              <div class="lid-line"></div>
+            </div>
+
+            <div class="jar-body">
+
+              <div class="glass-shine"></div>
+
+              <div class="paper paper-one"></div>
+              <div class="paper paper-two"></div>
+              <div class="paper paper-three"></div>
+              <div class="paper paper-four"></div>
+              <div class="paper paper-five"></div>
+
+              <div class="jar-label">
+                <span>♡</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        <div class="jar-status" data-status="missyou"></div>
+
+      </article>
+
+
+      <!-- YELLOW -->
+      <article class="jar-card yellow-card">
+
+        <div class="jar-info">
+          <h2>look how much i love you</h2>
+
+          <p>
+            just a reminder that me, myself, and i<br>
+            are madly in love with you.
+          </p>
+        </div>
+
+        <button
+          class="jar-button"
+          data-jar="love"
+          aria-label="Open look how much i love you jar"
+        >
+
+          <div class="jar">
+
+            <div class="jar-lid">
+              <div class="lid-top"></div>
+              <div class="lid-line"></div>
+            </div>
+
+            <div class="jar-body">
+
+              <div class="glass-shine"></div>
+
+              <div class="paper paper-one"></div>
+              <div class="paper paper-two"></div>
+              <div class="paper paper-three"></div>
+              <div class="paper paper-four"></div>
+              <div class="paper paper-five"></div>
+
+              <div class="jar-label">
+                <span>♥</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        <div class="jar-status" data-status="love"></div>
+
+      </article>
+
+    </section>
+
+
+    <!-- ================= DAILY STATUS ================= -->
+    <section class="daily-status">
+      <p id="dailyMessage">
+        your dose is waiting.
+      </p>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>
+        one dose per jar, per day.
+      </p>
+
+      <span>
+        come back tomorrow for another one ♡
+      </span>
+
+      <div class="footer-love">
+        ♡ made with a little viJEMIn
+      </div>
+    </footer>
+
+  </main>
+
+
+  <!-- ================= POPUP ================= -->
+
+  <div
+    class="modal"
+    id="doseModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-overlay"></div>
+
+    <div
+      class="dose-note"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="doseTitle"
+    >
+
+      <button
+        class="close-button"
+        id="closeModal"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="note-decoration">
+        ✦
+      </div>
+
+      <p class="dose-label" id="doseTitle">
+        today's dose
+      </p>
+
+      <div class="note-divider">
+        ♡
+      </div>
+
+      <p
+        class="dose-message"
+        id="doseMessage"
+      >
+        dummy message here.
+      </p>
+
+      <div class="note-bottom">
+
+        <span>
+          — jemi
+        </span>
+
+        <small>
+          one of 50 little reminders ♡
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
