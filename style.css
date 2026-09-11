@@ -1,19 +1,20 @@
 /* =========================================================
-   viJEMIn daily booster
+   viJEMIn Daily Booster
    ========================================================= */
 
 :root {
   --background: #f8f1e7;
   --paper: #fffaf2;
+
   --text: #463c35;
   --soft-text: #8b7b6d;
 
-  --red: #c94a4a;
-  --orange: #e8893a;
-  --pink: #e8899f;
-  --yellow: #e6c85c;
+  --red: #d98282;
+  --orange: #e5a16a;
+  --pink: #e3a0af;
+  --yellow: #e4cf78;
 
-  --shadow: rgba(67, 51, 39, 0.12);
+  --shadow: rgba(67, 51, 39, 0.11);
 }
 
 
@@ -60,7 +61,9 @@ button {
 
 .page {
   width: min(1100px, 92%);
+
   margin: 0 auto;
+
   padding: 70px 0 50px;
 }
 
@@ -71,12 +74,15 @@ button {
 
 .hero {
   text-align: center;
-  margin-bottom: 55px;
+
+  margin-bottom: 60px;
 }
 
 .title-wrap {
   display: inline-flex;
+
   align-items: baseline;
+
   gap: 12px;
 }
 
@@ -84,9 +90,11 @@ button {
   font-family: "Playfair Display", serif;
 
   font-size: clamp(3rem, 7vw, 5rem);
+
   line-height: 0.95;
 
   font-weight: 600;
+
   letter-spacing: -2px;
 }
 
@@ -114,27 +122,28 @@ button {
   font-size: 0.9rem;
 
   letter-spacing: 2px;
-  text-transform: lowercase;
 
   color: var(--soft-text);
 }
 
 .intro {
-  margin-top: 22px;
+  margin-top: 23px;
 
   font-family: "Playfair Display", serif;
 
-  font-size: 1.1rem;
+  font-size: 1.08rem;
+
   font-style: italic;
 
   color: #77685c;
 }
 
 .take-note {
-  margin-top: 12px;
+  margin-top: 13px;
 
-  font-size: 0.78rem;
-  letter-spacing: 1.5px;
+  font-size: 0.76rem;
+
+  letter-spacing: 1.4px;
 
   color: #a08d7c;
 }
@@ -149,7 +158,7 @@ button {
 
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 70px 60px;
+  gap: 72px 60px;
 
   width: 100%;
 }
@@ -163,20 +172,22 @@ button {
   text-align: center;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
   min-width: 0;
 }
 
 .jar-info {
-  min-height: 88px;
+  min-height: 91px;
 }
 
 .jar-info h2 {
   font-family: "Playfair Display", serif;
 
-  font-size: 1.45rem;
+  font-size: 1.4rem;
 
   font-weight: 600;
 
@@ -184,7 +195,7 @@ button {
 }
 
 .jar-info p {
-  font-size: 0.78rem;
+  font-size: 0.77rem;
 
   line-height: 1.65;
 
@@ -198,13 +209,14 @@ button {
 
 .jar-button {
   border: none;
+
   background: transparent;
 
   cursor: pointer;
 
   margin-top: 18px;
 
-  padding: 10px 20px 0;
+  padding: 12px 20px 0;
 
   transition:
     transform 0.25s ease,
@@ -213,8 +225,10 @@ button {
 
 .jar-button:focus-visible {
   outline: 2px solid #9b8270;
+
   outline-offset: 8px;
-  border-radius: 20px;
+
+  border-radius: 25px;
 }
 
 .jar-button:hover {
@@ -230,11 +244,13 @@ button {
   position: relative;
 
   width: 190px;
-  height: 220px;
+
+  height: 225px;
 
   margin: 0 auto;
 
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease;
 }
 
 
@@ -246,87 +262,164 @@ button {
   position: absolute;
 
   top: 0;
-  left: 23px;
 
-  width: 144px;
-  height: 31px;
+  left: 38px;
 
-  z-index: 5;
+  width: 114px;
+
+  height: 40px;
+
+  z-index: 10;
 
   transition:
-    transform 0.45s cubic-bezier(.2,.8,.2,1);
+    transform 0.55s cubic-bezier(.2,.8,.2,1);
 }
 
 .lid-top {
   position: absolute;
 
   top: 0;
+
   left: 0;
 
   width: 100%;
-  height: 15px;
 
-  border-radius: 8px 8px 4px 4px;
+  height: 17px;
 
-  background: #b6a394;
+  border-radius: 7px 7px 5px 5px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #c7b7a8,
+      #ae9d8d
+    );
 
   box-shadow:
-    inset 0 2px 2px rgba(255,255,255,0.3),
-    0 2px 3px rgba(0,0,0,0.08);
+    inset 0 2px 2px rgba(255,255,255,0.35),
+    0 2px 4px rgba(0,0,0,0.08);
 }
 
 .lid-line {
   position: absolute;
 
-  top: 12px;
+  top: 14px;
+
   left: 5px;
 
   width: calc(100% - 10px);
-  height: 12px;
 
-  border-radius: 3px 3px 8px 8px;
+  height: 18px;
 
-  background: #a18e7e;
+  border-radius: 3px 3px 10px 10px;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #a79788 0,
+      #a79788 2px,
+      #b8a797 2px,
+      #b8a797 4px
+    );
 }
 
 
 /* =========================================================
-   JAR BODY
+   JAR BODY — BOTTLE SHAPE
    ========================================================= */
 
 .jar-body {
   position: absolute;
 
-  left: 5px;
-  right: 5px;
+  left: 9px;
+  right: 9px;
+
   bottom: 0;
 
-  height: 197px;
+  height: 202px;
 
   overflow: hidden;
 
   border-radius:
-    24px
-    24px
-    43px
-    43px;
+    28px
+    28px
+    48px
+    48px;
 
-  border: 3px solid rgba(255,255,255,0.62);
+  border: 3px solid rgba(255,255,255,0.65);
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,0.18),
-      rgba(255,255,255,0.05) 45%,
-      rgba(255,255,255,0.16)
-    );
+  /*
+     Bottle-like silhouette:
+     narrow shoulders, wider middle,
+     rounded bottom.
+  */
+
+  clip-path: polygon(
+    24% 0%,
+    76% 0%,
+    80% 8%,
+    89% 15%,
+    94% 27%,
+    96% 75%,
+    93% 88%,
+    84% 96%,
+    68% 100%,
+    32% 100%,
+    16% 96%,
+    7% 88%,
+    4% 75%,
+    6% 27%,
+    11% 15%,
+    20% 8%
+  );
 
   box-shadow:
-    inset 8px 0 15px rgba(255,255,255,0.18),
-    inset -8px 0 15px rgba(80,50,30,0.06),
-    0 12px 22px var(--shadow);
+    inset 9px 0 15px rgba(255,255,255,0.2),
+    inset -9px 0 15px rgba(80,50,30,0.04),
+    0 13px 24px var(--shadow);
 
   backdrop-filter: blur(2px);
+}
+
+
+/* =========================================================
+   JAR COLOR
+   ========================================================= */
+
+.red-card .jar-body {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(217,130,130,0.55),
+      rgba(201,105,105,0.7)
+    );
+}
+
+.orange-card .jar-body {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(229,161,106,0.55),
+      rgba(221,139,77,0.7)
+    );
+}
+
+.pink-card .jar-body {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(227,160,175,0.55),
+      rgba(216,137,157,0.7)
+    );
+}
+
+.yellow-card .jar-body {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(228,207,120,0.55),
+      rgba(217,190,77,0.7)
+    );
 }
 
 
@@ -337,120 +430,173 @@ button {
 .glass-shine {
   position: absolute;
 
-  top: 15px;
-  left: 17px;
+  top: 23px;
+
+  left: 30px;
 
   width: 10px;
-  height: 125px;
+
+  height: 130px;
 
   border-radius: 50%;
 
-  background: rgba(255,255,255,0.36);
+  background: rgba(255,255,255,0.35);
 
   transform: rotate(3deg);
 
-  z-index: 4;
+  z-index: 6;
 }
 
 
 /* =========================================================
-   PAPERS
+   ROLLED PAPER NOTES
    ========================================================= */
 
-.paper {
+.scroll {
   position: absolute;
 
-  width: 45px;
-  height: 63px;
+  width: 46px;
 
-  border-radius: 3px;
+  height: 19px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf0,
+      #eadcc7
+    );
 
   box-shadow:
-    0 3px 5px rgba(50,30,20,0.13);
+    0 3px 5px rgba(50,30,20,0.12);
 
-  background: #fff8e9;
-
-  bottom: 25px;
+  z-index: 3;
 }
 
-.paper::after {
+
+/* little rolled end */
+
+.scroll::before {
   content: "";
+
   position: absolute;
 
-  left: 8px;
-  right: 8px;
+  left: 3px;
 
-  top: 17px;
+  top: 2px;
+
+  width: 15px;
+
+  height: 15px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #d4bea3 0 20%,
+      #fff9ec 22% 38%,
+      #dbc5a8 40% 48%,
+      #fff9ec 50%
+    );
+}
+
+
+/* little writing lines */
+
+.scroll span {
+  position: absolute;
+
+  right: 7px;
+
+  top: 6px;
+
+  width: 17px;
 
   height: 2px;
 
   background: rgba(100,80,60,0.18);
 
   box-shadow:
-    0 8px rgba(100,80,60,0.12),
-    0 16px rgba(100,80,60,0.12);
+    0 4px rgba(100,80,60,0.12);
 }
 
-.paper-one {
-  left: 25px;
-  transform: rotate(-13deg);
+
+.scroll-one {
+  left: 31px;
+
+  bottom: 48px;
+
+  transform: rotate(-12deg);
 }
 
-.paper-two {
-  left: 55px;
-  bottom: 21px;
+.scroll-two {
+  left: 62px;
+
+  bottom: 30px;
 
   transform: rotate(8deg);
+
+  z-index: 4;
 }
 
-.paper-three {
-  right: 25px;
-  bottom: 23px;
+.scroll-three {
+  right: 27px;
 
-  transform: rotate(-5deg);
+  bottom: 50px;
+
+  transform: rotate(-6deg);
 }
 
-.paper-four {
-  right: 52px;
-  bottom: 28px;
+.scroll-four {
+  right: 49px;
+
+  bottom: 27px;
 
   transform: rotate(14deg);
 
-  opacity: 0.9;
+  z-index: 5;
 }
 
-.paper-five {
-  left: 73px;
-  bottom: 13px;
+.scroll-five {
+  left: 75px;
+
+  bottom: 62px;
 
   transform: rotate(-2deg);
 
-  opacity: 0.85;
+  opacity: 0.88;
 }
 
 
 /* =========================================================
-   LABEL
+   JAR LABEL
    ========================================================= */
 
 .jar-label {
   position: absolute;
 
   left: 50%;
-  bottom: 36px;
+
+  bottom: 82px;
 
   transform: translateX(-50%);
 
-  width: 72px;
-  height: 52px;
+  width: 75px;
+
+  height: 51px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  z-index: 6;
+  z-index: 7;
 
-  background: rgba(255,250,240,0.88);
+  background:
+    rgba(255,250,240,0.88);
 
   border-radius: 5px;
 
@@ -461,50 +607,9 @@ button {
 .jar-label span {
   font-family: "Playfair Display", serif;
 
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 
-  opacity: 0.6;
-}
-
-
-/* =========================================================
-   JAR COLORS
-   ========================================================= */
-
-.red-card .jar-body {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(201,74,74,0.76),
-      rgba(183,61,61,0.9)
-    );
-}
-
-.orange-card .jar-body {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(232,137,58,0.76),
-      rgba(218,116,39,0.9)
-    );
-}
-
-.pink-card .jar-body {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(232,137,159,0.75),
-      rgba(216,112,139,0.9)
-    );
-}
-
-.yellow-card .jar-body {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(230,200,92,0.76),
-      rgba(216,183,64,0.9)
-    );
+  opacity: 0.55;
 }
 
 
@@ -521,11 +626,16 @@ button {
 }
 
 .pink-card .jar-button:hover .jar {
-  transform: rotate(2deg) translateY(-2px);
+  transform:
+    rotate(2deg)
+    translateY(-2px);
 }
 
 .yellow-card .jar-button:hover .jar {
-  filter: drop-shadow(0 0 12px rgba(230,200,92,0.45));
+  filter:
+    drop-shadow(
+      0 0 13px rgba(228,207,120,0.5)
+    );
 }
 
 
@@ -536,19 +646,20 @@ button {
 .jar-status {
   min-height: 20px;
 
-  margin-top: 7px;
+  margin-top: 8px;
 
-  font-size: 0.68rem;
+  font-size: 0.67rem;
 
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 
   color: #9a8878;
 }
 
 .jar-card.taken .jar-button {
-  cursor: default;
+  cursor: pointer;
 
-  filter: saturate(0.58);
+  filter: saturate(0.6);
+
   opacity: 0.78;
 }
 
@@ -562,53 +673,136 @@ button {
 
 
 /* =========================================================
-   ANIMATIONS
+   OPENING ANIMATION
    ========================================================= */
 
 @keyframes gentleWiggle {
-  0%   { transform: rotate(0); }
-  25%  { transform: rotate(-3deg); }
-  50%  { transform: rotate(3deg); }
-  75%  { transform: rotate(-2deg); }
-  100% { transform: rotate(0); }
-}
 
-@keyframes energeticShake {
-  0%   { transform: translateX(0); }
-  20%  { transform: translateX(-5px) rotate(-2deg); }
-  40%  { transform: translateX(5px) rotate(2deg); }
-  60%  { transform: translateX(-4px) rotate(-2deg); }
-  80%  { transform: translateX(3px) rotate(1deg); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes jarShake {
-  0%   { transform: translateX(0) rotate(0); }
-  20%  { transform: translateX(-6px) rotate(-2deg); }
-  40%  { transform: translateX(6px) rotate(2deg); }
-  60%  { transform: translateX(-5px) rotate(-2deg); }
-  80%  { transform: translateX(4px) rotate(1deg); }
-  100% { transform: translateX(0) rotate(0); }
-}
-
-@keyframes lidOpen {
   0% {
-    transform: translateY(0) rotate(0);
+    transform: rotate(0);
   }
 
-  40% {
-    transform: translateY(-8px) rotate(-4deg);
+  25% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
   }
 
   100% {
-    transform: translateY(-15px) rotate(-8deg);
+    transform: rotate(0);
   }
+
 }
 
-@keyframes noteRise {
+@keyframes energeticShake {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform:
+      translateX(-5px)
+      rotate(-2deg);
+  }
+
+  40% {
+    transform:
+      translateX(5px)
+      rotate(2deg);
+  }
+
+  60% {
+    transform:
+      translateX(-4px)
+      rotate(-2deg);
+  }
+
+  80% {
+    transform:
+      translateX(3px)
+      rotate(1deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes jarShake {
+
   0% {
     transform:
-      translate(-50%, 20px)
+      translateX(0)
+      rotate(0);
+  }
+
+  20% {
+    transform:
+      translateX(-6px)
+      rotate(-2deg);
+  }
+
+  40% {
+    transform:
+      translateX(6px)
+      rotate(2deg);
+  }
+
+  60% {
+    transform:
+      translateX(-5px)
+      rotate(-2deg);
+  }
+
+  80% {
+    transform:
+      translateX(4px)
+      rotate(1deg);
+  }
+
+  100% {
+    transform:
+      translateX(0)
+      rotate(0);
+  }
+
+}
+
+@keyframes lidOpen {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0);
+  }
+
+  40% {
+    transform:
+      translateY(-7px)
+      rotate(-4deg);
+  }
+
+  100% {
+    transform:
+      translateY(-15px)
+      rotate(-8deg);
+  }
+
+}
+
+@keyframes scrollRise {
+
+  0% {
+    transform:
+      translate(-50%, 18px)
       scale(0.8);
 
     opacity: 0;
@@ -621,6 +815,7 @@ button {
 
     opacity: 1;
   }
+
 }
 
 
@@ -629,11 +824,13 @@ button {
    ========================================================= */
 
 .jar-card.opening .jar {
-  animation: jarShake 0.55s ease;
+  animation:
+    jarShake 0.55s ease;
 }
 
 .jar-card.opening .jar-lid {
-  animation: lidOpen 0.65s ease 0.4s forwards;
+  animation:
+    lidOpen 0.65s ease 0.4s forwards;
 }
 
 
@@ -644,13 +841,14 @@ button {
 .daily-status {
   text-align: center;
 
-  margin: 65px 0 45px;
+  margin: 70px 0 45px;
 }
 
 .daily-status p {
   font-family: "Playfair Display", serif;
 
   font-size: 1.05rem;
+
   font-style: italic;
 
   color: #77685c;
@@ -666,7 +864,8 @@ footer {
 
   padding-top: 25px;
 
-  border-top: 1px solid rgba(100,80,60,0.12);
+  border-top:
+    1px solid rgba(100,80,60,0.12);
 
   color: #988879;
 }
@@ -706,12 +905,15 @@ footer span {
   z-index: 100;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   padding: 25px;
 
   visibility: hidden;
+
   opacity: 0;
 
   transition:
@@ -721,6 +923,7 @@ footer span {
 
 .modal.show {
   visibility: visible;
+
   opacity: 1;
 }
 
@@ -729,7 +932,8 @@ footer span {
 
   inset: 0;
 
-  background: rgba(49,38,30,0.48);
+  background:
+    rgba(49,38,30,0.48);
 
   backdrop-filter: blur(5px);
 }
@@ -746,7 +950,7 @@ footer span {
 
   width: min(470px, 100%);
 
-  min-height: 300px;
+  min-height: 310px;
 
   padding: 55px 45px 42px;
 
@@ -785,7 +989,8 @@ footer span {
 
   inset: 10px;
 
-  border: 1px solid rgba(130,100,70,0.12);
+  border:
+    1px solid rgba(130,100,70,0.12);
 
   border-radius: 4px;
 
@@ -794,16 +999,18 @@ footer span {
 
 
 /* =========================================================
-   CLOSE
+   CLOSE BUTTON
    ========================================================= */
 
 .close-button {
   position: absolute;
 
   top: 14px;
+
   right: 17px;
 
   width: 32px;
+
   height: 32px;
 
   border: none;
@@ -827,6 +1034,7 @@ footer span {
 
 .close-button:hover {
   transform: rotate(90deg);
+
   color: #514237;
 }
 
@@ -864,7 +1072,7 @@ footer span {
 .dose-message {
   font-family: "Playfair Display", serif;
 
-  font-size: 1.35rem;
+  font-size: 1.3rem;
 
   line-height: 1.65;
 
@@ -873,7 +1081,9 @@ footer span {
   min-height: 90px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 }
 
@@ -917,7 +1127,7 @@ footer span {
   }
 
   .hero {
-    margin-bottom: 45px;
+    margin-bottom: 48px;
   }
 
   .title-wrap {
@@ -925,7 +1135,7 @@ footer span {
 
     align-items: center;
 
-    gap: 2px;
+    gap: 3px;
   }
 
   .hero h1 {
@@ -968,18 +1178,19 @@ footer span {
   }
 
   .jar {
-    width: 175px;
-    height: 205px;
+    width: 180px;
+
+    height: 215px;
   }
 
   .jar-lid {
-    left: 21px;
+    left: 36px;
 
-    width: 133px;
+    width: 108px;
   }
 
   .jar-body {
-    height: 183px;
+    height: 194px;
   }
 
   .daily-status {
@@ -987,12 +1198,16 @@ footer span {
   }
 
   .dose-note {
-    padding: 50px 30px 38px;
+    padding:
+      50px
+      30px
+      38px;
   }
 
   .dose-message {
     font-size: 1.2rem;
   }
+
 }
 
 
@@ -1015,11 +1230,15 @@ footer span {
   }
 
   .jar-button:hover .jar {
-    transform: scale(0.94) translateY(-3px);
+    transform:
+      scale(0.94)
+      translateY(-3px);
   }
 
   .dose-note {
     padding-left: 25px;
+
     padding-right: 25px;
   }
+
 }
