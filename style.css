@@ -10,11 +10,11 @@
   --text: #463c35;
   --soft-text: #8b7b6d;
 
-  /* More vivid jar colors */
-  --red: #d95f68;
-  --orange: #e98b3f;
-  --pink: #df7892;
-  --yellow: #e5c442;
+  /* Deeper jar colors */
+  --red: #c93649;
+  --orange: #df742c;
+  --pink: #d95b82;
+  --yellow: #d9b52d;
 
   --shadow: rgba(67, 51, 39, 0.12);
 }
@@ -223,6 +223,9 @@ body {
   transition:
     transform 0.5s ease,
     top 0.5s ease;
+
+  /* decorative only — never blocks the button */
+  pointer-events: none;
 }
 
 .lid-top {
@@ -241,6 +244,8 @@ body {
   box-shadow:
     inset 0 2px 3px rgba(255, 255, 255, 0.55),
     0 3px 5px rgba(67, 51, 39, 0.12);
+
+  pointer-events: none;
 }
 
 .lid-line {
@@ -264,6 +269,8 @@ body {
   box-shadow:
     inset 0 2px 2px rgba(255, 255, 255, 0.3),
     0 4px 6px rgba(67, 51, 39, 0.12);
+
+  pointer-events: none;
 }
 
 
@@ -291,6 +298,10 @@ body {
     0 12px 25px var(--shadow);
 
   backdrop-filter: blur(2px);
+
+  /* IMPORTANT:
+     jar body is decorative, button receives the click */
+  pointer-events: none;
 }
 
 .jar-body::before {
@@ -312,19 +323,21 @@ body {
     2px solid rgba(255, 255, 255, 0.68);
 
   z-index: 1;
+
+  pointer-events: none;
 }
 
 
 /* =========================================================
-   MORE VIVID + DEEPER JAR COLORS
+   DEEPER JAR COLORS
 ========================================================= */
 
 .red-card .jar-body {
   background:
     linear-gradient(
       180deg,
-      rgba(190, 48, 62, 0.68),
-      rgba(190, 48, 62, 0.48)
+      rgba(201, 54, 73, 0.72),
+      rgba(201, 54, 73, 0.52)
     );
 }
 
@@ -332,8 +345,8 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(224, 111, 35, 0.70),
-      rgba(224, 111, 35, 0.49)
+      rgba(223, 116, 44, 0.72),
+      rgba(223, 116, 44, 0.51)
     );
 }
 
@@ -341,8 +354,8 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(218, 82, 119, 0.60),
-      rgba(218, 82, 119, 0.40)
+      rgba(217, 91, 130, 0.66),
+      rgba(217, 91, 130, 0.45)
     );
 }
 
@@ -350,10 +363,11 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(218, 179, 35, 0.68),
-      rgba(218, 179, 35, 0.45)
+      rgba(217, 181, 45, 0.72),
+      rgba(217, 181, 45, 0.49)
     );
 }
+
 
 /* =========================================================
    GLASS SHINE
@@ -387,7 +401,6 @@ body {
 .scroll {
   position: absolute;
 
-  /* smaller + thicker, like tiny rolled paper */
   width: 16px;
   height: 11px;
 
@@ -410,6 +423,10 @@ body {
   transform-origin: center;
 
   z-index: 4;
+
+  /* IMPORTANT:
+     notes are decorative and must not block jar click */
+  pointer-events: none;
 }
 
 
@@ -439,6 +456,8 @@ body {
     );
 
   opacity: 0.9;
+
+  pointer-events: none;
 }
 
 
@@ -456,6 +475,8 @@ body {
   border-radius: 2px;
 
   background: rgba(120, 105, 90, 0.20);
+
+  pointer-events: none;
 }
 
 
@@ -837,6 +858,7 @@ body {
   z-index: 10;
 }
 
+
 /* =========================================================
    JAR LABEL
 ========================================================= */
@@ -857,6 +879,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  pointer-events: none;
 }
 
 .jar-label span {
@@ -868,6 +892,8 @@ body {
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
+
+  pointer-events: none;
 }
 
 .red-card .jar-label span {
