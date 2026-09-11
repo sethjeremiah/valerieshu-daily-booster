@@ -1,36 +1,34 @@
 /* =========================================================
    viJEMIn Daily Booster
+   SCRIPT
 ========================================================= */
 
 
 /* =========================================================
    MESSAGE POOLS
+
+   Dummy for now.
+   Later:
+   - 50 messages per jar
+   - one message is selected per jar per day
 ========================================================= */
 
 const messages = {
 
   comfort: [
-
     "Hey. Whatever happened today, you don't have to carry all of it at once. Come here for a second. Breathe. I'm here."
-
   ],
 
   motivation: [
-
     "Get your ass up, sweetheart. You don't have to conquer the whole world today. Just do one thing. Then we'll see."
-
   ],
 
   missyou: [
-
     "Miss me, huh? Well... I figured you might. Here's a little reminder that even when I'm not around, a tiny piece of me can still keep you company."
-
   ],
 
   love: [
-
     "Just in case you forgot: Me, myself, and I are all completely, ridiculously, madly in love with you."
-
   ]
 
 };
@@ -48,14 +46,12 @@ function getTodayKey() {
     today.getFullYear();
 
   const month =
-    String(
-      today.getMonth() + 1
-    ).padStart(2, "0");
+    String(today.getMonth() + 1)
+      .padStart(2, "0");
 
   const day =
-    String(
-      today.getDate()
-    ).padStart(2, "0");
+    String(today.getDate())
+      .padStart(2, "0");
 
   return `${year}-${month}-${day}`;
 }
@@ -108,6 +104,7 @@ function getTodayMessage(jarId) {
       index
 
   };
+
 }
 
 
@@ -223,6 +220,11 @@ const dailyMessage =
     "dailyMessage"
   );
 
+const jarButtons =
+  document.querySelectorAll(
+    ".jar-button"
+  );
+
 
 /* =========================================================
    OPEN MODAL
@@ -265,6 +267,7 @@ function openModal(
 
   document.body.style.overflow =
     "hidden";
+
 }
 
 
@@ -285,6 +288,7 @@ function closeModal() {
 
   document.body.style.overflow =
     "";
+
 }
 
 
@@ -388,13 +392,12 @@ function takeDose(
   button
 ) {
 
+  /* -------------------------------------------------------
+     ALREADY TAKEN
 
-  /*
-    ALREADY TAKEN
-
-    Show the exact same dose.
-    Never generate another one.
-  */
+     Show the exact same dose.
+     Never generate another one.
+  ------------------------------------------------------- */
 
   if (hasTakenToday(jarId)) {
 
@@ -414,9 +417,9 @@ function takeDose(
   }
 
 
-  /*
-    FIRST TIME TODAY
-  */
+  /* -------------------------------------------------------
+     FIRST TIME TODAY
+  ------------------------------------------------------- */
 
   const card =
     button.closest(
@@ -429,19 +432,18 @@ function takeDose(
     );
 
 
-  /*
-    START ANIMATION
-  */
+  /* -------------------------------------------------------
+     START JAR ANIMATION
+  ------------------------------------------------------- */
 
   card.classList.add(
     "opening"
   );
 
 
-  /*
-    WAIT FOR BOTTLE
-    ANIMATION
-  */
+  /* -------------------------------------------------------
+     WAIT FOR JAR ANIMATION
+  ------------------------------------------------------- */
 
   setTimeout(() => {
 
@@ -456,12 +458,10 @@ function takeDose(
 
     updateDailyMessage();
 
-
     openModal(
       messageData.text,
       false
     );
-
 
     card.classList.remove(
       "opening"
@@ -475,12 +475,6 @@ function takeDose(
 /* =========================================================
    JAR BUTTONS
 ========================================================= */
-
-const jarButtons =
-  document.querySelectorAll(
-    ".jar-button"
-  );
-
 
 jarButtons.forEach(
   button => {
@@ -515,7 +509,7 @@ closeModalButton.addEventListener(
 
 
 /* =========================================================
-   CLICK OUTSIDE
+   CLICK OUTSIDE MODAL
 ========================================================= */
 
 modal.addEventListener(
@@ -536,7 +530,7 @@ modal.addEventListener(
 
 
 /* =========================================================
-   ESCAPE
+   ESCAPE KEY
 ========================================================= */
 
 document.addEventListener(
