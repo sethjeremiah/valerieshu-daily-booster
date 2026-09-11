@@ -1,14 +1,16 @@
-/* =========================================
-   VIJEMIN DAILY BOOSTER
-   FULL CSS — MINI ROLLED PAPER VERSION
-   ========================================= */
+/* =========================================================
+   viJEMIn Daily Booster
+   STYLE
+========================================================= */
 
 :root {
   --background: #f8f1e7;
   --paper: #fffaf2;
+
   --text: #463c35;
   --soft-text: #8b7b6d;
 
+  /* More vivid jar colors */
   --red: #d95f68;
   --orange: #e98b3f;
   --pink: #df7892;
@@ -18,14 +20,12 @@
 }
 
 
-/* =========================================
+/* =========================================================
    RESET
-   ========================================= */
+========================================================= */
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -33,149 +33,298 @@ html {
 }
 
 body {
+  margin: 0;
   min-height: 100vh;
+
   background:
     radial-gradient(
       circle at top,
-      rgba(255, 255, 255, 0.65),
-      transparent 55%
-    ),
-    var(--background);
+      #fffaf3 0%,
+      var(--background) 55%,
+      #f4eadf 100%
+    );
+
   color: var(--text);
-  font-family: Georgia, "Times New Roman", serif;
+
+  font-family: "DM Sans", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
 }
 
 
-/* =========================================
-   PAGE
-   ========================================= */
+/* =========================================================
+   HERO
+========================================================= */
 
-.page {
-  width: min(1100px, 92%);
-  margin: 0 auto;
-  padding: 55px 0 45px;
-}
-
-
-/* =========================================
-   HEADER
-   ========================================= */
-
-header {
+.hero {
   text-align: center;
-  margin-bottom: 42px;
+  padding: 80px 20px 35px;
 }
 
-header h1 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
+.title-wrap {
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 600;
   letter-spacing: -0.03em;
-  margin-bottom: 10px;
 }
 
-header p {
+.subtitle-title {
+  margin-top: 2px;
+
   color: var(--soft-text);
-  font-size: 0.98rem;
-  line-height: 1.6;
+
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
 }
-
-
-/* =========================================
-   INTRO
-   ========================================= */
 
 .intro {
   max-width: 650px;
-  margin: 0 auto 48px;
-  text-align: center;
+  margin: 18px auto 0;
+
   color: var(--soft-text);
+
   font-size: 0.95rem;
   line-height: 1.8;
 }
 
+.take-note {
+  margin: 15px 0 0;
 
-/* =========================================
-   JAR GRID
-   ========================================= */
+  color: #a39486;
 
-.jar-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  align-items: end;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 
-/* =========================================
-   JAR CARD
-   ========================================= */
+/* =========================================================
+   JAR GRID
+========================================================= */
+
+.jar-grid {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  column-gap: 60px;
+  row-gap: 72px;
+}
 
 .jar-card {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   text-align: center;
 }
 
-.jar-card h2 {
-  font-size: 1rem;
+
+/* =========================================================
+   JAR INFO
+========================================================= */
+
+.jar-info {
+  margin-bottom: 18px;
+}
+
+.jar-info h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
   font-weight: 600;
-  margin-bottom: 7px;
 }
 
-.jar-card p {
-  min-height: 40px;
+.jar-info p {
+  margin: 7px 0 0;
+
   color: var(--soft-text);
-  font-size: 0.78rem;
-  line-height: 1.45;
-  margin-bottom: 15px;
+
+  font-size: 0.82rem;
+  line-height: 1.55;
 }
 
 
-/* =========================================
+/* =========================================================
+   JAR BUTTON
+========================================================= */
+
+.jar-button {
+  position: relative;
+
+  display: block;
+
+  padding: 0;
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font: inherit;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.jar-button:hover {
+  transform: translateY(-5px);
+}
+
+.jar-button:focus-visible {
+  outline: 2px solid var(--soft-text);
+  outline-offset: 10px;
+  border-radius: 20px;
+}
+
+
+/* =========================================================
    JAR
-   ========================================= */
+========================================================= */
 
 .jar {
   position: relative;
-  width: 145px;
-  height: 245px;
+
+  width: 190px;
+  height: 230px;
+
   margin: 0 auto;
 }
 
 
-/* =========================================
-   JAR BODY
-   ========================================= */
+/* =========================================================
+   JAR LID
+========================================================= */
 
-.jar-body {
+.jar-lid {
   position: absolute;
-  left: 8px;
-  bottom: 0;
 
-  width: 129px;
-  height: 210px;
+  top: 0;
+  left: 40px;
 
-  border: 2px solid rgba(100, 75, 55, 0.18);
-  border-radius: 24px 24px 30px 30px;
+  width: 110px;
+  height: 42px;
 
-  overflow: hidden;
+  z-index: 20;
+
+  transition:
+    transform 0.5s ease,
+    top 0.5s ease;
+}
+
+.lid-top {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 110px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #d7c9ba;
 
   box-shadow:
-    inset 8px 0 10px rgba(255, 255, 255, 0.22),
-    inset -8px 0 12px rgba(70, 50, 40, 0.08),
-    0 12px 22px rgba(67, 51, 39, 0.10);
+    inset 0 2px 3px rgba(255, 255, 255, 0.55),
+    0 3px 5px rgba(67, 51, 39, 0.12);
+}
+
+.lid-line {
+  position: absolute;
+
+  top: 13px;
+  left: 4px;
+
+  width: 102px;
+  height: 27px;
+
+  border-radius: 0 0 9px 9px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #cdbdac,
+      #bfae9c
+    );
+
+  box-shadow:
+    inset 0 2px 2px rgba(255, 255, 255, 0.3),
+    0 4px 6px rgba(67, 51, 39, 0.12);
 }
 
 
-/* =========================================
-   VIVID JAR COLORS
-   ========================================= */
+/* =========================================================
+   JAR BODY
+========================================================= */
+
+.jar-body {
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+  bottom: 0;
+
+  height: 207px;
+
+  overflow: hidden;
+
+  border-radius: 22px 22px 30px 30px;
+
+  border: 2px solid rgba(255, 255, 255, 0.68);
+
+  box-shadow:
+    inset 0 0 15px rgba(255, 255, 255, 0.45),
+    0 12px 25px var(--shadow);
+
+  backdrop-filter: blur(2px);
+}
+
+.jar-body::before {
+  content: "";
+
+  position: absolute;
+
+  top: -12px;
+  left: 10px;
+  right: 10px;
+
+  height: 35px;
+
+  border-radius: 50%;
+
+  background: inherit;
+
+  border-top:
+    2px solid rgba(255, 255, 255, 0.68);
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   MORE VIVID + DEEPER JAR COLORS
+========================================================= */
 
 .red-card .jar-body {
   background:
     linear-gradient(
       180deg,
-      rgba(217, 95, 104, 0.50),
-      rgba(217, 95, 104, 0.34)
+      rgba(190, 48, 62, 0.68),
+      rgba(190, 48, 62, 0.48)
     );
 }
 
@@ -183,8 +332,8 @@ header p {
   background:
     linear-gradient(
       180deg,
-      rgba(233, 139, 63, 0.53),
-      rgba(233, 139, 63, 0.34)
+      rgba(224, 111, 35, 0.70),
+      rgba(224, 111, 35, 0.49)
     );
 }
 
@@ -192,8 +341,8 @@ header p {
   background:
     linear-gradient(
       180deg,
-      rgba(223, 120, 146, 0.51),
-      rgba(223, 120, 146, 0.34)
+      rgba(218, 82, 119, 0.60),
+      rgba(218, 82, 119, 0.40)
     );
 }
 
@@ -201,117 +350,44 @@ header p {
   background:
     linear-gradient(
       180deg,
-      rgba(229, 196, 66, 0.53),
-      rgba(229, 196, 66, 0.33)
+      rgba(218, 179, 35, 0.68),
+      rgba(218, 179, 35, 0.45)
     );
 }
 
-
-/* =========================================
+/* =========================================================
    GLASS SHINE
-   ========================================= */
+========================================================= */
 
 .glass-shine {
   position: absolute;
-  top: 10px;
-  left: 20px;
 
-  width: 13px;
-  height: 170px;
+  top: 20px;
+  left: 18px;
+
+  width: 10px;
+  height: 140px;
 
   border-radius: 50%;
 
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.58),
-    rgba(255, 255, 255, 0.08)
-  );
+  background: rgba(255, 255, 255, 0.32);
 
-  opacity: 0.7;
-  filter: blur(1px);
+  transform: rotate(3deg);
 
-  z-index: 14;
+  z-index: 15;
+
   pointer-events: none;
 }
 
-.glass-shine::after {
-  content: "";
 
-  position: absolute;
-  top: 12px;
-  left: 18px;
-
-  width: 5px;
-  height: 95px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.38);
-}
-
-
-/* =========================================
-   JAR LID
-   ========================================= */
-
-.jar-lid {
-  position: absolute;
-
-  top: 8px;
-  left: 10px;
-
-  width: 125px;
-  height: 24px;
-
-  border-radius: 8px 8px 5px 5px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #fffdf9 0%,
-      #eee5d9 100%
-    );
-
-  border: 1px solid rgba(100, 75, 55, 0.16);
-
-  box-shadow:
-    0 4px 7px rgba(67, 51, 39, 0.13),
-    inset 0 2px 2px rgba(255, 255, 255, 0.8);
-
-  z-index: 20;
-
-  transition:
-    top 0.35s ease,
-    transform 0.35s ease;
-}
-
-.jar-lid::before {
-  content: "";
-
-  position: absolute;
-  left: 8px;
-  right: 8px;
-  top: 5px;
-
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: rgba(130, 110, 90, 0.12);
-}
-
-
-/* =========================================
-   MINI ROLLED PAPER
-   ========================================= */
+/* =========================================================
+   ROLLED NOTES — MINI VERSION
+========================================================= */
 
 .scroll {
   position: absolute;
 
-  /*
-    MINI + GEMUK
-    bukan strip panjang lagi
-  */
+  /* smaller + thicker, like tiny rolled paper */
   width: 16px;
   height: 11px;
 
@@ -337,7 +413,7 @@ header p {
 }
 
 
-/* little rolled end */
+/* little rolled spiral */
 
 .scroll::before {
   content: "";
@@ -368,9 +444,7 @@ header p {
 
 /* tiny paper line */
 
-.scroll::after {
-  content: "";
-
+.scroll span {
   position: absolute;
 
   right: 2px;
@@ -385,365 +459,387 @@ header p {
 }
 
 
-/* =========================================
-   50 MINI ROLLS
+/* =========================================================
+   50 MINI ROLL POSITIONS
    Dense pile — bottom to top
-   ========================================= */
+========================================================= */
+
+/* Bottom layer */
 
 .scroll-1 {
-  left: 19px;
-  bottom: 8px;
-  transform: rotate(-12deg);
-  z-index: 5;
+  left: 18px;
+  bottom: 15px;
+  transform: rotate(-10deg);
+  z-index: 3;
 }
 
 .scroll-2 {
-  left: 38px;
-  bottom: 7px;
+  left: 35px;
+  bottom: 14px;
+  transform: rotate(7deg);
+  z-index: 3;
+}
+
+.scroll-3 {
+  left: 52px;
+  bottom: 16px;
+  transform: rotate(-5deg);
+  z-index: 3;
+}
+
+.scroll-4 {
+  left: 70px;
+  bottom: 14px;
+  transform: rotate(9deg);
+  z-index: 3;
+}
+
+.scroll-5 {
+  left: 88px;
+  bottom: 15px;
+  transform: rotate(-7deg);
+  z-index: 3;
+}
+
+.scroll-6 {
+  left: 105px;
+  bottom: 14px;
+  transform: rotate(5deg);
+  z-index: 3;
+}
+
+.scroll-7 {
+  left: 121px;
+  bottom: 16px;
+  transform: rotate(-8deg);
+  z-index: 3;
+}
+
+
+/* Layer 2 */
+
+.scroll-8 {
+  left: 24px;
+  bottom: 25px;
+  transform: rotate(6deg);
+  z-index: 4;
+}
+
+.scroll-9 {
+  left: 42px;
+  bottom: 24px;
+  transform: rotate(-8deg);
+  z-index: 4;
+}
+
+.scroll-10 {
+  left: 60px;
+  bottom: 26px;
+  transform: rotate(5deg);
+  z-index: 4;
+}
+
+.scroll-11 {
+  left: 78px;
+  bottom: 24px;
+  transform: rotate(-6deg);
+  z-index: 4;
+}
+
+.scroll-12 {
+  left: 96px;
+  bottom: 26px;
+  transform: rotate(8deg);
+  z-index: 4;
+}
+
+.scroll-13 {
+  left: 114px;
+  bottom: 24px;
+  transform: rotate(-5deg);
+  z-index: 4;
+}
+
+.scroll-14 {
+  left: 130px;
+  bottom: 26px;
+  transform: rotate(7deg);
+  z-index: 4;
+}
+
+
+/* Layer 3 */
+
+.scroll-15 {
+  left: 18px;
+  bottom: 36px;
+  transform: rotate(7deg);
+  z-index: 5;
+}
+
+.scroll-16 {
+  left: 36px;
+  bottom: 34px;
+  transform: rotate(-6deg);
+  z-index: 5;
+}
+
+.scroll-17 {
+  left: 54px;
+  bottom: 36px;
+  transform: rotate(9deg);
+  z-index: 5;
+}
+
+.scroll-18 {
+  left: 72px;
+  bottom: 34px;
+  transform: rotate(-4deg);
+  z-index: 5;
+}
+
+.scroll-19 {
+  left: 90px;
+  bottom: 36px;
+  transform: rotate(6deg);
+  z-index: 5;
+}
+
+.scroll-20 {
+  left: 108px;
+  bottom: 34px;
+  transform: rotate(-8deg);
+  z-index: 5;
+}
+
+.scroll-21 {
+  left: 126px;
+  bottom: 36px;
+  transform: rotate(5deg);
+  z-index: 5;
+}
+
+
+/* Layer 4 */
+
+.scroll-22 {
+  left: 24px;
+  bottom: 47px;
+  transform: rotate(-7deg);
+  z-index: 6;
+}
+
+.scroll-23 {
+  left: 42px;
+  bottom: 45px;
+  transform: rotate(5deg);
+  z-index: 6;
+}
+
+.scroll-24 {
+  left: 60px;
+  bottom: 47px;
+  transform: rotate(-9deg);
+  z-index: 6;
+}
+
+.scroll-25 {
+  left: 78px;
+  bottom: 45px;
+  transform: rotate(7deg);
+  z-index: 6;
+}
+
+.scroll-26 {
+  left: 96px;
+  bottom: 47px;
+  transform: rotate(-5deg);
+  z-index: 6;
+}
+
+.scroll-27 {
+  left: 114px;
+  bottom: 45px;
   transform: rotate(8deg);
   z-index: 6;
 }
 
-.scroll-3 {
-  left: 57px;
-  bottom: 8px;
-  transform: rotate(-5deg);
-  z-index: 7;
-}
-
-.scroll-4 {
-  left: 77px;
-  bottom: 9px;
-  transform: rotate(12deg);
-  z-index: 8;
-}
-
-.scroll-5 {
-  left: 96px;
-  bottom: 10px;
-  transform: rotate(-8deg);
-  z-index: 7;
-}
-
-.scroll-6 {
-  left: 28px;
-  bottom: 19px;
-  transform: rotate(7deg);
-  z-index: 9;
-}
-
-.scroll-7 {
-  left: 48px;
-  bottom: 18px;
-  transform: rotate(-14deg);
-  z-index: 10;
-}
-
-.scroll-8 {
-  left: 68px;
-  bottom: 20px;
-  transform: rotate(5deg);
-  z-index: 11;
-}
-
-.scroll-9 {
-  left: 87px;
-  bottom: 18px;
-  transform: rotate(-10deg);
-  z-index: 10;
-}
-
-.scroll-10 {
-  left: 101px;
-  bottom: 22px;
-  transform: rotate(13deg);
-  z-index: 9;
-}
-
-.scroll-11 {
-  left: 17px;
-  bottom: 30px;
-  transform: rotate(6deg);
-  z-index: 8;
-}
-
-.scroll-12 {
-  left: 37px;
-  bottom: 29px;
-  transform: rotate(-7deg);
-  z-index: 12;
-}
-
-.scroll-13 {
-  left: 58px;
-  bottom: 31px;
-  transform: rotate(11deg);
-  z-index: 13;
-}
-
-.scroll-14 {
-  left: 78px;
-  bottom: 30px;
-  transform: rotate(-13deg);
-  z-index: 12;
-}
-
-.scroll-15 {
-  left: 96px;
-  bottom: 32px;
-  transform: rotate(4deg);
-  z-index: 11;
-}
-
-.scroll-16 {
-  left: 25px;
-  bottom: 42px;
-  transform: rotate(-11deg);
-  z-index: 10;
-}
-
-.scroll-17 {
-  left: 45px;
-  bottom: 41px;
-  transform: rotate(8deg);
-  z-index: 14;
-}
-
-.scroll-18 {
-  left: 66px;
-  bottom: 42px;
-  transform: rotate(-5deg);
-  z-index: 15;
-}
-
-.scroll-19 {
-  left: 85px;
-  bottom: 40px;
-  transform: rotate(12deg);
-  z-index: 14;
-}
-
-.scroll-20 {
-  left: 101px;
-  bottom: 44px;
-  transform: rotate(-9deg);
-  z-index: 12;
-}
-
-.scroll-21 {
-  left: 18px;
-  bottom: 53px;
-  transform: rotate(9deg);
-  z-index: 11;
-}
-
-.scroll-22 {
-  left: 37px;
-  bottom: 52px;
-  transform: rotate(-13deg);
-  z-index: 15;
-}
-
-.scroll-23 {
-  left: 57px;
-  bottom: 54px;
-  transform: rotate(6deg);
-  z-index: 16;
-}
-
-.scroll-24 {
-  left: 76px;
-  bottom: 52px;
-  transform: rotate(-8deg);
-  z-index: 15;
-}
-
-.scroll-25 {
-  left: 96px;
-  bottom: 55px;
-  transform: rotate(11deg);
-  z-index: 13;
-}
-
-.scroll-26 {
-  left: 25px;
-  bottom: 64px;
-  transform: rotate(-6deg);
-  z-index: 12;
-}
-
-.scroll-27 {
-  left: 44px;
-  bottom: 63px;
-  transform: rotate(13deg);
-  z-index: 16;
-}
-
 .scroll-28 {
-  left: 64px;
-  bottom: 65px;
-  transform: rotate(-10deg);
-  z-index: 17;
+  left: 130px;
+  bottom: 47px;
+  transform: rotate(-6deg);
+  z-index: 6;
 }
+
+
+/* Layer 5 */
 
 .scroll-29 {
-  left: 83px;
-  bottom: 63px;
-  transform: rotate(5deg);
-  z-index: 16;
+  left: 18px;
+  bottom: 58px;
+  transform: rotate(6deg);
+  z-index: 7;
 }
 
 .scroll-30 {
-  left: 101px;
-  bottom: 66px;
-  transform: rotate(-12deg);
-  z-index: 14;
+  left: 36px;
+  bottom: 56px;
+  transform: rotate(-8deg);
+  z-index: 7;
 }
 
 .scroll-31 {
-  left: 18px;
-  bottom: 75px;
-  transform: rotate(12deg);
-  z-index: 13;
+  left: 54px;
+  bottom: 58px;
+  transform: rotate(5deg);
+  z-index: 7;
 }
 
 .scroll-32 {
-  left: 37px;
-  bottom: 74px;
-  transform: rotate(-8deg);
-  z-index: 17;
+  left: 72px;
+  bottom: 56px;
+  transform: rotate(-7deg);
+  z-index: 7;
 }
 
 .scroll-33 {
-  left: 57px;
-  bottom: 76px;
-  transform: rotate(7deg);
-  z-index: 18;
+  left: 90px;
+  bottom: 58px;
+  transform: rotate(9deg);
+  z-index: 7;
 }
 
 .scroll-34 {
-  left: 77px;
-  bottom: 74px;
-  transform: rotate(-12deg);
-  z-index: 17;
+  left: 108px;
+  bottom: 56px;
+  transform: rotate(-5deg);
+  z-index: 7;
 }
 
 .scroll-35 {
-  left: 96px;
-  bottom: 77px;
-  transform: rotate(9deg);
-  z-index: 15;
+  left: 126px;
+  bottom: 58px;
+  transform: rotate(7deg);
+  z-index: 7;
 }
 
+
+/* Layer 6 */
+
 .scroll-36 {
-  left: 27px;
-  bottom: 86px;
-  transform: rotate(-10deg);
-  z-index: 14;
+  left: 24px;
+  bottom: 69px;
+  transform: rotate(-6deg);
+  z-index: 8;
 }
 
 .scroll-37 {
-  left: 46px;
-  bottom: 85px;
-  transform: rotate(6deg);
-  z-index: 18;
+  left: 42px;
+  bottom: 67px;
+  transform: rotate(8deg);
+  z-index: 8;
 }
 
 .scroll-38 {
-  left: 65px;
-  bottom: 87px;
-  transform: rotate(-7deg);
-  z-index: 19;
+  left: 60px;
+  bottom: 69px;
+  transform: rotate(-5deg);
+  z-index: 8;
 }
 
 .scroll-39 {
-  left: 84px;
-  bottom: 85px;
-  transform: rotate(11deg);
-  z-index: 18;
+  left: 78px;
+  bottom: 67px;
+  transform: rotate(7deg);
+  z-index: 8;
 }
 
 .scroll-40 {
-  left: 100px;
-  bottom: 88px;
-  transform: rotate(-5deg);
-  z-index: 16;
+  left: 96px;
+  bottom: 69px;
+  transform: rotate(-9deg);
+  z-index: 8;
 }
 
 .scroll-41 {
-  left: 22px;
-  bottom: 97px;
-  transform: rotate(8deg);
-  z-index: 15;
+  left: 114px;
+  bottom: 67px;
+  transform: rotate(5deg);
+  z-index: 8;
 }
 
 .scroll-42 {
-  left: 41px;
-  bottom: 96px;
-  transform: rotate(-12deg);
-  z-index: 19;
+  left: 130px;
+  bottom: 69px;
+  transform: rotate(-7deg);
+  z-index: 8;
 }
 
+
+/* Layer 7 */
+
 .scroll-43 {
-  left: 60px;
-  bottom: 98px;
-  transform: rotate(5deg);
-  z-index: 20;
+  left: 30px;
+  bottom: 80px;
+  transform: rotate(7deg);
+  z-index: 9;
 }
 
 .scroll-44 {
-  left: 79px;
-  bottom: 96px;
-  transform: rotate(-9deg);
-  z-index: 19;
+  left: 48px;
+  bottom: 78px;
+  transform: rotate(-6deg);
+  z-index: 9;
 }
 
 .scroll-45 {
-  left: 96px;
-  bottom: 99px;
-  transform: rotate(12deg);
-  z-index: 17;
+  left: 66px;
+  bottom: 80px;
+  transform: rotate(9deg);
+  z-index: 9;
 }
 
 .scroll-46 {
-  left: 28px;
-  bottom: 108px;
-  transform: rotate(-6deg);
-  z-index: 16;
+  left: 84px;
+  bottom: 78px;
+  transform: rotate(-5deg);
+  z-index: 9;
 }
 
 .scroll-47 {
-  left: 47px;
-  bottom: 107px;
-  transform: rotate(10deg);
-  z-index: 20;
+  left: 102px;
+  bottom: 80px;
+  transform: rotate(7deg);
+  z-index: 9;
 }
 
 .scroll-48 {
-  left: 66px;
-  bottom: 109px;
-  transform: rotate(-11deg);
-  z-index: 21;
+  left: 120px;
+  bottom: 78px;
+  transform: rotate(-8deg);
+  z-index: 9;
 }
 
+
+/* Top layer */
+
 .scroll-49 {
-  left: 85px;
-  bottom: 107px;
-  transform: rotate(7deg);
-  z-index: 20;
+  left: 50px;
+  bottom: 90px;
+  transform: rotate(6deg);
+  z-index: 10;
 }
 
 .scroll-50 {
-  left: 101px;
-  bottom: 110px;
-  transform: rotate(-8deg);
-  z-index: 18;
+  left: 82px;
+  bottom: 91px;
+  transform: rotate(-7deg);
+  z-index: 10;
 }
 
-
-/* =========================================
+/* =========================================================
    JAR LABEL
-   ========================================= */
+========================================================= */
 
 .jar-label {
   position: absolute;
@@ -756,13 +852,11 @@ header p {
 
   transform: translateX(-50%);
 
-  z-index: 30;
+  z-index: 16;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  pointer-events: none;
 }
 
 .jar-label span {
@@ -776,58 +870,52 @@ header p {
     opacity 0.3s ease;
 }
 
-
-/* =========================================
-   BUTTON
-   ========================================= */
-
-.jar-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 125px;
-
-  padding: 9px 16px;
-
-  border: 1px solid rgba(100, 75, 55, 0.15);
-  border-radius: 999px;
-
-  background: rgba(255, 250, 242, 0.88);
-
-  color: var(--text);
-
-  font-family: inherit;
-  font-size: 0.78rem;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 4px 10px rgba(67, 51, 39, 0.08);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
+.red-card .jar-label span {
+  color: var(--red);
 }
 
-.jar-button:hover {
-  transform: translateY(-2px);
-
-  background: #fffdf9;
-
-  box-shadow:
-    0 7px 14px rgba(67, 51, 39, 0.12);
+.orange-card .jar-label span {
+  color: var(--orange);
 }
 
-.jar-button:active {
-  transform: translateY(0);
+.pink-card .jar-label span {
+  color: var(--pink);
+}
+
+.yellow-card .jar-label span {
+  color: var(--yellow);
+}
+
+.jar-button:hover .jar-label span {
+  transform: scale(1.08);
+  opacity: 0.9;
 }
 
 
-/* =========================================
-   JAR INTERACTION
-   ========================================= */
+/* =========================================================
+   JAR HOVER ANIMATIONS
+========================================================= */
+
+.red-card .jar-button:hover .jar {
+  animation: gentleWiggle 0.7s ease;
+}
+
+.orange-card .jar-button:hover .jar {
+  animation: energeticShake 0.5s ease;
+}
+
+.pink-card .jar-button:hover .jar {
+  animation: softTilt 0.7s ease;
+}
+
+.yellow-card .jar-button:hover .jar {
+  animation: gentleGlow 1s ease;
+}
+
+
+/* =========================================================
+   OPENING / TAKEN STATES
+========================================================= */
 
 .jar-card.opening .jar {
   animation: jarShake 0.45s ease;
@@ -847,128 +935,157 @@ header p {
   filter: grayscale(0.15);
 }
 
-.jar-card.taken .jar-label span {
-  transform: scale(0.94);
-  opacity: 0.58;
+.jar-status {
+  min-height: 20px;
+
+  margin-top: 12px;
+
+  color: var(--soft-text);
+
+  font-size: 0.72rem;
+  line-height: 1.4;
 }
 
 
-/* =========================================
-   SHAKE
-   ========================================= */
+/* =========================================================
+   DAILY STATUS
+========================================================= */
 
-@keyframes jarShake {
-  0% {
-    transform: rotate(0);
-  }
+.daily-status {
+  width: min(650px, calc(100% - 40px));
 
-  20% {
-    transform: rotate(-2deg);
-  }
+  margin: 55px auto 0;
 
-  40% {
-    transform: rotate(2deg);
-  }
+  padding: 18px 20px;
 
-  60% {
-    transform: rotate(-1.5deg);
-  }
+  text-align: center;
 
-  80% {
-    transform: rotate(1deg);
-  }
+  border-top: 1px solid rgba(139, 123, 109, 0.16);
+  border-bottom: 1px solid rgba(139, 123, 109, 0.16);
+}
 
-  100% {
-    transform: rotate(0);
-  }
+.daily-status p {
+  margin: 0;
+
+  color: var(--soft-text);
+
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
 
-/* =========================================
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  padding: 70px 20px 45px;
+
+  text-align: center;
+
+  color: #a39486;
+
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer > span {
+  display: block;
+}
+
+.footer-love {
+  margin-top: 14px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 0.82rem;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
    MODAL
-   ========================================= */
+========================================================= */
 
 .modal {
   position: fixed;
-
   inset: 0;
 
-  display: none;
+  z-index: 100;
+
+  display: flex;
   align-items: center;
   justify-content: center;
 
   padding: 20px;
 
-  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .modal.show {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal-overlay {
   position: absolute;
   inset: 0;
 
-  background: rgba(50, 40, 32, 0.38);
+  background: rgba(70, 60, 53, 0.35);
 
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(7px);
 }
-
-
-/* =========================================
-   NOTE
-   ========================================= */
 
 .dose-note {
   position: relative;
 
-  width: min(480px, 92vw);
+  z-index: 1;
 
-  padding: 38px 34px 34px;
+  width: min(500px, 100%);
 
-  border-radius: 5px;
+  padding: 45px 35px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #fffdf7,
-      #fff8ed
-    );
+  border-radius: 24px;
+
+  background: var(--paper);
 
   box-shadow:
-    0 22px 60px rgba(45, 34, 27, 0.20);
+    0 25px 70px rgba(67, 51, 39, 0.20);
 
-  z-index: 2;
+  text-align: center;
 
-  animation: noteAppear 0.35s ease;
+  transform:
+    translateY(15px)
+    scale(0.97);
+
+  transition:
+    transform 0.35s ease;
 }
 
-@keyframes noteAppear {
-  from {
-    opacity: 0;
-    transform: translateY(15px) rotate(-1deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) rotate(0);
-  }
+.modal.show .dose-note {
+  transform:
+    translateY(0)
+    scale(1);
 }
-
-
-/* =========================================
-   CLOSE BUTTON
-   ========================================= */
 
 .close-button {
   position: absolute;
 
-  top: 13px;
-  right: 15px;
+  top: 14px;
+  right: 17px;
 
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 
   border: 0;
   border-radius: 50%;
@@ -987,153 +1104,226 @@ header p {
 }
 
 .close-button:hover {
-  background: rgba(100, 75, 55, 0.07);
-  transform: rotate(5deg);
+  background: rgba(70, 60, 53, 0.07);
+
+  transform: rotate(90deg);
 }
 
-
-/* =========================================
-   NOTE CONTENT
-   ========================================= */
-
 .note-decoration {
-  text-align: center;
+  margin-bottom: 8px;
 
-  color: #c7b7a4;
+  color: #b6a394;
 
-  font-size: 0.85rem;
-
-  margin-bottom: 14px;
+  font-size: 1rem;
 }
 
 .dose-label {
-  text-align: center;
+  margin: 0;
 
-  font-size: 0.72rem;
+  font-family: "Playfair Display", serif;
 
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: var(--text);
 
-  color: var(--soft-text);
-
-  margin-bottom: 7px;
+  font-size: 1.55rem;
+  font-weight: 600;
 }
 
 .dose-repeat {
-  text-align: center;
+  min-height: 22px;
+
+  margin: 6px 0 0;
+
+  color: var(--soft-text);
 
   font-size: 0.78rem;
-
-  color: #a08e7e;
-
-  margin-bottom: 20px;
+  font-style: italic;
 }
 
 .note-divider {
-  width: 60px;
-  height: 1px;
+  margin: 17px 0;
 
-  margin: 0 auto 24px;
+  color: #b6a394;
 
-  background: rgba(100, 75, 55, 0.18);
+  font-size: 0.9rem;
 }
 
 .dose-message {
-  text-align: center;
+  margin: 0;
 
-  font-size: 1.15rem;
+  color: var(--soft-text);
 
-  line-height: 1.8;
+  font-size: 0.95rem;
 
-  color: var(--text);
+  line-height: 1.85;
 }
 
 .note-bottom {
   margin-top: 28px;
 
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
-  color: #b19e8b;
+  color: #a39486;
 
-  font-size: 0.72rem;
+  font-size: 0.75rem;
+}
 
-  font-style: italic;
+.note-bottom small {
+  font-size: 0.68rem;
+
+  opacity: 0.8;
 }
 
 
-/* =========================================
-   DAILY STATUS
-   ========================================= */
+/* =========================================================
+   ANIMATIONS
+========================================================= */
 
-.daily-status {
-  margin: 48px auto 0;
+@keyframes gentleWiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
 
-  max-width: 520px;
+  25% {
+    transform: rotate(-2deg);
+  }
 
-  text-align: center;
+  75% {
+    transform: rotate(2deg);
+  }
+}
 
-  color: var(--soft-text);
+@keyframes energeticShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
 
-  font-size: 0.78rem;
+  25% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
 
-  line-height: 1.6;
+  50% {
+    transform: translateX(3px) rotate(1deg);
+  }
+
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes softTilt {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes gentleGlow {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.08);
+  }
+}
+
+@keyframes jarShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-4px) rotate(-1deg);
+  }
+
+  40% {
+    transform: translateX(4px) rotate(1deg);
+  }
+
+  60% {
+    transform: translateX(-3px);
+  }
+
+  80% {
+    transform: translateX(2px);
+  }
 }
 
 
-/* =========================================
-   FOOTER
-   ========================================= */
-
-footer {
-  margin-top: 55px;
-
-  text-align: center;
-
-  color: #a89787;
-
-  font-size: 0.72rem;
-}
-
-
-/* =========================================
+/* =========================================================
    RESPONSIVE
-   ========================================= */
+========================================================= */
 
-@media (max-width: 900px) {
-  .jar-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 38px 24px;
-  }
-}
+@media (max-width: 700px) {
 
-@media (max-width: 560px) {
-  .page {
-    width: 90%;
-    padding-top: 38px;
-  }
-
-  header {
-    margin-bottom: 32px;
-  }
-
-  .intro {
-    margin-bottom: 38px;
+  .hero {
+    padding-top: 55px;
   }
 
   .jar-grid {
+    width: min(430px, calc(100% - 30px));
+
     grid-template-columns: 1fr;
-    gap: 42px;
+
+    row-gap: 60px;
   }
 
-  .jar-card p {
-    min-height: auto;
+  .jar-info h2 {
+    font-size: 1.35rem;
+  }
+
+  .jar {
+    width: 190px;
+    height: 230px;
   }
 
   .dose-note {
-    padding: 34px 24px 28px;
+    padding:
+      42px
+      28px
+      38px;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro {
+    padding: 0 18px;
+  }
+
+  .jar-grid {
+    width: calc(100% - 20px);
+  }
+
+  .dose-note {
+    padding:
+      40px
+      22px
+      35px;
   }
 
   .dose-message {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
+
 }
