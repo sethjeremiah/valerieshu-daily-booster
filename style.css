@@ -20,12 +20,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(
-      circle at 50% 20%,
-      #fffdf8 0%,
-      var(--cream) 55%,
-      #f5eee4 100%
-    );
+    radial-gradient(circle at 50% 20%, #fffdf8 0%, var(--cream) 55%, #f5eee4 100%);
   color: var(--brown);
   font-family: "DM Sans", sans-serif;
 }
@@ -128,6 +123,7 @@ header {
   transition: transform 0.3s ease;
 }
 
+/* soft shadow behind the bottle */
 .jar::after {
   content: "";
   position: absolute;
@@ -154,7 +150,6 @@ header {
   height: 45px;
   transform: translateX(-50%);
   border-radius: 9px 9px 12px 12px;
-
   background:
     linear-gradient(
       to bottom,
@@ -162,14 +157,13 @@ header {
       #bdb7af 45%,
       #cbc5bd 100%
     );
-
   box-shadow:
     0 5px 8px rgba(84, 73, 65, 0.13),
     inset 0 2px 1px rgba(255, 255, 255, 0.45);
-
   transition: transform 0.45s ease;
 }
 
+/* lid grooves */
 .jar-lid::after {
   content: "";
   position: absolute;
@@ -178,7 +172,6 @@ header {
   bottom: 6px;
   height: 20px;
   border-radius: 0 0 9px 9px;
-
   background:
     repeating-linear-gradient(
       to bottom,
@@ -198,10 +191,8 @@ header {
   z-index: 2;
   left: 50%;
   bottom: 0;
-
   width: 220px;
   height: 280px;
-
   transform: translateX(-50%);
   overflow: hidden;
 
@@ -227,6 +218,7 @@ header {
     box-shadow 0.4s ease;
 }
 
+/* shoulders */
 .jar-body::before {
   content: "";
   position: absolute;
@@ -248,19 +240,14 @@ header {
   z-index: 6;
   top: 45px;
   left: 37px;
-
   width: 15px;
   height: 175px;
-
   border-radius: 50%;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.48),
-      rgba(255, 255, 255, 0.04)
-    );
-
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.48),
+    rgba(255, 255, 255, 0.04)
+  );
   transform: rotate(7deg);
   pointer-events: none;
 }
@@ -269,14 +256,21 @@ header {
    PAPER NOTES
 ========================= */
 
+/*
+   Each .scroll is now intentionally tiny.
+   There are 14 real scroll elements in the HTML.
+   Each one creates a second tiny paper using ::after,
+   giving us a much fuller pile without changing the HTML.
+*/
+
 .scroll {
   position: absolute;
   z-index: 3;
 
-  width: 27px;
-  height: 8px;
+  width: 30px;
+  height: 10px;
 
-  border-radius: 5px 6px 6px 5px;
+  border-radius: 5px 7px 7px 5px;
 
   background:
     linear-gradient(
@@ -292,29 +286,22 @@ header {
   transform-origin: center;
 }
 
-/* small second roll behind */
+/* second tiny roll behind each one */
 .scroll::after {
   content: "";
   position: absolute;
-
-  width: 23px;
-  height: 7px;
-
-  left: 6px;
-  top: 4px;
-
-  border-radius: 5px 6px 6px 5px;
-
+  width: 27px;
+  height: 9px;
+  left: 7px;
+  top: 5px;
+  border-radius: 5px 7px 7px 5px;
   background:
     linear-gradient(
       to bottom,
       #fffdf8 0%,
       #f1e9df 100%
     );
-
-  box-shadow:
-    0 1px 3px rgba(104, 87, 76, 0.08);
-
+  box-shadow: 0 2px 3px rgba(104, 87, 76, 0.08);
   z-index: -1;
 }
 
@@ -323,12 +310,11 @@ header {
   content: "";
   position: absolute;
   z-index: 3;
-
   left: -1px;
   top: 1px;
 
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
 
   border-radius: 50%;
 
@@ -336,16 +322,16 @@ header {
     radial-gradient(
       circle,
       transparent 0 1px,
-      rgba(139, 124, 111, 0.72) 1px 1.8px,
-      transparent 1.8px 2.6px,
-      rgba(139, 124, 111, 0.55) 2.6px 3.5px,
-      transparent 3.5px
+      rgba(139, 124, 111, 0.72) 1px 2px,
+      transparent 2px 3px,
+      rgba(139, 124, 111, 0.55) 3px 4px,
+      transparent 4px
     );
 }
 
 /* =========================
    NOTE POSITIONS
-========================= */
+   ========================= */
 
 /* top layer */
 .scroll-1 {
@@ -435,6 +421,20 @@ header {
   transform: rotate(-6deg);
 }
 
+/*
+   More visual density below the label area.
+   These use the same 14 notes but position them
+   with the label sitting visually above the pile.
+*/
+
+.jar-body .scroll:nth-child(3) {
+  margin-top: 8px;
+}
+
+.jar-body .scroll:nth-child(4) {
+  margin-top: 5px;
+}
+
 /* =========================
    LABEL
 ========================= */
@@ -442,13 +442,10 @@ header {
 .jar-label {
   position: absolute;
   z-index: 7;
-
   left: 50%;
   top: 88px;
-
   width: 101px;
   min-height: 70px;
-
   transform: translateX(-50%);
 
   display: flex;
@@ -474,45 +471,25 @@ header {
   pointer-events: none;
 }
 
-/* =========================
-   SYMBOL COLORS
-========================= */
+/*
+   Jar-specific symbol colors.
+   These work best if the symbol in the HTML is
+   a normal text character such as ♥ or ♡.
+*/
 
-/* first jar — red */
 .jar-card:nth-child(1) .jar-label {
   color: var(--red);
 }
 
-/* second jar — orange */
 .jar-card:nth-child(2) .jar-label {
   color: var(--orange);
 }
 
-/* third jar — pink */
 .jar-card:nth-child(3) .jar-label {
   color: var(--pink);
 }
 
-/* fourth jar — yellow */
 .jar-card:nth-child(4) .jar-label {
-  color: var(--yellow);
-}
-
-/* if symbol is wrapped in a span,
-   only the symbol gets the jar color */
-.jar-card:nth-child(1) .jar-label span {
-  color: var(--red);
-}
-
-.jar-card:nth-child(2) .jar-label span {
-  color: var(--orange);
-}
-
-.jar-card:nth-child(3) .jar-label span {
-  color: var(--pink);
-}
-
-.jar-card:nth-child(4) .jar-label span {
   color: var(--yellow);
 }
 
@@ -522,9 +499,7 @@ header {
 
 .jar-status {
   margin-top: 15px;
-
   color: #9a8b80;
-
   font-size: 0.78rem;
   line-height: 1.4;
 }
@@ -549,10 +524,7 @@ header {
   --jar-color: rgba(228, 207, 120, 0.55);
 }
 
-/* =========================
-   HOVER
-========================= */
-
+/* hover */
 .jar-button:hover .jar {
   transform: translateY(-5px);
 }
@@ -582,10 +554,7 @@ header {
 }
 
 .jar-button.opening .jar-lid {
-  transform:
-    translateX(-50%)
-    translateY(-12px)
-    rotate(-2deg);
+  transform: translateX(-50%) translateY(-12px) rotate(-2deg);
 }
 
 /* =========================
@@ -604,7 +573,6 @@ header {
   padding: 24px;
 
   background: rgba(67, 55, 48, 0.35);
-
   backdrop-filter: blur(5px);
 }
 
@@ -614,9 +582,7 @@ header {
 
 .dose-box {
   position: relative;
-
   width: min(470px, 92vw);
-
   padding: 42px 34px 35px;
 
   border-radius: 20px;
@@ -677,7 +643,6 @@ header {
 
 .dose-close {
   position: absolute;
-
   top: 13px;
   right: 16px;
 
@@ -710,9 +675,7 @@ footer {
 
 footer p {
   margin: 4px 0;
-
   color: #a09185;
-
   font-size: 0.76rem;
   line-height: 1.5;
 }
