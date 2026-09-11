@@ -1,7 +1,6 @@
 :root {
   --background: #f8f1e7;
   --paper: #fffaf2;
-
   --text: #463c35;
   --soft-text: #8b7b6d;
 
@@ -14,14 +13,12 @@
 }
 
 
-/* =========================
-   RESET
-========================= */
+/* =========================================
+   GLOBAL
+   ========================================= */
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -29,191 +26,172 @@ html {
 }
 
 body {
+  margin: 0;
   min-height: 100vh;
 
   background:
     radial-gradient(
       circle at top,
       #fffaf3 0%,
-      var(--background) 58%,
-      #f4e9da 100%
+      var(--background) 55%,
+      #f4eadf 100%
     );
 
   color: var(--text);
 
   font-family: "DM Sans", sans-serif;
 
-  overflow-x: hidden;
-}
-
-button {
-  font: inherit;
+  -webkit-font-smoothing: antialiased;
 }
 
 
-/* =========================
-   PAGE
-========================= */
-
-.page {
-  width: min(1100px, 92%);
-
-  margin: 0 auto;
-
-  padding: 70px 0 50px;
-}
-
-
-/* =========================
-   HEADER
-========================= */
+/* =========================================
+   HERO
+   ========================================= */
 
 .hero {
   text-align: center;
 
-  margin-bottom: 60px;
-}
-
-.title-wrap {
-  display: inline-flex;
-
-  align-items: baseline;
-
-  gap: 12px;
+  padding: 80px 20px 35px;
 }
 
 .hero h1 {
+  margin: 0;
+
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(3rem, 7vw, 5rem);
-
-  line-height: 0.95;
+  font-size: clamp(2.4rem, 5vw, 4rem);
 
   font-weight: 600;
 
-  letter-spacing: -2px;
+  letter-spacing: -0.03em;
 }
 
-.hero h1 span {
-  position: relative;
-}
+.hero p {
+  margin: 12px auto 0;
 
-.hero h1 span::after {
-  content: "";
-
-  position: absolute;
-
-  left: 3px;
-  right: 3px;
-  bottom: -3px;
-
-  height: 3px;
-
-  background: #d9bba3;
-
-  border-radius: 50%;
-}
-
-.subtitle-title {
-  font-size: 0.9rem;
-
-  letter-spacing: 2px;
+  max-width: 560px;
 
   color: var(--soft-text);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
 }
 
+
+/* =========================================
+   INTRO
+   ========================================= */
+
 .intro {
-  margin-top: 23px;
+  text-align: center;
 
-  font-family: "Playfair Display", serif;
+  max-width: 650px;
 
-  font-size: 1.08rem;
+  margin: 0 auto 45px;
 
-  font-style: italic;
+  padding: 0 20px;
+}
 
-  color: #77685c;
+.intro p {
+  margin: 0;
+
+  color: var(--soft-text);
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
 }
 
 .take-note {
-  margin-top: 13px;
+  margin-top: 15px;
 
-  font-size: 0.76rem;
+  font-size: 0.8rem;
 
-  letter-spacing: 1.4px;
+  font-style: italic;
 
-  color: #a08d7c;
+  color: #a39486;
 }
 
 
-/* =========================
+/* =========================================
    JAR GRID
-========================= */
+   ========================================= */
 
 .jar-grid {
+  width: min(900px, calc(100% - 40px));
+
+  margin: 0 auto;
+
   display: grid;
 
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 72px 60px;
+  column-gap: 60px;
+  row-gap: 72px;
 }
 
 
-/* =========================
+/* =========================================
    JAR CARD
-========================= */
+   ========================================= */
 
 .jar-card {
-  text-align: center;
-
   display: flex;
 
   flex-direction: column;
 
   align-items: center;
+
+  text-align: center;
 }
 
 .jar-info {
-  min-height: 91px;
+  margin-bottom: 18px;
 }
 
 .jar-info h2 {
+  margin: 0;
+
   font-family: "Playfair Display", serif;
 
-  font-size: 1.4rem;
+  font-size: 1.45rem;
 
   font-weight: 600;
-
-  margin-bottom: 10px;
 }
 
 .jar-info p {
-  font-size: 0.77rem;
-
-  line-height: 1.65;
+  margin: 7px 0 0;
 
   color: var(--soft-text);
+
+  font-size: 0.82rem;
+
+  line-height: 1.55;
 }
 
 
-/* =========================
+/* =========================================
    JAR BUTTON
-========================= */
+   ========================================= */
 
 .jar-button {
-  border: none;
+  position: relative;
+
+  display: block;
+
+  padding: 0;
+
+  border: 0;
 
   background: transparent;
 
   cursor: pointer;
 
-  margin-top: 18px;
+  font: inherit;
 
-  padding: 12px 20px 0;
-
-  transition:
-    transform 0.25s ease,
-    filter 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .jar-button:hover {
@@ -221,750 +199,652 @@ button {
 }
 
 .jar-button:focus-visible {
-  outline: 2px solid #9b8270;
+  outline: 2px solid var(--soft-text);
 
-  outline-offset: 8px;
+  outline-offset: 10px;
 
-  border-radius: 25px;
+  border-radius: 20px;
+}
+
+.jar-button {
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
 }
 
 
-/* =========================
-   BOTTLE
-========================= */
+/* =========================================
+   JAR
+   ========================================= */
 
 .jar {
   position: relative;
 
   width: 190px;
-
   height: 230px;
 
   margin: 0 auto;
-
-  transition:
-    transform 0.3s ease;
 }
 
 
-/* =========================
-   LID
-========================= */
+/* =========================================
+   JAR LID
+   ========================================= */
 
 .jar-lid {
   position: absolute;
 
   top: 0;
-
   left: 40px;
 
   width: 110px;
-
   height: 42px;
 
   z-index: 20;
 
   transition:
-    transform 0.55s
-    cubic-bezier(.2,.8,.2,1);
+    transform 0.5s ease,
+    top 0.5s ease;
 }
 
 .lid-top {
   position: absolute;
 
   top: 0;
-
   left: 0;
 
-  width: 100%;
+  width: 110px;
+  height: 18px;
 
-  height: 17px;
+  border-radius: 50%;
 
-  border-radius:
-    8px 8px 5px 5px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #c9b9aa,
-      #ae9d8e
-    );
+  background: #d7c9ba;
 
   box-shadow:
-    inset 0 2px 2px
-      rgba(255,255,255,0.4),
-
-    0 2px 4px
-      rgba(0,0,0,0.08);
+    inset 0 2px 3px rgba(255, 255, 255, 0.55),
+    0 3px 5px rgba(67, 51, 39, 0.12);
 }
 
 .lid-line {
   position: absolute;
 
-  top: 14px;
+  top: 13px;
+  left: 4px;
 
-  left: 5px;
+  width: 102px;
+  height: 27px;
 
-  width: calc(100% - 10px);
+  border-radius: 0 0 9px 9px;
 
-  height: 20px;
+  background: linear-gradient(
+    to bottom,
+    #cdbdac,
+    #bfae9c
+  );
 
-  border-radius:
-    3px 3px 10px 10px;
-
-  background:
-    repeating-linear-gradient(
-      0deg,
-      #a79788 0,
-      #a79788 2px,
-      #b9a99a 2px,
-      #b9a99a 4px
-    );
+  box-shadow:
+    inset 0 2px 2px rgba(255, 255, 255, 0.3),
+    0 4px 6px rgba(67, 51, 39, 0.12);
 }
 
 
-/* =========================
-   SOFT ROUND BOTTLE BODY
-========================= */
+/* =========================================
+   JAR BODY
+   ========================================= */
 
 .jar-body {
   position: absolute;
 
   left: 15px;
-
   right: 15px;
-
   bottom: 0;
 
   height: 207px;
 
   overflow: hidden;
 
-  /*
-    Rounded bottle silhouette.
-    No clip-path, so the shape
-    stays soft and natural.
-  */
+  border-radius: 22px 22px 30px 30px;
 
-  border-radius:
-    40px 40px 48px 48px;
+  border: 2px solid rgba(255, 255, 255, 0.65);
 
-  border:
-    2px solid
-    rgba(255,255,255,0.68);
+  background: rgba(255, 255, 255, 0.24);
 
   box-shadow:
+    inset 0 0 15px rgba(255, 255, 255, 0.45),
+    0 12px 25px var(--shadow);
 
-    inset 8px 0 14px
-      rgba(255,255,255,0.22),
-
-    inset -8px 0 15px
-      rgba(70,45,30,0.04),
-
-    inset 0 -10px 15px
-      rgba(70,45,30,0.05),
-
-    0 14px 26px
-      var(--shadow);
+  backdrop-filter: blur(2px);
 }
 
 
-/*
-  Slightly narrower shoulder,
-  created with a pseudo element.
-*/
+/* jar shoulders */
 
 .jar-body::before {
   content: "";
 
   position: absolute;
 
-  top: -2px;
+  top: -12px;
+  left: 10px;
+  right: 10px;
 
-  left: 26px;
+  height: 35px;
 
-  right: 26px;
+  border-radius: 50%;
 
-  height: 40px;
+  background: inherit;
 
-  border-radius:
-    0 0 28px 28px;
-
-  background:
-    inherit;
-
-  border-bottom:
-    2px solid
-    rgba(255,255,255,0.12);
+  border-top: 2px solid rgba(255, 255, 255, 0.65);
 
   z-index: 1;
 }
 
 
-/* =========================
-   COLORS
-========================= */
+/* =========================================
+   JAR COLORS
+   ========================================= */
 
 .red-card .jar-body {
   background:
     linear-gradient(
-      145deg,
-      rgba(231,151,151,0.65),
-      rgba(207,119,119,0.76)
+      180deg,
+      rgba(217, 130, 130, 0.28),
+      rgba(217, 130, 130, 0.18)
     );
 }
 
 .orange-card .jar-body {
   background:
     linear-gradient(
-      145deg,
-      rgba(235,172,116,0.65),
-      rgba(218,143,82,0.76)
+      180deg,
+      rgba(229, 161, 106, 0.30),
+      rgba(229, 161, 106, 0.18)
     );
 }
 
 .pink-card .jar-body {
   background:
     linear-gradient(
-      145deg,
-      rgba(233,171,185,0.65),
-      rgba(216,140,161,0.76)
+      180deg,
+      rgba(227, 160, 175, 0.30),
+      rgba(227, 160, 175, 0.18)
     );
 }
 
 .yellow-card .jar-body {
   background:
     linear-gradient(
-      145deg,
-      rgba(235,218,137,0.65),
-      rgba(216,195,103,0.76)
+      180deg,
+      rgba(228, 207, 120, 0.32),
+      rgba(228, 207, 120, 0.18)
     );
 }
 
 
-/* =========================
+/* =========================================
    GLASS SHINE
-========================= */
+   ========================================= */
 
 .glass-shine {
   position: absolute;
 
-  top: 35px;
+  top: 20px;
+  left: 18px;
 
-  left: 27px;
-
-  width: 12px;
-
-  height: 125px;
+  width: 10px;
+  height: 140px;
 
   border-radius: 50%;
 
-  background:
-    rgba(255,255,255,0.35);
+  background: rgba(255, 255, 255, 0.28);
 
-  filter: blur(0.5px);
-
-  transform:
-    rotate(4deg);
+  transform: rotate(3deg);
 
   z-index: 15;
+
+  pointer-events: none;
 }
 
 
-/* =========================
-   ROLLED PAPER NOTES
-========================= */
+/* =========================================
+   ROLLED PAPERS
+   small • thin • many • stacked
+   ========================================= */
 
 .scroll {
   position: absolute;
 
-  width: 32px;
+  width: 25px;
+  height: 10px;
 
-  height: 22px;
-
-  border-radius:
-    5px 8px 8px 5px;
+  border-radius: 4px 6px 6px 4px;
 
   background:
     linear-gradient(
-      180deg,
-      #fffaf0,
-      #eadcc7
+      90deg,
+      #fffdf7 0%,
+      #f8efe2 72%,
+      #e8dccd 100%
     );
 
   box-shadow:
-    0 3px 5px
-      rgba(65,45,30,0.14);
-
-  z-index: 5;
+    0 2px 3px rgba(67, 51, 39, 0.10),
+    inset 0 1px 1px rgba(255, 255, 255, 0.75);
 
   transform-origin: center;
+
+  z-index: 4;
 }
 
 
-/*
-  Spiral / rolled end.
-*/
+/* rolled edge */
 
 .scroll::before {
   content: "";
 
   position: absolute;
 
-  left: -3px;
+  left: -1px;
+  top: 1px;
 
-  top: 2px;
-
-  width: 19px;
-
-  height: 18px;
+  width: 8px;
+  height: 8px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
-      circle,
-      #d4bda1 0 16%,
-      #fff8ea 18% 32%,
-      #d9c1a5 34% 43%,
-      #fff8ea 45% 57%,
-      #d9c1a5 59% 64%,
-      #fff8ea 66%
+      circle at center,
+      transparent 0 2px,
+      rgba(120, 100, 82, 0.22) 2.3px 3px,
+      transparent 3.2px
     );
+
+  opacity: 0.75;
 }
 
 
-/*
-  Tiny writing lines.
-*/
+/* tiny writing */
 
 .scroll span {
   position: absolute;
 
   right: 4px;
+  top: 3px;
 
-  top: 7px;
+  width: 11px;
+  height: 1px;
 
-  width: 9px;
+  border-radius: 2px;
 
-  height: 2px;
-
-  background:
-    rgba(100,80,60,0.18);
-
-  box-shadow:
-    0 4px
-    rgba(100,80,60,0.12);
+  background: rgba(120, 105, 90, 0.18);
 }
 
 
-/* =========================
-   NOTE POSITIONS
-========================= */
+/* =========================================
+   28 ROLLS
+   ========================================= */
+
+/* bottom */
 
 .scroll-1 {
-  left: 18px;
-  bottom: 30px;
-  transform: rotate(-18deg);
+  left: 27px;
+  bottom: 22px;
+  transform: rotate(-8deg);
+  z-index: 3;
 }
 
 .scroll-2 {
-  left: 45px;
-  bottom: 25px;
-  transform: rotate(11deg);
-  z-index: 7;
+  left: 54px;
+  bottom: 20px;
+  transform: rotate(6deg);
+  z-index: 3;
 }
 
 .scroll-3 {
-  left: 74px;
-  bottom: 27px;
+  left: 83px;
+  bottom: 22px;
+  transform: rotate(-4deg);
+  z-index: 3;
+}
+
+.scroll-4 {
+  left: 112px;
+  bottom: 21px;
+  transform: rotate(9deg);
+  z-index: 3;
+}
+
+
+/* second */
+
+.scroll-5 {
+  left: 38px;
+  bottom: 31px;
+  transform: rotate(5deg);
+  z-index: 4;
+}
+
+.scroll-6 {
+  left: 68px;
+  bottom: 30px;
+  transform: rotate(-7deg);
+  z-index: 4;
+}
+
+.scroll-7 {
+  left: 96px;
+  bottom: 32px;
+  transform: rotate(4deg);
+  z-index: 4;
+}
+
+.scroll-8 {
+  left: 124px;
+  bottom: 30px;
+  transform: rotate(-6deg);
+  z-index: 4;
+}
+
+
+/* third */
+
+.scroll-9 {
+  left: 25px;
+  bottom: 41px;
+  transform: rotate(7deg);
+  z-index: 5;
+}
+
+.scroll-10 {
+  left: 52px;
+  bottom: 42px;
+  transform: rotate(-5deg);
+  z-index: 5;
+}
+
+.scroll-11 {
+  left: 81px;
+  bottom: 40px;
+  transform: rotate(8deg);
+  z-index: 5;
+}
+
+.scroll-12 {
+  left: 110px;
+  bottom: 42px;
+  transform: rotate(-3deg);
+  z-index: 5;
+}
+
+.scroll-13 {
+  left: 132px;
+  bottom: 40px;
+  transform: rotate(6deg);
+  z-index: 5;
+}
+
+
+/* middle */
+
+.scroll-14 {
+  left: 34px;
+  bottom: 52px;
+  transform: rotate(-7deg);
+  z-index: 6;
+}
+
+.scroll-15 {
+  left: 63px;
+  bottom: 50px;
+  transform: rotate(4deg);
+  z-index: 6;
+}
+
+.scroll-16 {
+  left: 92px;
+  bottom: 52px;
+  transform: rotate(-6deg);
+  z-index: 6;
+}
+
+.scroll-17 {
+  left: 120px;
+  bottom: 50px;
+  transform: rotate(8deg);
+  z-index: 6;
+}
+
+
+/* upper-middle */
+
+.scroll-18 {
+  left: 25px;
+  bottom: 63px;
+  transform: rotate(5deg);
+  z-index: 7;
+}
+
+.scroll-19 {
+  left: 51px;
+  bottom: 61px;
+  transform: rotate(-8deg);
+  z-index: 7;
+}
+
+.scroll-20 {
+  left: 80px;
+  bottom: 63px;
+  transform: rotate(6deg);
+  z-index: 7;
+}
+
+.scroll-21 {
+  left: 109px;
+  bottom: 61px;
+  transform: rotate(-4deg);
+  z-index: 7;
+}
+
+.scroll-22 {
+  left: 132px;
+  bottom: 63px;
+  transform: rotate(7deg);
+  z-index: 7;
+}
+
+
+/* upper */
+
+.scroll-23 {
+  left: 36px;
+  bottom: 74px;
+  transform: rotate(-6deg);
+  z-index: 8;
+}
+
+.scroll-24 {
+  left: 65px;
+  bottom: 72px;
+  transform: rotate(5deg);
+  z-index: 8;
+}
+
+.scroll-25 {
+  left: 94px;
+  bottom: 74px;
   transform: rotate(-7deg);
   z-index: 8;
 }
 
-.scroll-4 {
-  left: 102px;
-  bottom: 31px;
-  transform: rotate(16deg);
-  z-index: 7;
-}
-
-.scroll-5 {
-  left: 129px;
-  bottom: 28px;
-  transform: rotate(-11deg);
-}
-
-.scroll-6 {
-  left: 29px;
-  bottom: 54px;
-  transform: rotate(7deg);
+.scroll-26 {
+  left: 121px;
+  bottom: 72px;
+  transform: rotate(4deg);
   z-index: 8;
 }
 
-.scroll-7 {
-  left: 58px;
-  bottom: 55px;
-  transform: rotate(-15deg);
-  z-index: 9;
-}
 
-.scroll-8 {
-  left: 88px;
-  bottom: 52px;
-  transform: rotate(10deg);
-  z-index: 10;
-}
+/* top */
 
-.scroll-9 {
-  left: 117px;
-  bottom: 55px;
+.scroll-27 {
+  left: 49px;
+  bottom: 84px;
   transform: rotate(-5deg);
   z-index: 9;
 }
 
-.scroll-10 {
-  left: 143px;
-  bottom: 57px;
-  transform: rotate(13deg);
-  z-index: 8;
-}
-
-.scroll-11 {
-  left: 43px;
-  bottom: 82px;
-  transform: rotate(-9deg);
-  z-index: 10;
-}
-
-.scroll-12 {
-  left: 73px;
-  bottom: 80px;
-  transform: rotate(14deg);
-  z-index: 11;
-}
-
-.scroll-13 {
-  left: 103px;
-  bottom: 82px;
-  transform: rotate(-12deg);
-  z-index: 10;
-}
-
-.scroll-14 {
-  left: 130px;
-  bottom: 79px;
+.scroll-28 {
+  left: 78px;
+  bottom: 86px;
   transform: rotate(6deg);
   z-index: 9;
 }
 
 
-/* =========================
+/* =========================================
    JAR LABEL
-========================= */
+   ========================================= */
 
 .jar-label {
   position: absolute;
 
+  bottom: 94px;
   left: 50%;
 
-  bottom: 94px;
-
-  transform:
-    translateX(-50%);
-
   width: 72px;
-
   height: 47px;
+
+  transform: translateX(-50%);
+
+  z-index: 16;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
-
-  z-index: 16;
-
-  background:
-    rgba(255,250,240,0.9);
-
-  border-radius: 6px;
-
-  box-shadow:
-    0 4px 8px
-      rgba(60,40,30,0.08);
 }
 
 .jar-label span {
-  font-family:
-    "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
 
   font-size: 1.25rem;
 
   opacity: 0.55;
+
+  transition: color 0.3s ease;
 }
 
 
-/* =========================
-   HOVER
-========================= */
+/* =========================================
+   SYMBOL COLOR PER JAR
+   ========================================= */
 
-@keyframes gentleWiggle {
-
-  0% {
-    transform: rotate(0);
-  }
-
-  25% {
-    transform: rotate(-3deg);
-  }
-
-  50% {
-    transform: rotate(3deg);
-  }
-
-  75% {
-    transform: rotate(-2deg);
-  }
-
-  100% {
-    transform: rotate(0);
-  }
+.red-card .jar-label span {
+  color: var(--red);
 }
 
-@keyframes energeticShake {
-
-  0% {
-    transform: translateX(0);
-  }
-
-  20% {
-    transform:
-      translateX(-5px)
-      rotate(-2deg);
-  }
-
-  40% {
-    transform:
-      translateX(5px)
-      rotate(2deg);
-  }
-
-  60% {
-    transform:
-      translateX(-4px)
-      rotate(-2deg);
-  }
-
-  80% {
-    transform:
-      translateX(3px)
-      rotate(1deg);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
+.orange-card .jar-label span {
+  color: var(--orange);
 }
+
+.pink-card .jar-label span {
+  color: var(--pink);
+}
+
+.yellow-card .jar-label span {
+  color: var(--yellow);
+}
+
+
+/* =========================================
+   HOVER ANIMATIONS
+   ========================================= */
 
 .red-card .jar-button:hover .jar {
-  animation:
-    gentleWiggle 0.55s ease;
+  animation: gentleWiggle 0.7s ease;
 }
 
 .orange-card .jar-button:hover .jar {
-  animation:
-    energeticShake 0.45s ease;
+  animation: energeticShake 0.5s ease;
 }
 
 .pink-card .jar-button:hover .jar {
-  transform:
-    rotate(2deg)
-    translateY(-2px);
+  animation: softTilt 0.7s ease;
 }
 
 .yellow-card .jar-button:hover .jar {
-  filter:
-    drop-shadow(
-      0 0 13px
-      rgba(228,207,120,0.5)
-    );
+  animation: gentleGlow 1s ease;
 }
 
 
-/* =========================
+/* =========================================
    OPENING ANIMATION
-========================= */
+   ========================================= */
 
-@keyframes jarShake {
-
-  0% {
-    transform:
-      translateX(0)
-      rotate(0);
-  }
-
-  20% {
-    transform:
-      translateX(-6px)
-      rotate(-2deg);
-  }
-
-  40% {
-    transform:
-      translateX(6px)
-      rotate(2deg);
-  }
-
-  60% {
-    transform:
-      translateX(-5px)
-      rotate(-2deg);
-  }
-
-  80% {
-    transform:
-      translateX(4px)
-      rotate(1deg);
-  }
-
-  100% {
-    transform:
-      translateX(0)
-      rotate(0);
-  }
+.jar-button.opening .jar {
+  animation: jarShake 0.45s ease;
 }
 
-@keyframes lidOpen {
+.jar-button.opening .jar-lid {
+  top: -16px;
 
-  0% {
-    transform:
-      translateY(0)
-      rotate(0);
-  }
-
-  40% {
-    transform:
-      translateY(-7px)
-      rotate(-4deg);
-  }
-
-  100% {
-    transform:
-      translateY(-15px)
-      rotate(-8deg);
-  }
-}
-
-.jar-card.opening .jar {
-  animation:
-    jarShake 0.55s ease;
-}
-
-.jar-card.opening .jar-lid {
-  animation:
-    lidOpen 0.65s
-    ease
-    0.4s
-    forwards;
+  transform: rotate(-7deg) translateX(5px);
 }
 
 
-/* =========================
+/* =========================================
    TAKEN STATE
-========================= */
+   ========================================= */
 
-.jar-card.taken .jar-button {
-  opacity: 0.78;
+.jar-button.taken {
+  opacity: 0.65;
 
-  filter:
-    saturate(0.65);
+  pointer-events: none;
 }
 
-.jar-card.taken .jar-button:hover {
-  transform: none;
+.jar-button.taken .jar {
+  filter: grayscale(0.15);
 }
+
+
+/* =========================================
+   JAR STATUS
+   ========================================= */
 
 .jar-status {
   min-height: 20px;
 
-  margin-top: 8px;
+  margin-top: 12px;
 
-  font-size: 0.67rem;
+  color: var(--soft-text);
 
-  letter-spacing: 0.4px;
+  font-size: 0.72rem;
 
-  color: #9a8878;
+  line-height: 1.4;
 }
 
 
-/* =========================
-   DAILY STATUS
-========================= */
-
-.daily-status {
-  text-align: center;
-
-  margin:
-    70px 0
-    45px;
-}
-
-.daily-status p {
-  font-family:
-    "Playfair Display",
-    serif;
-
-  font-size: 1.05rem;
-
-  font-style: italic;
-
-  color: #77685c;
-}
-
-
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+   ========================================= */
 
 footer {
+  padding: 70px 20px 45px;
+
   text-align: center;
 
-  padding-top: 25px;
+  color: #a39486;
 
-  border-top:
-    1px solid
-    rgba(100,80,60,0.12);
+  font-size: 0.75rem;
 
-  color: #988879;
-}
-
-footer p {
-  font-size: 0.74rem;
-
-  letter-spacing: 1px;
-}
-
-footer span {
-  display: block;
-
-  margin-top: 7px;
-
-  font-size: 0.68rem;
-}
-
-.footer-love {
-  margin-top: 28px;
-
-  font-size: 0.68rem;
-
-  opacity: 0.7;
+  line-height: 1.7;
 }
 
 
-/* =========================
+/* =========================================
    MODAL
-========================= */
+   ========================================= */
 
 .modal {
   position: fixed;
@@ -976,14 +856,17 @@ footer span {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  padding: 25px;
+  padding: 20px;
 
-  visibility: hidden;
+  background: rgba(70, 60, 53, 0.35);
+
+  backdrop-filter: blur(7px);
 
   opacity: 0;
+
+  visibility: hidden;
 
   transition:
     opacity 0.3s ease,
@@ -991,348 +874,215 @@ footer span {
 }
 
 .modal.show {
-  visibility: visible;
-
   opacity: 1;
+
+  visibility: visible;
 }
 
-.modal-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    rgba(49,38,30,0.48);
-
-  backdrop-filter:
-    blur(5px);
-}
-
-
-/* =========================
-   NOTE MODAL
-========================= */
-
-.dose-note {
+.modal-content {
   position: relative;
 
-  z-index: 2;
+  width: min(500px, 100%);
 
-  width:
-    min(470px, 100%);
+  padding: 45px 35px;
 
-  min-height: 310px;
+  border-radius: 24px;
 
-  padding:
-    55px
-    45px
-    42px;
+  background: var(--paper);
+
+  box-shadow:
+    0 25px 70px rgba(67, 51, 39, 0.20);
 
   text-align: center;
 
-  background:
-    linear-gradient(
-      135deg,
-      #fffaf0,
-      #fdf3e3
-    );
+  transform: translateY(15px) scale(0.97);
 
-  border-radius: 7px;
-
-  box-shadow:
-    0 25px 60px
-    rgba(40,30,20,0.22);
-
-  transform:
-    translateY(20px)
-    scale(0.95);
-
-  transition:
-    transform 0.35s
-    cubic-bezier(.2,.8,.2,1);
+  transition: transform 0.35s ease;
 }
 
-.modal.show .dose-note {
-  transform:
-    translateY(0)
-    scale(1);
+.modal.show .modal-content {
+  transform: translateY(0) scale(1);
 }
 
-.dose-note::before {
-  content: "";
+.modal-content h3 {
+  margin: 0 0 18px;
 
-  position: absolute;
+  font-family: "Playfair Display", serif;
 
-  inset: 10px;
-
-  border:
-    1px solid
-    rgba(130,100,70,0.12);
-
-  border-radius: 4px;
-
-  pointer-events: none;
+  font-size: 1.7rem;
 }
 
+.modal-content p {
+  margin: 0;
 
-/* =========================
-   CLOSE
-========================= */
-
-.close-button {
-  position: absolute;
-
-  top: 14px;
-
-  right: 17px;
-
-  width: 32px;
-
-  height: 32px;
-
-  border: none;
-
-  background: transparent;
-
-  cursor: pointer;
-
-  color: #8d7968;
-
-  font-size: 1.5rem;
-
-  line-height: 1;
-
-  z-index: 3;
-
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease;
-}
-
-.close-button:hover {
-  transform:
-    rotate(90deg);
-
-  color: #514237;
-}
-
-
-/* =========================
-   MODAL CONTENT
-========================= */
-
-.note-decoration {
-  font-size: 1rem;
-
-  color: #b49a82;
-
-  margin-bottom: 8px;
-}
-
-.dose-label {
-  font-size: 0.68rem;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-
-  color: #9b8673;
-}
-
-.dose-repeat {
-  min-height: 0;
-
-  margin-top: 12px;
-
-  font-size: 0.76rem;
-
-  color: #a18d7c;
-}
-
-.note-divider {
-  margin:
-    18px 0
-    23px;
-
-  font-size: 0.85rem;
-
-  color: #c29d81;
-}
-
-.dose-message {
-  font-family:
-    "Playfair Display",
-    serif;
-
-  font-size: 1.3rem;
-
-  line-height: 1.65;
-
-  color: #4b4038;
-
-  min-height: 90px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-}
-
-.note-bottom {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 8px;
-
-  margin-top: 28px;
-}
-
-.note-bottom span {
-  font-family:
-    "Playfair Display",
-    serif;
+  color: var(--soft-text);
 
   font-size: 0.95rem;
 
-  color: #66574b;
+  line-height: 1.8;
 }
 
-.note-bottom small {
-  font-size: 0.65rem;
+.modal-close {
+  position: absolute;
 
-  letter-spacing: 0.7px;
+  top: 14px;
+  right: 17px;
 
-  color: #a18e7e;
+  width: 32px;
+  height: 32px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: var(--soft-text);
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(70, 60, 53, 0.07);
+
+  transform: rotate(90deg);
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes gentleWiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-2deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes energeticShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateX(3px) rotate(1deg);
+  }
+
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes softTilt {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes gentleGlow {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.08);
+  }
+}
+
+@keyframes jarShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-4px) rotate(-1deg);
+  }
+
+  40% {
+    transform: translateX(4px) rotate(1deg);
+  }
+
+  60% {
+    transform: translateX(-3px);
+  }
+
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
 
 @media (max-width: 700px) {
 
-  .page {
-    width:
-      min(92%, 460px);
-
-    padding-top: 45px;
-  }
-
   .hero {
-    margin-bottom: 48px;
-  }
-
-  .title-wrap {
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 3px;
-  }
-
-  .hero h1 {
-    font-size: 3.5rem;
-  }
-
-  .subtitle-title {
-    font-size: 0.75rem;
-
-    letter-spacing: 2.5px;
-  }
-
-  .intro {
-    font-size: 0.98rem;
-
-    margin-top: 20px;
-  }
-
-  .take-note {
-    font-size: 0.7rem;
+    padding-top: 55px;
   }
 
   .jar-grid {
+    width: min(430px, calc(100% - 30px));
+
     grid-template-columns: 1fr;
 
-    gap: 65px;
-  }
-
-  .jar-info {
-    min-height: auto;
+    row-gap: 60px;
   }
 
   .jar-info h2 {
     font-size: 1.35rem;
   }
 
-  .jar-info p {
-    font-size: 0.74rem;
-  }
-
   .jar {
-    width: 180px;
-
-    height: 220px;
+    width: 190px;
+    height: 230px;
   }
-
-  .jar-lid {
-    left: 38px;
-
-    width: 104px;
-  }
-
-  .jar-body {
-    height: 198px;
-  }
-
-  .daily-status {
-    margin-top: 65px;
-  }
-
-  .dose-note {
-    padding:
-      50px
-      30px
-      38px;
-  }
-
-  .dose-message {
-    font-size: 1.2rem;
-  }
-
 }
 
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 380px) {
 
+  .hero {
+    padding-top: 45px;
+  }
+
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
+  }
+
+  .intro {
+    padding: 0 18px;
   }
 
   .jar-grid {
-    gap: 55px;
+    width: calc(100% - 20px);
   }
-
-  .jar {
-    transform: scale(0.94);
-  }
-
-  .jar-button:hover .jar {
-    transform:
-      scale(0.94)
-      translateY(-3px);
-  }
-
-  .dose-note {
-    padding-left: 25px;
-
-    padding-right: 25px;
-  }
-
 }
