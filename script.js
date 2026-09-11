@@ -13,26 +13,440 @@
    - one message is selected per jar per day
 ========================================================= */
 
+```js
 const messages = {
 
+  /* =========================================================
+     ❤️ COMFORT — WHEN LIFE SUCKS
+     ========================================================= */
+
   comfort: [
-    "Hey. Whatever happened today, you don't have to carry all of it at once. Come here for a second. Breathe. I'm here."
+
+    "Hey. Whatever happened today, you don't have to carry all of it at once. Come here for a second. Breathe. I'm here.",
+
+    "You don't have to be okay every second. Some days are just hard. Let this one be hard, and let yourself rest.",
+
+    "Come here. No fixing, no explaining, no pretending. You can just exist beside me for a while.",
+
+    "Whatever went wrong today, it doesn't make you a failure. One bad day is still just one day.",
+
+    "Take a breath, sweetheart. The world can wait a little. You deserve a moment where nothing is expected from you.",
+
+    "I'm sorry today wasn't gentle with you. If I could, I'd steal you away somewhere quiet and make you forget about everything for a while.",
+
+    "You don't have to figure everything out tonight. Some answers can wait until tomorrow.",
+
+    "Hey, look at me. You're doing better than you think you are. I know it doesn't feel like it right now, but I see you.",
+
+    "It's okay if all you managed today was getting through the day. Sometimes that is more than enough.",
+
+    "You can put the weight down for a little while. You don't have to prove that you can carry everything alone.",
+
+    "Whatever you're feeling right now, you don't have to apologize for it. Feel it. I'll stay.",
+
+    "Bad days don't get to decide what your whole life looks like. Tomorrow is still yours.",
+
+    "Come closer. Consider this your tiny reminder that you are loved even on the days you don't feel particularly lovable.",
+
+    "You are allowed to have messy days, tired days, angry days, quiet days. You're still you through all of them.",
+
+    "If today hurt, then let yourself admit that it hurt. You don't have to turn every wound into a lesson immediately.",
+
+    "Drink some water. Breathe slowly. Unclench your jaw. Yes, I'm bossing you around. It's because I care.",
+
+    "You don't need to accomplish anything impressive to deserve kindness. You deserve it simply because you're you.",
+
+    "If everything feels too loud, make your world smaller for a moment. Just you, your breath, and this little reminder from me.",
+
+    "I know you can handle a lot. But sweetheart, being strong doesn't mean you never get to lean on someone.",
+
+    "You are not behind. You are not late. You're just moving through your own life at your own pace.",
+
+    "Whatever happened today, please don't let one moment convince you that everything is ruined.",
+
+    "I'm proud of you for making it this far today. Even if nobody saw how hard it was.",
+
+    "Some days don't need productivity. Some days need food, water, sleep, and a little tenderness.",
+
+    "You don't have to make yourself smaller just because someone failed to appreciate you.",
+
+    "If I were there right now, I'd probably just sit next to you quietly until your breathing felt a little easier.",
+
+    "Hey. You survived every bad day you've had so far. This one isn't getting special treatment.",
+
+    "Please remember that being tired doesn't mean you're weak. It means you've been carrying things.",
+
+    "You can cry. You can complain. You can be annoyed. You can even be dramatic. I'll allow it.",
+
+    "There is still so much good waiting for you beyond whatever is hurting right now.",
+
+    "Don't make permanent conclusions about your life while you're having a terrible day.",
+
+    "Whatever you're blaming yourself for, take a breath before deciding you deserve all that blame.",
+
+    "You are allowed to rest before you completely run out of yourself.",
+
+    "If today feels like too much, then let's make the goal smaller: get through the next hour. That's it.",
+
+    "I hope you remember that you don't have to earn my care by being happy, productive, or easy to love.",
+
+    "Your feelings are real, but they are not always forecasts. What hurts today won't necessarily hurt forever.",
+
+    "Hey, sweetheart. One thing at a time. One breath at a time. We don't need to solve the universe tonight.",
+
+    "You don't have to have the perfect words for what you're feeling. Sometimes 'I feel awful' is enough.",
+
+    "I'm still here. Even if today made you feel like everyone and everything was against you.",
+
+    "You are more than whatever went wrong today. Please don't let a bad moment become your whole identity.",
+
+    "Eat something. Rest a little. Then decide what actually needs your attention. Not everything deserves access to you.",
+
+    "If nobody told you today: you are doing enough. You are enough.",
+
+    "I wish I could give you one of those hugs that makes your shoulders finally drop. For now, consider this a tiny digital one.",
+
+    "You don't need to be cheerful for me. You can show up exactly as you are.",
+
+    "Tomorrow doesn't need you to be perfect either. It just needs you to show up again.",
+
+    "Sometimes the kindest thing you can do is stop fighting the fact that you're tired.",
+
+    "I'm rooting for you even when you're not particularly rooting for yourself.",
+
+    "This feeling is allowed to pass through you. You don't have to build a home inside it.",
+
+    "Whatever today took from you, I hope tonight gives some of it back.",
+
+    "Come back to yourself, slowly. There's no rush. I'm right here.",
+
+    "For tonight, let this be enough: you made it here, you're still trying, and you're loved."
   ],
+
+
+  /* =========================================================
+     🧡 MOTIVATION — GET YOUR ASS UP
+     ========================================================= */
 
   motivation: [
-    "Get your ass up, sweetheart. You don't have to conquer the whole world today. Just do one thing. Then we'll see."
+
+    "Get your ass up, sweetheart. You don't have to conquer the whole world today. Just do one thing. Then we'll see.",
+
+    "Okay, enough staring at the ceiling. Pick one tiny thing and go do it. I'll be annoying about this until you do.",
+
+    "You don't need motivation first. Move first. Motivation can catch up later.",
+
+    "Come on. Shoes on. Water first. Then one small task. That's the deal.",
+
+    "Your future self is going to be very grateful that you got up today. Go make them proud.",
+
+    "You can complain while doing it. I don't care. Just do the thing.",
+
+    "No dramatic speeches today. Just get up and start. Five minutes. That's all I'm asking.",
+
+    "Sweetheart, your bed is not going to build the life you keep dreaming about. Up you go.",
+
+    "You don't need a perfect plan. You need a first step.",
+
+    "Go do something your tomorrow-self will thank you for. Tiny counts.",
+
+    "I know you don't feel like it. That's precisely why I'm telling you to get moving.",
+
+    "One email. One page. One shower. One meal. One task. Start somewhere.",
+
+    "You are absolutely capable of more than today's laziness is trying to convince you.",
+
+    "Get up. Stretch. Drink water. Then decide what deserves your energy today.",
+
+    "You don't have to finish everything. You just have to stop doing absolutely nothing.",
+
+    "Come on, love. Let's turn 'I don't feel like it' into 'fine, I'll do one thing.'",
+
+    "Nobody is asking you to run a marathon. We're literally asking you to stand up.",
+
+    "Your to-do list isn't going to attack you. Open it. Pick one. Begin.",
+
+    "You can rest later. Right now, give yourself ten honest minutes of effort.",
+
+    "I believe in you, which unfortunately means I am not letting you get away with doing nothing.",
+
+    "Get your ass up. This is your lovingly aggressive reminder.",
+
+    "Start badly. Start slowly. Start annoyed. Just start.",
+
+    "You don't need to feel ready. Most worthwhile things begin before you feel ready.",
+
+    "Do one useful thing before you scroll again. Deal?",
+
+    "Sweetheart, momentum is built from tiny actions. Go make one.",
+
+    "Today doesn't need to be your most productive day ever. It just needs a little movement.",
+
+    "Stop waiting for the magical moment when you'll suddenly want to do everything. It may not come.",
+
+    "Go wash your face. Sometimes that's where the comeback starts.",
+
+    "You can absolutely be tired and still take one small step.",
+
+    "I know you can do hard things. But today, let's start with an easy one.",
+
+    "Put the phone down for five minutes and go handle one thing. I'll still be here when you return.",
+
+    "Your dream life is built on boring little actions. Congratulations, today's little action is waiting.",
+
+    "You don't have to impress anyone. Just keep your promise to yourself today.",
+
+    "Go. Move. Begin. We'll figure out the rest once you're already moving.",
+
+    "A tiny amount of progress is still progress. Stop disrespecting your tiny wins.",
+
+    "You're not lazy forever just because you're unmotivated today. Shake it off.",
+
+    "Do it scared. Do it tired. Do it imperfectly. Just don't keep talking yourself out of it.",
+
+    "Sweetheart, you have things to do and a life to live. Up.",
+
+    "Give yourself twenty minutes. If you still hate it after that, we can negotiate.",
+
+    "You don't need permission to start again. Just start again.",
+
+    "Today is not ruined because the morning was unproductive. You still have hours left.",
+
+    "One little win. That's the mission.",
+
+    "Your excuses are getting very creative lately. Cute. Now get up.",
+
+    "You can take it slow without standing still.",
+
+    "Do the annoying thing first. You'll feel so much better afterward.",
+
+    "Don't wait until you feel confident. Action is allowed to come before confidence.",
+
+    "Come on, sweetheart. Give today a chance before deciding it's a lost cause.",
+
+    "You don't need to fix your whole life today. Just move it forward a little.",
+
+    "Get up. I promise the world looks slightly less offensive after water and food.",
+
+    "This is your reminder: you're capable, you're loved, and now you're getting your ass up."
   ],
+
+
+  /* =========================================================
+     🩷 MISS YOU — MISS ME, HUH?
+     ========================================================= */
 
   missyou: [
-    "Miss me, huh? Well... I figured you might. Here's a little reminder that even when I'm not around, a tiny piece of me can still keep you company."
+
+    "Miss me, huh? Well... I figured you might. Here's a little reminder that I'm thinking of you too.",
+
+    "If you're reading this because you miss me, congratulations. Your diagnosis is correct.",
+
+    "I know you miss me. Don't deny it. It's cute.",
+
+    "Wish I were there? Yeah. Me too.",
+
+    "Here's your tiny substitute for having me beside you. Unfortunately, it doesn't come with hugs.",
+
+    "If you could hear me right now, I'd probably say, 'come here.' So... come here.",
+
+    "You know what's annoying? Missing someone when you can't just reach over and bother them.",
+
+    "Consider this a tiny piece of me sneaking into your day.",
+
+    "I wonder how many times you've thought about me today. Be honest.",
+
+    "Missing me already? You really are hopeless.",
+
+    "I wish I could teleport. Mostly for selfish reasons.",
+
+    "If I suddenly appeared beside you right now, what would you do first?",
+
+    "Here's your reminder that somewhere, someone is thinking about you with a very stupid smile.",
+
+    "You don't have to miss me quietly. You can tell me. I like knowing.",
+
+    "A little distance doesn't make me any less yours to bother.",
+
+    "If this note could hug you, it would. You'll have to imagine the rest.",
+
+    "I hope something small today reminds you of me and makes you smile.",
+
+    "You know I'm going to ask eventually: how much did you miss me?",
+
+    "I miss your presence in all those tiny ways that are difficult to explain.",
+
+    "If you're having a lonely moment, pretend I'm sitting next to you judging whatever you're doing.",
+
+    "I wish I could steal five minutes with you right now. Maybe ten. Fine, the whole day.",
+
+    "This jar is basically me saying, 'hey, I'm still here.'",
+
+    "You opened the miss-me jar. Interesting choice. Suspiciously specific.",
+
+    "I hope you know that being away from you never makes you less important to me.",
+
+    "I wonder if you smiled when you saw this jar. If you did, I'll count that as a win.",
+
+    "You could have picked another jar, but you picked this one. Hmm. Someone misses me.",
+
+    "If I were there, you'd probably be annoyed by how much attention I'd demand from you.",
+
+    "Sometimes I miss you for no particular reason. I just do.",
+
+    "I hope today gives you at least one moment where you wish I were there beside you.",
+
+    "Don't worry. I'll let you miss me a little. Builds character.",
+
+    "This is your official permission to be clingy today.",
+
+    "If you need me, you know where to find me. If you just miss me, that's also acceptable.",
+
+    "I wonder what you're doing right now. And yes, I'm imagining myself interrupting it.",
+
+    "A tiny reminder: distance is just geography being annoying.",
+
+    "If missing me gets unbearable, you can always open this jar again. I won't complain.",
+
+    "I wish this note could carry my voice. You'd probably hear me teasing you.",
+
+    "Some days I don't need a reason to think about you. You're just there in my head.",
+
+    "You know what I like about missing you? Absolutely nothing. Zero stars. Would not recommend.",
+
+    "If I were there, I'd probably find an excuse to stay a little longer.",
+
+    "I hope you feel a little less alone after reading this.",
+
+    "Imagine me looking at you right now and saying, 'I miss you too, dummy.'",
+
+    "You are allowed to miss me. I happen to miss you quite a lot too.",
+
+    "Here's a little reminder that you're never really far from my thoughts.",
+
+    "If you smiled just now, I'm claiming responsibility.",
+
+    "I wish I could bottle up a hug and leave it here for you.",
+
+    "Until I can actually be there, let this tiny note keep you company.",
+
+    "Sometimes I just want to hear your voice. No reason. Just because it's yours.",
+
+    "I hope you know how easily you find your way into my thoughts.",
+
+    "Miss me all you want, sweetheart. I'll be missing you right back.",
+
+    "Come back to me when you can. Until then, keep a little piece of me with you."
   ],
 
+
+  /* =========================================================
+     💛 LOVE — LOOK HOW MUCH I LOVE YOU
+     ========================================================= */
+
   love: [
-    "Just in case you forgot: Me, myself, and I are all completely, ridiculously, madly in love with you."
+
+    "Just in case you forgot: Me, myself, and I are all completely, ridiculously, madly in love with you.",
+
+    "I love you. Annoyingly much, actually.",
+
+    "If loving you were a full-time job, I'd be dangerously overqualified.",
+
+    "You are one of my favorite things about this life.",
+
+    "I hope you know how deeply, genuinely, and stupidly I adore you.",
+
+    "Sometimes I look at you and think, 'yeah, I really got lucky.'",
+
+    "I love the little things about you that you probably don't even realize I notice.",
+
+    "You're not just someone I love. You're someone I love choosing, again and again.",
+
+    "If I had to choose one person to annoy for the foreseeable future, congratulations. It's you.",
+
+    "You make ordinary days feel a little more special just by existing in them.",
+
+    "I love you in the quiet moments, the chaotic moments, and all the weird ones in between.",
+
+    "You're ridiculously easy to love. Don't let it go to your head.",
+
+    "I hope you never doubt how wanted, appreciated, and loved you are.",
+
+    "You have a permanent little corner of my heart. Unfortunately, no eviction notice exists.",
+
+    "I love your presence. Even when you're doing absolutely nothing.",
+
+    "There are probably a thousand ways to say I love you. I'll probably keep trying all of them.",
+
+    "You make me want to keep becoming someone worthy of loving you well.",
+
+    "I love being able to call you mine.",
+
+    "If I could give you one thing today, it would be the ability to see yourself through my eyes.",
+
+    "You are, very inconveniently, one of the easiest people in the world for me to fall for.",
+
+    "I love you more than this tiny piece of paper can possibly explain.",
+
+    "You're my favorite notification, favorite distraction, and favorite person to think about.",
+
+    "I don't need a special occasion to love you loudly.",
+
+    "You make my heart do embarrassing things. Please take responsibility.",
+
+    "I hope you know that I notice you. I see you. And I love you.",
+
+    "Even your little habits have somehow become things I adore.",
+
+    "I love the version of me that exists when I'm with you.",
+
+    "You are one of those people who makes life feel warmer.",
+
+    "If you ever wonder whether I still love you, open this jar. The answer is yes.",
+
+    "I choose you with all your weirdness, softness, stubbornness, and everything in between.",
+
+    "I don't think I'll ever get tired of finding new reasons to love you.",
+
+    "You're precious to me. More than I probably say out loud.",
+
+    "I love you in ways that don't always need words.",
+
+    "You deserve to be loved gently, loudly, consistently, and completely. I'm trying to give you all of that.",
+
+    "You make my world a little brighter without even trying.",
+
+    "I love knowing that somewhere in this huge world, there's you.",
+
+    "You are my favorite kind of trouble.",
+
+    "I would still choose you on the ordinary days. Especially the ordinary days.",
+
+    "I hope today reminds you that you have someone in your corner who loves you very, very much.",
+
+    "You're one of the best things that ever happened to my heart.",
+
+    "I love your laugh. I love your thoughts. I love your existence. See? Ridiculous.",
+
+    "There is something incredibly comforting about knowing you're you and I'm me and somehow we found each other.",
+
+    "I don't need everything to be perfect. Having you makes imperfect days easier to love.",
+
+    "You make me want to say 'I love you' even when there is absolutely no reason to.",
+
+    "If love could be folded into a tiny note, I'd fill this whole jar with it.",
+
+    "You're loved on your good days, your bad days, your sleepy days, and your grumpy days.",
+
+    "I hope you never underestimate the space you occupy in my heart.",
+
+    "I love you abundantly. More than I know how to fit into one little message.",
+
+    "And if you somehow still haven't realized it: yes, sweetheart. I am very, very in love with you."
   ]
 
 };
-
+```
 
 /* =========================================================
    DATE
