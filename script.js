@@ -1,86 +1,61 @@
 /* =========================================================
-   viJEMIn daily booster
-   ========================================================= */
+   viJEMIn Daily Booster
+========================================================= */
 
 
 /* =========================================================
    MESSAGE POOLS
-   ========================================================= */
-
-/*
-   FOR NOW:
-   Only one dummy message per jar.
-
-   Later:
-   Each array will contain 50 messages.
-*/
+========================================================= */
 
 const messages = {
 
   comfort: [
-    "hey. whatever happened today, you don't have to carry all of it at once. come here for a second. breathe. i'm here."
+
+    "Hey. Whatever happened today, you don't have to carry all of it at once. Come here for a second. Breathe. I'm here."
+
   ],
 
   motivation: [
-    "get your ass up, sweetheart. you don't have to conquer the whole world today. just do one thing. then we'll see."
+
+    "Get your ass up, sweetheart. You don't have to conquer the whole world today. Just do one thing. Then we'll see."
+
   ],
 
   missyou: [
-    "miss me, huh? well... i figured you might. here's a little reminder that even when i'm not around, a tiny piece of me can still keep you company."
+
+    "Miss me, huh? Well... I figured you might. Here's a little reminder that even when I'm not around, a tiny piece of me can still keep you company."
+
   ],
 
   love: [
-    "just in case you forgot: me, myself, and i are all completely, ridiculously, madly in love with you."
+
+    "Just in case you forgot: Me, myself, and I are all completely, ridiculously, madly in love with you."
+
   ]
 
 };
 
 
 /* =========================================================
-   JAR INFORMATION
-   ========================================================= */
-
-const jarNames = {
-
-  comfort: "when life sucks",
-
-  motivation: "get your ass up",
-
-  missyou: "miss me, huh?",
-
-  love: "look how much i love you"
-
-};
-
-
-/* =========================================================
-   DOM ELEMENTS
-   ========================================================= */
-
-const jarButtons = document.querySelectorAll(".jar-button");
-
-const modal = document.getElementById("doseModal");
-
-const modalMessage = document.getElementById("doseMessage");
-
-const closeModalButton = document.getElementById("closeModal");
-
-const dailyMessage = document.getElementById("dailyMessage");
-
-
-/* =========================================================
-   DATE HELPER
-   ========================================================= */
+   DATE
+========================================================= */
 
 function getTodayKey() {
 
   const today = new Date();
 
-  const year = today.getFullYear();
+  const year =
+    today.getFullYear();
 
-  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const month =
+    String(
+      today.getMonth() + 1
+    ).padStart(2, "0");
 
-  const day = String(today.getDate()).padStart(2, "0");
+  const day =
+    String(
+      today.getDate()
+    ).padStart(2, "0");
 
   return `${year}-${month}-${day}`;
 }
@@ -88,7 +63,7 @@ function getTodayKey() {
 
 /* =========================================================
    STORAGE KEY
-   ========================================================= */
+========================================================= */
 
 function getStorageKey(jarId) {
 
@@ -98,75 +73,83 @@ function getStorageKey(jarId) {
 
 
 /* =========================================================
-   GET TODAY'S MESSAGE
-   ========================================================= */
-
-/*
-   This makes sure that:
-
-   - refreshing the page doesn't change the message
-   - the same jar gives the same message all day
-   - tomorrow automatically gets a different message
-*/
+   TODAY'S MESSAGE
+========================================================= */
 
 function getTodayMessage(jarId) {
 
-  const pool = messages[jarId];
+  const pool =
+    messages[jarId];
 
-  const today = getTodayKey();
+  const today =
+    getTodayKey();
 
-  /*
-     Convert date into a number.
-     This will later allow us to select
-     different messages from the 50-message pool.
-  */
+  const dateNumber =
+    Number(
+      today.replaceAll("-", "")
+    );
 
-  const dateNumber = Number(
-    today.replaceAll("-", "")
-  );
-
-  const jarNumber = Object.keys(messages).indexOf(jarId);
+  const jarNumber =
+    Object.keys(messages)
+      .indexOf(jarId);
 
   const index =
-    (dateNumber + jarNumber * 17) % pool.length;
+    (
+      dateNumber +
+      jarNumber * 17
+    ) % pool.length;
 
   return {
-    text: pool[index],
-    index: index
-  };
 
+    text:
+      pool[index],
+
+    index:
+      index
+
+  };
 }
 
 
 /* =========================================================
-   CHECK IF JAR HAS BEEN OPENED TODAY
-   ========================================================= */
+   CHECK IF ALREADY TAKEN
+========================================================= */
 
 function hasTakenToday(jarId) {
 
-  const storageKey = getStorageKey(jarId);
-
-  return localStorage.getItem(storageKey) !== null;
+  return (
+    localStorage.getItem(
+      getStorageKey(jarId)
+    ) !== null
+  );
 
 }
 
 
 /* =========================================================
-   SAVE TODAY'S DOSE
-   ========================================================= */
+   SAVE DOSE
+========================================================= */
 
-function saveDose(jarId, messageData) {
-
-  const storageKey = getStorageKey(jarId);
+function saveDose(
+  jarId,
+  messageData
+) {
 
   const doseData = {
-    message: messageData.text,
-    messageIndex: messageData.index,
-    date: getTodayKey()
+
+    message:
+      messageData.text,
+
+    messageIndex:
+      messageData.index,
+
+    date:
+      getTodayKey()
+
   };
 
   localStorage.setItem(
-    storageKey,
+    getStorageKey(jarId),
     JSON.stringify(doseData)
   );
 
@@ -175,13 +158,14 @@ function saveDose(jarId, messageData) {
 
 /* =========================================================
    GET SAVED DOSE
-   ========================================================= */
+========================================================= */
 
 function getSavedDose(jarId) {
 
-  const storageKey = getStorageKey(jarId);
-
-  const saved = localStorage.getItem(storageKey);
+  const saved =
+    localStorage.getItem(
+      getStorageKey(jarId)
+    );
 
   if (!saved) {
     return null;
@@ -199,73 +183,154 @@ function getSavedDose(jarId) {
     );
 
     return null;
+
   }
 
 }
 
 
 /* =========================================================
+   ELEMENTS
+========================================================= */
+
+const modal =
+  document.getElementById(
+    "doseModal"
+  );
+
+const modalMessage =
+  document.getElementById(
+    "doseMessage"
+  );
+
+const doseTitle =
+  document.getElementById(
+    "doseTitle"
+  );
+
+const doseRepeat =
+  document.getElementById(
+    "doseRepeat"
+  );
+
+const closeModalButton =
+  document.getElementById(
+    "closeModal"
+  );
+
+const dailyMessage =
+  document.getElementById(
+    "dailyMessage"
+  );
+
+
+/* =========================================================
    OPEN MODAL
-   ========================================================= */
+========================================================= */
 
-function openModal(message) {
+function openModal(
+  message,
+  alreadyTaken = false
+) {
 
-  modalMessage.textContent = message;
+  if (alreadyTaken) {
 
-  modal.classList.add("show");
+    doseTitle.textContent =
+      "You Already Took One!";
 
-  modal.setAttribute("aria-hidden", "false");
+    doseRepeat.textContent =
+      "Here it is again ♡";
 
-  document.body.style.overflow = "hidden";
+  } else {
 
+    doseTitle.textContent =
+      "Today's Dose";
+
+    doseRepeat.textContent =
+      "";
+
+  }
+
+  modalMessage.textContent =
+    message;
+
+  modal.classList.add(
+    "show"
+  );
+
+  modal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+  document.body.style.overflow =
+    "hidden";
 }
 
 
 /* =========================================================
    CLOSE MODAL
-   ========================================================= */
+========================================================= */
 
 function closeModal() {
 
-  modal.classList.remove("show");
+  modal.classList.remove(
+    "show"
+  );
 
-  modal.setAttribute("aria-hidden", "true");
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
 
-  document.body.style.overflow = "";
-
+  document.body.style.overflow =
+    "";
 }
 
 
 /* =========================================================
    UPDATE JAR UI
-   ========================================================= */
+========================================================= */
 
 function updateJarUI(jarId) {
 
-  const card = document.querySelector(
-    `.jar-button[data-jar="${jarId}"]`
-  )?.closest(".jar-card");
+  const button =
+    document.querySelector(
+      `.jar-button[data-jar="${jarId}"]`
+    );
 
-  const status = document.querySelector(
-    `.jar-status[data-status="${jarId}"]`
-  );
+  const card =
+    button?.closest(
+      ".jar-card"
+    );
+
+  const status =
+    document.querySelector(
+      `.jar-status[data-status="${jarId}"]`
+    );
 
   if (!card || !status) {
     return;
   }
 
+
   if (hasTakenToday(jarId)) {
 
-    card.classList.add("taken");
+    card.classList.add(
+      "taken"
+    );
 
     status.textContent =
-      "you already took your dose today ♡";
+      "You already took your dose today ♡";
 
   } else {
 
-    card.classList.remove("taken");
+    card.classList.remove(
+      "taken"
+    );
 
-    status.textContent = "";
+    status.textContent =
+      "";
 
   }
 
@@ -274,31 +339,40 @@ function updateJarUI(jarId) {
 
 /* =========================================================
    UPDATE DAILY MESSAGE
-   ========================================================= */
+========================================================= */
 
 function updateDailyMessage() {
 
-  const jarIds = Object.keys(messages);
+  const jarIds =
+    Object.keys(messages);
 
-  const takenCount = jarIds.filter(
-    jarId => hasTakenToday(jarId)
-  ).length;
+  const takenCount =
+    jarIds.filter(
+      jarId =>
+        hasTakenToday(jarId)
+    ).length;
 
 
   if (takenCount === 0) {
 
     dailyMessage.textContent =
-      "your dose is waiting.";
+      "Your dose is waiting.";
 
-  } else if (takenCount === jarIds.length) {
+  }
+
+  else if (
+    takenCount === jarIds.length
+  ) {
 
     dailyMessage.textContent =
-      "that's enough for today ♡";
+      "That's enough for today ♡";
 
-  } else {
+  }
+
+  else {
 
     dailyMessage.textContent =
-      "take what you need. there's still more waiting ♡";
+      "Take what you need. There's still more waiting ♡";
 
   }
 
@@ -306,23 +380,33 @@ function updateDailyMessage() {
 
 
 /* =========================================================
-   OPEN JAR
-   ========================================================= */
+   TAKE DOSE
+========================================================= */
 
-function takeDose(jarId, button) {
+function takeDose(
+  jarId,
+  button
+) {
+
 
   /*
-     If already opened today:
-     simply show the same message again.
+    ALREADY TAKEN
+
+    Show the exact same dose.
+    Never generate another one.
   */
 
   if (hasTakenToday(jarId)) {
 
-    const savedDose = getSavedDose(jarId);
+    const savedDose =
+      getSavedDose(jarId);
 
     if (savedDose) {
 
-      openModal(savedDose.message);
+      openModal(
+        savedDose.message,
+        true
+      );
 
     }
 
@@ -330,34 +414,58 @@ function takeDose(jarId, button) {
   }
 
 
-  const card = button.closest(".jar-card");
-
-  const messageData = getTodayMessage(jarId);
-
-
   /*
-     Start jar animation.
+    FIRST TIME TODAY
   */
 
-  card.classList.add("opening");
+  const card =
+    button.closest(
+      ".jar-card"
+    );
+
+  const messageData =
+    getTodayMessage(
+      jarId
+    );
 
 
   /*
-     Wait until the animation has happened
-     before showing the note.
+    START ANIMATION
+  */
+
+  card.classList.add(
+    "opening"
+  );
+
+
+  /*
+    WAIT FOR BOTTLE
+    ANIMATION
   */
 
   setTimeout(() => {
 
-    saveDose(jarId, messageData);
+    saveDose(
+      jarId,
+      messageData
+    );
 
-    updateJarUI(jarId);
+    updateJarUI(
+      jarId
+    );
 
     updateDailyMessage();
 
-    openModal(messageData.text);
 
-    card.classList.remove("opening");
+    openModal(
+      messageData.text,
+      false
+    );
+
+
+    card.classList.remove(
+      "opening"
+    );
 
   }, 850);
 
@@ -365,25 +473,40 @@ function takeDose(jarId, button) {
 
 
 /* =========================================================
-   JAR CLICK EVENTS
-   ========================================================= */
+   JAR BUTTONS
+========================================================= */
 
-jarButtons.forEach(button => {
+const jarButtons =
+  document.querySelectorAll(
+    ".jar-button"
+  );
 
-  button.addEventListener("click", () => {
 
-    const jarId = button.dataset.jar;
+jarButtons.forEach(
+  button => {
 
-    takeDose(jarId, button);
+    button.addEventListener(
+      "click",
+      () => {
 
-  });
+        const jarId =
+          button.dataset.jar;
 
-});
+        takeDose(
+          jarId,
+          button
+        );
+
+      }
+    );
+
+  }
+);
 
 
 /* =========================================================
    CLOSE BUTTON
-   ========================================================= */
+========================================================= */
 
 closeModalButton.addEventListener(
   "click",
@@ -392,56 +515,66 @@ closeModalButton.addEventListener(
 
 
 /* =========================================================
-   CLOSE BY CLICKING OUTSIDE NOTE
-   ========================================================= */
+   CLICK OUTSIDE
+========================================================= */
 
-modal.addEventListener("click", (event) => {
+modal.addEventListener(
+  "click",
+  event => {
 
-  if (
-    event.target.classList.contains("modal-overlay")
-  ) {
+    if (
+      event.target.classList
+        .contains("modal-overlay")
+    ) {
 
-    closeModal();
+      closeModal();
+
+    }
 
   }
-
-});
+);
 
 
 /* =========================================================
-   CLOSE WITH ESC
-   ========================================================= */
+   ESCAPE
+========================================================= */
 
-document.addEventListener("keydown", (event) => {
+document.addEventListener(
+  "keydown",
+  event => {
 
-  if (event.key === "Escape") {
+    if (
+      event.key === "Escape"
+    ) {
 
-    closeModal();
+      closeModal();
+
+    }
 
   }
-
-});
+);
 
 
 /* =========================================================
-   INITIALIZE PAGE
-   ========================================================= */
+   INITIALIZE
+========================================================= */
 
 function initializePage() {
 
-  Object.keys(messages).forEach(jarId => {
+  Object.keys(messages)
+    .forEach(
+      jarId => {
 
-    updateJarUI(jarId);
+        updateJarUI(
+          jarId
+        );
 
-  });
+      }
+    );
 
   updateDailyMessage();
 
 }
 
-
-/* =========================================================
-   START
-   ========================================================= */
 
 initializePage();
