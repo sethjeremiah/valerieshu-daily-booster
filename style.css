@@ -10,10 +10,11 @@
   --text: #463c35;
   --soft-text: #8b7b6d;
 
-  --red: #d98282;
-  --orange: #e5a16a;
-  --pink: #e3a0af;
-  --yellow: #e4cf78;
+  /* More vivid jar colors */
+  --red: #d95f68;
+  --orange: #e98b3f;
+  --pink: #df7892;
+  --yellow: #e5c442;
 
   --shadow: rgba(67, 51, 39, 0.12);
 }
@@ -80,7 +81,6 @@ body {
 
   font-size: 0.8rem;
   letter-spacing: 0.18em;
-  text-transform: lowercase;
 }
 
 .intro {
@@ -284,9 +284,7 @@ body {
 
   border-radius: 22px 22px 30px 30px;
 
-  border: 2px solid rgba(255, 255, 255, 0.65);
-
-  background: rgba(255, 255, 255, 0.24);
+  border: 2px solid rgba(255, 255, 255, 0.68);
 
   box-shadow:
     inset 0 0 15px rgba(255, 255, 255, 0.45),
@@ -311,22 +309,22 @@ body {
   background: inherit;
 
   border-top:
-    2px solid rgba(255, 255, 255, 0.65);
+    2px solid rgba(255, 255, 255, 0.68);
 
   z-index: 1;
 }
 
 
 /* =========================================================
-   JAR COLORS
+   MORE VIVID JAR COLORS
 ========================================================= */
 
 .red-card .jar-body {
   background:
     linear-gradient(
       180deg,
-      rgba(217, 130, 130, 0.28),
-      rgba(217, 130, 130, 0.18)
+      rgba(217, 95, 104, 0.48),
+      rgba(217, 95, 104, 0.30)
     );
 }
 
@@ -334,8 +332,8 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(229, 161, 106, 0.30),
-      rgba(229, 161, 106, 0.18)
+      rgba(233, 139, 63, 0.50),
+      rgba(233, 139, 63, 0.30)
     );
 }
 
@@ -343,8 +341,8 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(227, 160, 175, 0.30),
-      rgba(227, 160, 175, 0.18)
+      rgba(223, 120, 146, 0.48),
+      rgba(223, 120, 146, 0.30)
     );
 }
 
@@ -352,8 +350,8 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(228, 207, 120, 0.32),
-      rgba(228, 207, 120, 0.18)
+      rgba(229, 196, 66, 0.50),
+      rgba(229, 196, 66, 0.29)
     );
 }
 
@@ -373,7 +371,7 @@ body {
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.32);
 
   transform: rotate(3deg);
 
@@ -390,8 +388,8 @@ body {
 .scroll {
   position: absolute;
 
-  width: 25px;
-  height: 10px;
+  width: 22px;
+  height: 9px;
 
   border-radius: 4px 6px 6px 4px;
 
@@ -420,17 +418,17 @@ body {
   left: -1px;
   top: 1px;
 
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle at center,
-      transparent 0 2px,
-      rgba(120, 100, 82, 0.22) 2.3px 3px,
-      transparent 3.2px
+      transparent 0 1.7px,
+      rgba(120, 100, 82, 0.22) 2px 2.7px,
+      transparent 3px
     );
 
   opacity: 0.75;
@@ -439,10 +437,10 @@ body {
 .scroll span {
   position: absolute;
 
-  right: 4px;
+  right: 3px;
   top: 3px;
 
-  width: 11px;
+  width: 9px;
   height: 1px;
 
   border-radius: 2px;
@@ -452,43 +450,64 @@ body {
 
 
 /* =========================================================
-   ROLL POSITIONS
+   40 ROLL POSITIONS
 ========================================================= */
 
-.scroll-1  { left: 27px;  bottom: 22px; transform: rotate(-8deg); z-index: 3; }
-.scroll-2  { left: 54px;  bottom: 20px; transform: rotate(6deg);  z-index: 3; }
-.scroll-3  { left: 83px;  bottom: 22px; transform: rotate(-4deg); z-index: 3; }
-.scroll-4  { left: 112px; bottom: 21px; transform: rotate(9deg);  z-index: 3; }
+/* Bottom layer */
+.scroll-1  { left: 22px;  bottom: 17px; transform: rotate(-8deg); z-index: 3; }
+.scroll-2  { left: 44px;  bottom: 16px; transform: rotate(6deg);  z-index: 3; }
+.scroll-3  { left: 67px;  bottom: 18px; transform: rotate(-4deg); z-index: 3; }
+.scroll-4  { left: 91px;  bottom: 16px; transform: rotate(9deg);  z-index: 3; }
+.scroll-5  { left: 114px; bottom: 18px; transform: rotate(-6deg); z-index: 3; }
+.scroll-6  { left: 130px; bottom: 16px; transform: rotate(5deg);  z-index: 3; }
 
-.scroll-5  { left: 38px;  bottom: 31px; transform: rotate(5deg);  z-index: 4; }
-.scroll-6  { left: 68px;  bottom: 30px; transform: rotate(-7deg); z-index: 4; }
-.scroll-7  { left: 96px;  bottom: 32px; transform: rotate(4deg);  z-index: 4; }
-.scroll-8  { left: 124px; bottom: 30px; transform: rotate(-6deg); z-index: 4; }
+/* Layer 2 */
+.scroll-7  { left: 29px;  bottom: 27px; transform: rotate(5deg);  z-index: 4; }
+.scroll-8  { left: 52px;  bottom: 26px; transform: rotate(-7deg); z-index: 4; }
+.scroll-9  { left: 76px;  bottom: 28px; transform: rotate(4deg);  z-index: 4; }
+.scroll-10 { left: 100px; bottom: 26px; transform: rotate(-6deg); z-index: 4; }
+.scroll-11 { left: 123px; bottom: 28px; transform: rotate(7deg);  z-index: 4; }
 
-.scroll-9  { left: 25px;  bottom: 41px; transform: rotate(7deg);  z-index: 5; }
-.scroll-10 { left: 52px;  bottom: 42px; transform: rotate(-5deg); z-index: 5; }
-.scroll-11 { left: 81px;  bottom: 40px; transform: rotate(8deg);  z-index: 5; }
-.scroll-12 { left: 110px; bottom: 42px; transform: rotate(-3deg); z-index: 5; }
-.scroll-13 { left: 132px; bottom: 40px; transform: rotate(6deg);  z-index: 5; }
+/* Layer 3 */
+.scroll-12 { left: 21px;  bottom: 38px; transform: rotate(7deg);  z-index: 5; }
+.scroll-13 { left: 45px;  bottom: 37px; transform: rotate(-5deg); z-index: 5; }
+.scroll-14 { left: 69px;  bottom: 39px; transform: rotate(8deg);  z-index: 5; }
+.scroll-15 { left: 93px;  bottom: 37px; transform: rotate(-3deg); z-index: 5; }
+.scroll-16 { left: 117px; bottom: 39px; transform: rotate(6deg);  z-index: 5; }
+.scroll-17 { left: 134px; bottom: 37px; transform: rotate(-4deg); z-index: 5; }
 
-.scroll-14 { left: 34px;  bottom: 52px; transform: rotate(-7deg); z-index: 6; }
-.scroll-15 { left: 63px;  bottom: 50px; transform: rotate(4deg);  z-index: 6; }
-.scroll-16 { left: 92px;  bottom: 52px; transform: rotate(-6deg); z-index: 6; }
-.scroll-17 { left: 120px; bottom: 50px; transform: rotate(8deg);  z-index: 6; }
+/* Layer 4 */
+.scroll-18 { left: 29px;  bottom: 49px; transform: rotate(-7deg); z-index: 6; }
+.scroll-19 { left: 53px;  bottom: 47px; transform: rotate(4deg);  z-index: 6; }
+.scroll-20 { left: 77px;  bottom: 49px; transform: rotate(-6deg); z-index: 6; }
+.scroll-21 { left: 101px; bottom: 47px; transform: rotate(8deg);  z-index: 6; }
+.scroll-22 { left: 125px; bottom: 49px; transform: rotate(-5deg); z-index: 6; }
 
-.scroll-18 { left: 25px;  bottom: 63px; transform: rotate(5deg);  z-index: 7; }
-.scroll-19 { left: 51px;  bottom: 61px; transform: rotate(-8deg); z-index: 7; }
-.scroll-20 { left: 80px;  bottom: 63px; transform: rotate(6deg);  z-index: 7; }
-.scroll-21 { left: 109px; bottom: 61px; transform: rotate(-4deg); z-index: 7; }
-.scroll-22 { left: 132px; bottom: 63px; transform: rotate(7deg);  z-index: 7; }
+/* Layer 5 */
+.scroll-23 { left: 21px;  bottom: 60px; transform: rotate(5deg);  z-index: 7; }
+.scroll-24 { left: 45px;  bottom: 58px; transform: rotate(-8deg); z-index: 7; }
+.scroll-25 { left: 69px;  bottom: 60px; transform: rotate(6deg);  z-index: 7; }
+.scroll-26 { left: 93px;  bottom: 58px; transform: rotate(-4deg); z-index: 7; }
+.scroll-27 { left: 117px; bottom: 60px; transform: rotate(7deg);  z-index: 7; }
+.scroll-28 { left: 134px; bottom: 58px; transform: rotate(-6deg); z-index: 7; }
 
-.scroll-23 { left: 36px;  bottom: 74px; transform: rotate(-6deg); z-index: 8; }
-.scroll-24 { left: 65px;  bottom: 72px; transform: rotate(5deg);  z-index: 8; }
-.scroll-25 { left: 94px;  bottom: 74px; transform: rotate(-7deg); z-index: 8; }
-.scroll-26 { left: 121px; bottom: 72px; transform: rotate(4deg);  z-index: 8; }
+/* Layer 6 */
+.scroll-29 { left: 30px;  bottom: 71px; transform: rotate(-6deg); z-index: 8; }
+.scroll-30 { left: 54px;  bottom: 69px; transform: rotate(5deg);  z-index: 8; }
+.scroll-31 { left: 78px;  bottom: 71px; transform: rotate(-7deg); z-index: 8; }
+.scroll-32 { left: 102px; bottom: 69px; transform: rotate(4deg);  z-index: 8; }
+.scroll-33 { left: 126px; bottom: 71px; transform: rotate(-5deg); z-index: 8; }
 
-.scroll-27 { left: 49px; bottom: 84px; transform: rotate(-5deg); z-index: 9; }
-.scroll-28 { left: 78px; bottom: 86px; transform: rotate(6deg);  z-index: 9; }
+/* Layer 7 */
+.scroll-34 { left: 23px;  bottom: 82px; transform: rotate(6deg);  z-index: 9; }
+.scroll-35 { left: 48px;  bottom: 80px; transform: rotate(-5deg); z-index: 9; }
+.scroll-36 { left: 72px;  bottom: 82px; transform: rotate(7deg);  z-index: 9; }
+.scroll-37 { left: 96px;  bottom: 80px; transform: rotate(-6deg); z-index: 9; }
+.scroll-38 { left: 120px; bottom: 82px; transform: rotate(4deg);  z-index: 9; }
+.scroll-39 { left: 136px; bottom: 80px; transform: rotate(-7deg); z-index: 9; }
+
+/* Top layer */
+.scroll-40 { left: 61px; bottom: 92px; transform: rotate(5deg); z-index: 10; }
 
 
 /* =========================================================
@@ -517,7 +536,7 @@ body {
   font-size: 1.45rem;
   line-height: 1;
 
-  opacity: 0.65;
+  opacity: 0.72;
 
   transition:
     transform 0.3s ease,
@@ -542,7 +561,7 @@ body {
 
 .jar-button:hover .jar-label span {
   transform: scale(1.08);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 
@@ -571,21 +590,21 @@ body {
    OPENING / TAKEN STATES
 ========================================================= */
 
-.jar-button.opening .jar {
+.jar-card.opening .jar {
   animation: jarShake 0.45s ease;
 }
 
-.jar-button.opening .jar-lid {
+.jar-card.opening .jar-lid {
   top: -16px;
   transform: rotate(-7deg) translateX(5px);
 }
 
-.jar-button.taken {
+.jar-card.taken .jar-button {
   opacity: 0.65;
   pointer-events: none;
 }
 
-.jar-button.taken .jar {
+.jar-card.taken .jar {
   filter: grayscale(0.15);
 }
 
@@ -691,11 +710,6 @@ footer > span {
   visibility: visible;
 }
 
-
-/* =========================================================
-   MODAL OVERLAY
-========================================================= */
-
 .modal-overlay {
   position: absolute;
   inset: 0;
@@ -704,11 +718,6 @@ footer > span {
 
   backdrop-filter: blur(7px);
 }
-
-
-/* =========================================================
-   DOSE NOTE
-========================================================= */
 
 .dose-note {
   position: relative;
@@ -742,11 +751,6 @@ footer > span {
     scale(1);
 }
 
-
-/* =========================================================
-   MODAL CLOSE
-========================================================= */
-
 .close-button {
   position: absolute;
 
@@ -777,11 +781,6 @@ footer > span {
 
   transform: rotate(90deg);
 }
-
-
-/* =========================================================
-   MODAL CONTENT
-========================================================= */
 
 .note-decoration {
   margin-bottom: 8px;
