@@ -1,81 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
-
 :root {
-  --cream: #f8f3eb;
-  --brown: #6f6259;
-  --brown-dark: #544941;
-  --white: #fffdf9;
+  --background: #f8f1e7;
+  --paper: #fffaf2;
+
+  --text: #463c35;
+  --soft-text: #8b7b6d;
 
   --red: #d98282;
   --orange: #e5a16a;
   --pink: #e3a0af;
   --yellow: #e4cf78;
+
+  --shadow: rgba(67, 51, 39, 0.12);
 }
+
+
+/* =========================
+   RESET
+========================= */
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   min-height: 100vh;
+
   background:
-    radial-gradient(circle at 50% 20%, #fffdf8 0%, var(--cream) 55%, #f5eee4 100%);
-  color: var(--brown);
+    radial-gradient(
+      circle at top,
+      #fffaf3 0%,
+      var(--background) 58%,
+      #f4e9da 100%
+    );
+
+  color: var(--text);
+
   font-family: "DM Sans", sans-serif;
+
+  overflow-x: hidden;
 }
 
 button {
   font: inherit;
 }
 
+
+/* =========================
+   PAGE
+========================= */
+
 .page {
   width: min(1100px, 92%);
+
   margin: 0 auto;
-  padding: 60px 0 45px;
+
+  padding: 70px 0 50px;
 }
+
 
 /* =========================
    HEADER
 ========================= */
 
-header {
+.hero {
   text-align: center;
-  margin-bottom: 42px;
+
+  margin-bottom: 60px;
 }
 
-.logo {
-  margin: 0;
-  color: var(--brown-dark);
+.title-wrap {
+  display: inline-flex;
+
+  align-items: baseline;
+
+  gap: 12px;
+}
+
+.hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2.6rem, 6vw, 4rem);
+
+  font-size: clamp(3rem, 7vw, 5rem);
+
+  line-height: 0.95;
+
   font-weight: 600;
-  letter-spacing: -1.5px;
-  line-height: 1;
+
+  letter-spacing: -2px;
 }
 
-.logo span {
-  color: var(--brown-dark);
+.hero h1 span {
+  position: relative;
 }
 
-.subtitle {
-  margin: 8px 0 7px;
-  font-size: 0.92rem;
-  letter-spacing: 0.08em;
-  text-transform: lowercase;
+.hero h1 span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 3px;
+  right: 3px;
+  bottom: -3px;
+
+  height: 3px;
+
+  background: #d9bba3;
+
+  border-radius: 50%;
 }
 
-.tagline {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #887a70;
+.subtitle-title {
+  font-size: 0.9rem;
+
+  letter-spacing: 2px;
+
+  color: var(--soft-text);
 }
 
-.daily-note {
-  margin-top: 18px;
-  font-size: 0.84rem;
-  color: #9a8b80;
+.intro {
+  margin-top: 23px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.08rem;
+
+  font-style: italic;
+
+  color: #77685c;
 }
+
+.take-note {
+  margin-top: 13px;
+
+  font-size: 0.76rem;
+
+  letter-spacing: 1.4px;
+
+  color: #a08d7c;
+}
+
 
 /* =========================
    JAR GRID
@@ -83,753 +151,1188 @@ header {
 
 .jar-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 44px 38px;
-  align-items: start;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 72px 60px;
 }
+
+
+/* =========================
+   JAR CARD
+========================= */
 
 .jar-card {
   text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
 }
+
+.jar-info {
+  min-height: 91px;
+}
+
+.jar-info h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.4rem;
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+}
+
+.jar-info p {
+  font-size: 0.77rem;
+
+  line-height: 1.65;
+
+  color: var(--soft-text);
+}
+
 
 /* =========================
    JAR BUTTON
 ========================= */
 
 .jar-button {
-  width: 100%;
-  border: 0;
-  padding: 0;
+  border: none;
+
   background: transparent;
+
   cursor: pointer;
-  color: inherit;
+
+  margin-top: 18px;
+
+  padding: 12px 20px 0;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.jar-button:hover {
+  transform: translateY(-5px);
 }
 
 .jar-button:focus-visible {
-  outline: 2px solid #9d8d82;
+  outline: 2px solid #9b8270;
+
   outline-offset: 8px;
-  border-radius: 40px;
+
+  border-radius: 25px;
 }
 
+
 /* =========================
-   JAR
+   BOTTLE
 ========================= */
 
 .jar {
   position: relative;
-  width: min(270px, 76vw);
-  height: 330px;
+
+  width: 190px;
+
+  height: 230px;
+
   margin: 0 auto;
-  transition: transform 0.3s ease;
+
+  transition:
+    transform 0.3s ease;
 }
 
-/* soft shadow behind the bottle */
-.jar::after {
-  content: "";
-  position: absolute;
-  left: 13%;
-  right: 13%;
-  bottom: 2px;
-  height: 25px;
-  border-radius: 50%;
-  background: rgba(101, 83, 72, 0.12);
-  filter: blur(10px);
-  z-index: 0;
-}
 
 /* =========================
-   JAR LID
+   LID
 ========================= */
 
 .jar-lid {
   position: absolute;
-  z-index: 8;
+
   top: 0;
-  left: 50%;
-  width: 155px;
-  height: 45px;
-  transform: translateX(-50%);
-  border-radius: 9px 9px 12px 12px;
+
+  left: 40px;
+
+  width: 110px;
+
+  height: 42px;
+
+  z-index: 20;
+
+  transition:
+    transform 0.55s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+.lid-top {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 17px;
+
+  border-radius:
+    8px 8px 5px 5px;
+
   background:
     linear-gradient(
-      to bottom,
-      #d2cdc5 0%,
-      #bdb7af 45%,
-      #cbc5bd 100%
+      180deg,
+      #c9b9aa,
+      #ae9d8e
     );
+
   box-shadow:
-    0 5px 8px rgba(84, 73, 65, 0.13),
-    inset 0 2px 1px rgba(255, 255, 255, 0.45);
-  transition: transform 0.45s ease;
+    inset 0 2px 2px
+      rgba(255,255,255,0.4),
+
+    0 2px 4px
+      rgba(0,0,0,0.08);
 }
 
-/* lid grooves */
-.jar-lid::after {
-  content: "";
+.lid-line {
   position: absolute;
-  left: 9px;
-  right: 9px;
-  bottom: 6px;
+
+  top: 14px;
+
+  left: 5px;
+
+  width: calc(100% - 10px);
+
   height: 20px;
-  border-radius: 0 0 9px 9px;
+
+  border-radius:
+    3px 3px 10px 10px;
+
   background:
     repeating-linear-gradient(
-      to bottom,
-      rgba(111, 98, 89, 0.2) 0,
-      rgba(111, 98, 89, 0.2) 2px,
-      transparent 2px,
-      transparent 5px
+      0deg,
+      #a79788 0,
+      #a79788 2px,
+      #b9a99a 2px,
+      #b9a99a 4px
     );
 }
 
+
 /* =========================
-   JAR BODY
+   SOFT ROUND BOTTLE BODY
 ========================= */
 
 .jar-body {
   position: absolute;
-  z-index: 2;
-  left: 50%;
+
+  left: 15px;
+
+  right: 15px;
+
   bottom: 0;
-  width: 220px;
-  height: 280px;
-  transform: translateX(-50%);
+
+  height: 207px;
+
   overflow: hidden;
 
-  border-radius: 42px 42px 48px 48px;
+  /*
+    Rounded bottle silhouette.
+    No clip-path, so the shape
+    stays soft and natural.
+  */
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.16) 0%,
-      rgba(255, 255, 255, 0.04) 20%,
-      rgba(255, 255, 255, 0.02) 70%,
-      rgba(255, 255, 255, 0.14) 100%
-    ),
-    var(--jar-color);
+  border-radius:
+    40px 40px 48px 48px;
+
+  border:
+    2px solid
+    rgba(255,255,255,0.68);
 
   box-shadow:
-    inset 7px 0 15px rgba(255, 255, 255, 0.16),
-    inset -7px 0 15px rgba(110, 85, 75, 0.06),
-    0 12px 25px rgba(111, 98, 89, 0.09);
 
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+    inset 8px 0 14px
+      rgba(255,255,255,0.22),
+
+    inset -8px 0 15px
+      rgba(70,45,30,0.04),
+
+    inset 0 -10px 15px
+      rgba(70,45,30,0.05),
+
+    0 14px 26px
+      var(--shadow);
 }
 
-/* shoulders */
+
+/*
+  Slightly narrower shoulder,
+  created with a pseudo element.
+*/
+
 .jar-body::before {
   content: "";
+
   position: absolute;
+
+  top: -2px;
+
+  left: 26px;
+
+  right: 26px;
+
+  height: 40px;
+
+  border-radius:
+    0 0 28px 28px;
+
+  background:
+    inherit;
+
+  border-bottom:
+    2px solid
+    rgba(255,255,255,0.12);
+
   z-index: 1;
-  top: -4px;
-  left: 20px;
-  right: 20px;
-  height: 58px;
-  border-radius: 0 0 40px 40px;
-  background: rgba(255, 255, 255, 0.07);
 }
 
+
 /* =========================
-   GLASS HIGHLIGHT
+   COLORS
+========================= */
+
+.red-card .jar-body {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(231,151,151,0.65),
+      rgba(207,119,119,0.76)
+    );
+}
+
+.orange-card .jar-body {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(235,172,116,0.65),
+      rgba(218,143,82,0.76)
+    );
+}
+
+.pink-card .jar-body {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(233,171,185,0.65),
+      rgba(216,140,161,0.76)
+    );
+}
+
+.yellow-card .jar-body {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(235,218,137,0.65),
+      rgba(216,195,103,0.76)
+    );
+}
+
+
+/* =========================
+   GLASS SHINE
 ========================= */
 
 .glass-shine {
   position: absolute;
-  z-index: 6;
-  top: 45px;
-  left: 37px;
-  width: 15px;
-  height: 175px;
+
+  top: 35px;
+
+  left: 27px;
+
+  width: 12px;
+
+  height: 125px;
+
   border-radius: 50%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.48),
-    rgba(255, 255, 255, 0.04)
-  );
-  transform: rotate(7deg);
-  pointer-events: none;
+
+  background:
+    rgba(255,255,255,0.35);
+
+  filter: blur(0.5px);
+
+  transform:
+    rotate(4deg);
+
+  z-index: 15;
 }
 
-/* =========================
-   PAPER NOTES
-========================= */
 
-/*
-   Each .scroll is now intentionally tiny.
-   There are 14 real scroll elements in the HTML.
-   Each one creates a second tiny paper using ::after,
-   giving us a much fuller pile without changing the HTML.
-*/
+/* =========================
+   ROLLED PAPER NOTES
+========================= */
 
 .scroll {
   position: absolute;
-  z-index: 3;
 
-  width: 30px;
-  height: 10px;
+  width: 32px;
 
-  border-radius: 5px 7px 7px 5px;
+  height: 22px;
+
+  border-radius:
+    5px 8px 8px 5px;
 
   background:
     linear-gradient(
-      to bottom,
-      #fffdf8 0%,
-      #f4eee5 55%,
-      #e9e0d5 100%
+      180deg,
+      #fffaf0,
+      #eadcc7
     );
 
   box-shadow:
-    0 2px 4px rgba(104, 87, 76, 0.12);
+    0 3px 5px
+      rgba(65,45,30,0.14);
+
+  z-index: 5;
 
   transform-origin: center;
 }
 
-/* second tiny roll behind each one */
-.scroll::after {
-  content: "";
-  position: absolute;
-  width: 27px;
-  height: 9px;
-  left: 7px;
-  top: 5px;
-  border-radius: 5px 7px 7px 5px;
-  background:
-    linear-gradient(
-      to bottom,
-      #fffdf8 0%,
-      #f1e9df 100%
-    );
-  box-shadow: 0 2px 3px rgba(104, 87, 76, 0.08);
-  z-index: -1;
-}
 
-/* spiral */
+/*
+  Spiral / rolled end.
+*/
+
 .scroll::before {
   content: "";
-  position: absolute;
-  z-index: 3;
-  left: -1px;
-  top: 1px;
 
-  width: 8px;
-  height: 8px;
+  position: absolute;
+
+  left: -3px;
+
+  top: 2px;
+
+  width: 19px;
+
+  height: 18px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      transparent 0 1px,
-      rgba(139, 124, 111, 0.72) 1px 2px,
-      transparent 2px 3px,
-      rgba(139, 124, 111, 0.55) 3px 4px,
-      transparent 4px
+      #d4bda1 0 16%,
+      #fff8ea 18% 32%,
+      #d9c1a5 34% 43%,
+      #fff8ea 45% 57%,
+      #d9c1a5 59% 64%,
+      #fff8ea 66%
     );
 }
 
+
+/*
+  Tiny writing lines.
+*/
+
+.scroll span {
+  position: absolute;
+
+  right: 4px;
+
+  top: 7px;
+
+  width: 9px;
+
+  height: 2px;
+
+  background:
+    rgba(100,80,60,0.18);
+
+  box-shadow:
+    0 4px
+    rgba(100,80,60,0.12);
+}
+
+
 /* =========================
    NOTE POSITIONS
-   ========================= */
+========================= */
 
-/* top layer */
 .scroll-1 {
-  left: 25px;
-  top: 55px;
-  transform: rotate(-7deg);
+  left: 18px;
+  bottom: 30px;
+  transform: rotate(-18deg);
 }
 
 .scroll-2 {
-  left: 69px;
-  top: 48px;
-  transform: rotate(5deg);
+  left: 45px;
+  bottom: 25px;
+  transform: rotate(11deg);
+  z-index: 7;
 }
 
 .scroll-3 {
-  left: 114px;
-  top: 59px;
-  transform: rotate(-4deg);
+  left: 74px;
+  bottom: 27px;
+  transform: rotate(-7deg);
+  z-index: 8;
 }
 
 .scroll-4 {
-  left: 157px;
-  top: 51px;
-  transform: rotate(7deg);
+  left: 102px;
+  bottom: 31px;
+  transform: rotate(16deg);
+  z-index: 7;
 }
 
-/* upper-middle */
 .scroll-5 {
-  left: 39px;
-  top: 82px;
-  transform: rotate(4deg);
+  left: 129px;
+  bottom: 28px;
+  transform: rotate(-11deg);
 }
 
 .scroll-6 {
-  left: 88px;
-  top: 76px;
-  transform: rotate(-6deg);
+  left: 29px;
+  bottom: 54px;
+  transform: rotate(7deg);
+  z-index: 8;
 }
 
 .scroll-7 {
-  left: 137px;
-  top: 82px;
-  transform: rotate(5deg);
+  left: 58px;
+  bottom: 55px;
+  transform: rotate(-15deg);
+  z-index: 9;
 }
 
 .scroll-8 {
-  left: 174px;
-  top: 76px;
-  transform: rotate(-5deg);
+  left: 88px;
+  bottom: 52px;
+  transform: rotate(10deg);
+  z-index: 10;
 }
 
-/* middle */
 .scroll-9 {
-  left: 22px;
-  top: 108px;
+  left: 117px;
+  bottom: 55px;
   transform: rotate(-5deg);
+  z-index: 9;
 }
 
 .scroll-10 {
-  left: 67px;
-  top: 105px;
-  transform: rotate(5deg);
+  left: 143px;
+  bottom: 57px;
+  transform: rotate(13deg);
+  z-index: 8;
 }
 
 .scroll-11 {
-  left: 119px;
-  top: 111px;
-  transform: rotate(-4deg);
+  left: 43px;
+  bottom: 82px;
+  transform: rotate(-9deg);
+  z-index: 10;
 }
 
 .scroll-12 {
-  left: 160px;
-  top: 105px;
-  transform: rotate(6deg);
+  left: 73px;
+  bottom: 80px;
+  transform: rotate(14deg);
+  z-index: 11;
 }
 
-/* lower pile */
 .scroll-13 {
-  left: 42px;
-  top: 132px;
-  transform: rotate(4deg);
+  left: 103px;
+  bottom: 82px;
+  transform: rotate(-12deg);
+  z-index: 10;
 }
 
 .scroll-14 {
-  left: 102px;
-  top: 137px;
-  transform: rotate(-6deg);
+  left: 130px;
+  bottom: 79px;
+  transform: rotate(6deg);
+  z-index: 9;
 }
 
-/*
-   More visual density below the label area.
-   These use the same 14 notes but position them
-   with the label sitting visually above the pile.
-*/
-
-.jar-body .scroll:nth-child(3) {
-  margin-top: 8px;
-}
-
-.jar-body .scroll:nth-child(4) {
-  margin-top: 5px;
-}
 
 /* =========================
-   LABEL
+   JAR LABEL
 ========================= */
 
 .jar-label {
   position: absolute;
-  z-index: 7;
+
   left: 50%;
-  top: 88px;
-  width: 101px;
-  min-height: 70px;
-  transform: translateX(-50%);
+
+  bottom: 94px;
+
+  transform:
+    translateX(-50%);
+
+  width: 72px;
+
+  height: 47px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  padding: 12px 9px;
+  z-index: 16;
 
-  border-radius: 8px;
+  background:
+    rgba(255,250,240,0.9);
 
-  background: rgba(255, 253, 249, 0.96);
+  border-radius: 6px;
 
   box-shadow:
-    0 5px 12px rgba(91, 74, 65, 0.08);
-
-  color: var(--brown-dark);
-
-  font-family: "Playfair Display", serif;
-  font-size: 0.82rem;
-  line-height: 1.25;
-  text-align: center;
-
-  pointer-events: none;
+    0 4px 8px
+      rgba(60,40,30,0.08);
 }
 
-/*
-   Jar-specific symbol colors.
-   These work best if the symbol in the HTML is
-   a normal text character such as ♥ or ♡.
-*/
+.jar-label span {
+  font-family:
+    "Playfair Display", serif;
 
-.jar-card:nth-child(1) .jar-label {
-  color: var(--red);
+  font-size: 1.25rem;
+
+  opacity: 0.55;
 }
 
-.jar-card:nth-child(2) .jar-label {
-  color: var(--orange);
-}
-
-.jar-card:nth-child(3) .jar-label {
-  color: var(--pink);
-}
-
-.jar-card:nth-child(4) .jar-label {
-  color: var(--yellow);
-}
 
 /* =========================
-   JAR STATUS
+   HOVER
 ========================= */
 
-.jar-status {
-  margin-top: 15px;
-  color: #9a8b80;
-  font-size: 0.78rem;
-  line-height: 1.4;
+@keyframes gentleWiggle {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }
 
-/* =========================
-   JAR PERSONALITIES
-========================= */
+@keyframes energeticShake {
 
-.jar-card:nth-child(1) .jar {
-  --jar-color: rgba(217, 130, 130, 0.55);
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform:
+      translateX(-5px)
+      rotate(-2deg);
+  }
+
+  40% {
+    transform:
+      translateX(5px)
+      rotate(2deg);
+  }
+
+  60% {
+    transform:
+      translateX(-4px)
+      rotate(-2deg);
+  }
+
+  80% {
+    transform:
+      translateX(3px)
+      rotate(1deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.jar-card:nth-child(2) .jar {
-  --jar-color: rgba(229, 161, 106, 0.55);
+.red-card .jar-button:hover .jar {
+  animation:
+    gentleWiggle 0.55s ease;
 }
 
-.jar-card:nth-child(3) .jar {
-  --jar-color: rgba(227, 160, 175, 0.55);
+.orange-card .jar-button:hover .jar {
+  animation:
+    energeticShake 0.45s ease;
 }
 
-.jar-card:nth-child(4) .jar {
-  --jar-color: rgba(228, 207, 120, 0.55);
+.pink-card .jar-button:hover .jar {
+  transform:
+    rotate(2deg)
+    translateY(-2px);
 }
 
-/* hover */
-.jar-button:hover .jar {
-  transform: translateY(-5px);
+.yellow-card .jar-button:hover .jar {
+  filter:
+    drop-shadow(
+      0 0 13px
+      rgba(228,207,120,0.5)
+    );
 }
 
-.jar-card:nth-child(1) .jar-button:hover .jar {
-  animation: softWiggle 0.45s ease;
-}
-
-.jar-card:nth-child(2) .jar-button:hover .jar {
-  animation: softShake 0.4s ease;
-}
-
-.jar-card:nth-child(3) .jar-button:hover .jar {
-  animation: softTilt 0.45s ease;
-}
-
-.jar-card:nth-child(4) .jar-button:hover .jar {
-  animation: softGlow 0.6s ease;
-}
 
 /* =========================
    OPENING ANIMATION
 ========================= */
 
-.jar-button.opening .jar {
-  animation: jarOpen 0.85s ease;
+@keyframes jarShake {
+
+  0% {
+    transform:
+      translateX(0)
+      rotate(0);
+  }
+
+  20% {
+    transform:
+      translateX(-6px)
+      rotate(-2deg);
+  }
+
+  40% {
+    transform:
+      translateX(6px)
+      rotate(2deg);
+  }
+
+  60% {
+    transform:
+      translateX(-5px)
+      rotate(-2deg);
+  }
+
+  80% {
+    transform:
+      translateX(4px)
+      rotate(1deg);
+  }
+
+  100% {
+    transform:
+      translateX(0)
+      rotate(0);
+  }
 }
 
-.jar-button.opening .jar-lid {
-  transform: translateX(-50%) translateY(-12px) rotate(-2deg);
+@keyframes lidOpen {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0);
+  }
+
+  40% {
+    transform:
+      translateY(-7px)
+      rotate(-4deg);
+  }
+
+  100% {
+    transform:
+      translateY(-15px)
+      rotate(-8deg);
+  }
 }
+
+.jar-card.opening .jar {
+  animation:
+    jarShake 0.55s ease;
+}
+
+.jar-card.opening .jar-lid {
+  animation:
+    lidOpen 0.65s
+    ease
+    0.4s
+    forwards;
+}
+
 
 /* =========================
-   MODAL
+   TAKEN STATE
 ========================= */
 
-.dose-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
+.jar-card.taken .jar-button {
+  opacity: 0.78;
 
-  display: none;
-  align-items: center;
-  justify-content: center;
-
-  padding: 24px;
-
-  background: rgba(67, 55, 48, 0.35);
-  backdrop-filter: blur(5px);
+  filter:
+    saturate(0.65);
 }
 
-.dose-modal.show {
-  display: flex;
+.jar-card.taken .jar-button:hover {
+  transform: none;
 }
 
-.dose-box {
-  position: relative;
-  width: min(470px, 92vw);
-  padding: 42px 34px 35px;
+.jar-status {
+  min-height: 20px;
 
-  border-radius: 20px;
+  margin-top: 8px;
 
-  background: #fffdf9;
+  font-size: 0.67rem;
 
-  box-shadow:
-    0 22px 60px rgba(70, 55, 47, 0.2);
+  letter-spacing: 0.4px;
 
+  color: #9a8878;
+}
+
+
+/* =========================
+   DAILY STATUS
+========================= */
+
+.daily-status {
   text-align: center;
 
-  animation: modalAppear 0.35s ease;
+  margin:
+    70px 0
+    45px;
 }
 
-.dose-title {
-  margin: 0 0 7px;
+.daily-status p {
+  font-family:
+    "Playfair Display",
+    serif;
 
-  color: var(--brown-dark);
+  font-size: 1.05rem;
 
-  font-family: "Playfair Display", serif;
-  font-size: 1.45rem;
-  font-weight: 600;
+  font-style: italic;
+
+  color: #77685c;
 }
 
-.dose-repeat {
-  margin: 0 0 20px;
-
-  color: #a08f83;
-  font-size: 0.82rem;
-}
-
-.dose-message {
-  margin: 0 auto 22px;
-
-  max-width: 370px;
-
-  color: #766960;
-
-  font-size: 0.96rem;
-  line-height: 1.75;
-}
-
-.dose-signature {
-  margin: 0 0 13px;
-
-  color: var(--brown-dark);
-
-  font-family: "Playfair Display", serif;
-  font-size: 1rem;
-}
-
-.dose-count {
-  margin: 0;
-
-  color: #a39488;
-  font-size: 0.75rem;
-}
-
-.dose-close {
-  position: absolute;
-  top: 13px;
-  right: 16px;
-
-  width: 32px;
-  height: 32px;
-
-  border: 0;
-  border-radius: 50%;
-
-  background: transparent;
-
-  color: #9a8c82;
-  font-size: 1.25rem;
-
-  cursor: pointer;
-}
-
-.dose-close:hover {
-  background: #f4eee7;
-}
 
 /* =========================
    FOOTER
 ========================= */
 
 footer {
-  margin-top: 58px;
   text-align: center;
+
+  padding-top: 25px;
+
+  border-top:
+    1px solid
+    rgba(100,80,60,0.12);
+
+  color: #988879;
 }
 
 footer p {
-  margin: 4px 0;
-  color: #a09185;
-  font-size: 0.76rem;
-  line-height: 1.5;
+  font-size: 0.74rem;
+
+  letter-spacing: 1px;
 }
 
-footer p:last-child {
-  margin-top: 13px;
+footer span {
+  display: block;
+
+  margin-top: 7px;
+
+  font-size: 0.68rem;
 }
+
+.footer-love {
+  margin-top: 28px;
+
+  font-size: 0.68rem;
+
+  opacity: 0.7;
+}
+
 
 /* =========================
-   ANIMATIONS
+   MODAL
 ========================= */
 
-@keyframes softWiggle {
-  0%,
-  100% {
-    transform: translateY(-5px) rotate(0);
-  }
+.modal {
+  position: fixed;
 
-  35% {
-    transform: translateY(-5px) rotate(-1.5deg);
-  }
+  inset: 0;
 
-  70% {
-    transform: translateY(-5px) rotate(1.5deg);
-  }
+  z-index: 100;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
-@keyframes softShake {
-  0%,
-  100% {
-    transform: translateY(-5px) translateX(0);
-  }
+.modal.show {
+  visibility: visible;
 
-  25% {
-    transform: translateY(-5px) translateX(-2px);
-  }
-
-  50% {
-    transform: translateY(-5px) translateX(2px);
-  }
-
-  75% {
-    transform: translateY(-5px) translateX(-1px);
-  }
+  opacity: 1;
 }
 
-@keyframes softTilt {
-  0%,
-  100% {
-    transform: translateY(-5px) rotate(0);
-  }
+.modal-overlay {
+  position: absolute;
 
-  50% {
-    transform: translateY(-5px) rotate(-2deg);
-  }
+  inset: 0;
+
+  background:
+    rgba(49,38,30,0.48);
+
+  backdrop-filter:
+    blur(5px);
 }
 
-@keyframes softGlow {
-  0%,
-  100% {
-    transform: translateY(-5px);
-    filter: brightness(1);
-  }
 
-  50% {
-    transform: translateY(-5px);
-    filter: brightness(1.04);
-  }
+/* =========================
+   NOTE MODAL
+========================= */
+
+.dose-note {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(470px, 100%);
+
+  min-height: 310px;
+
+  padding:
+    55px
+    45px
+    42px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #fdf3e3
+    );
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 25px 60px
+    rgba(40,30,20,0.22);
+
+  transform:
+    translateY(20px)
+    scale(0.95);
+
+  transition:
+    transform 0.35s
+    cubic-bezier(.2,.8,.2,1);
 }
 
-@keyframes jarOpen {
-  0% {
-    transform: translateY(0);
-  }
-
-  30% {
-    transform: translateY(-3px) rotate(-1deg);
-  }
-
-  55% {
-    transform: translateY(0) rotate(1deg);
-  }
-
-  75% {
-    transform: translateY(-2px) rotate(0);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.modal.show .dose-note {
+  transform:
+    translateY(0)
+    scale(1);
 }
 
-@keyframes modalAppear {
-  from {
-    opacity: 0;
-    transform: translateY(12px) scale(0.97);
-  }
+.dose-note::before {
+  content: "";
 
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  position: absolute;
+
+  inset: 10px;
+
+  border:
+    1px solid
+    rgba(130,100,70,0.12);
+
+  border-radius: 4px;
+
+  pointer-events: none;
 }
+
+
+/* =========================
+   CLOSE
+========================= */
+
+.close-button {
+  position: absolute;
+
+  top: 14px;
+
+  right: 17px;
+
+  width: 32px;
+
+  height: 32px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #8d7968;
+
+  font-size: 1.5rem;
+
+  line-height: 1;
+
+  z-index: 3;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.close-button:hover {
+  transform:
+    rotate(90deg);
+
+  color: #514237;
+}
+
+
+/* =========================
+   MODAL CONTENT
+========================= */
+
+.note-decoration {
+  font-size: 1rem;
+
+  color: #b49a82;
+
+  margin-bottom: 8px;
+}
+
+.dose-label {
+  font-size: 0.68rem;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #9b8673;
+}
+
+.dose-repeat {
+  min-height: 0;
+
+  margin-top: 12px;
+
+  font-size: 0.76rem;
+
+  color: #a18d7c;
+}
+
+.note-divider {
+  margin:
+    18px 0
+    23px;
+
+  font-size: 0.85rem;
+
+  color: #c29d81;
+}
+
+.dose-message {
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 1.3rem;
+
+  line-height: 1.65;
+
+  color: #4b4038;
+
+  min-height: 90px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.note-bottom {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 28px;
+}
+
+.note-bottom span {
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 0.95rem;
+
+  color: #66574b;
+}
+
+.note-bottom small {
+  font-size: 0.65rem;
+
+  letter-spacing: 0.7px;
+
+  color: #a18e7e;
+}
+
 
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 720px) {
+@media (max-width: 700px) {
+
   .page {
-    width: min(92%, 430px);
-    padding-top: 42px;
+    width:
+      min(92%, 460px);
+
+    padding-top: 45px;
   }
 
-  header {
-    margin-bottom: 35px;
+  .hero {
+    margin-bottom: 48px;
+  }
+
+  .title-wrap {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .subtitle-title {
+    font-size: 0.75rem;
+
+    letter-spacing: 2.5px;
+  }
+
+  .intro {
+    font-size: 0.98rem;
+
+    margin-top: 20px;
+  }
+
+  .take-note {
+    font-size: 0.7rem;
   }
 
   .jar-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+
+    gap: 65px;
+  }
+
+  .jar-info {
+    min-height: auto;
+  }
+
+  .jar-info h2 {
+    font-size: 1.35rem;
+  }
+
+  .jar-info p {
+    font-size: 0.74rem;
   }
 
   .jar {
-    width: 270px;
-    height: 330px;
+    width: 180px;
+
+    height: 220px;
+  }
+
+  .jar-lid {
+    left: 38px;
+
+    width: 104px;
   }
 
   .jar-body {
-    width: 220px;
-    height: 280px;
+    height: 198px;
   }
 
-  footer {
-    margin-top: 50px;
+  .daily-status {
+    margin-top: 65px;
   }
+
+  .dose-note {
+    padding:
+      50px
+      30px
+      38px;
+  }
+
+  .dose-message {
+    font-size: 1.2rem;
+  }
+
 }
 
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
 @media (max-width: 380px) {
-  .page {
-    width: 94%;
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .jar-grid {
+    gap: 55px;
   }
 
   .jar {
-    transform: scale(0.92);
-    transform-origin: top center;
-    margin-bottom: -25px;
+    transform: scale(0.94);
   }
 
   .jar-button:hover .jar {
-    transform: scale(0.92) translateY(-5px);
+    transform:
+      scale(0.94)
+      translateY(-3px);
   }
 
-  .dose-box {
-    padding: 38px 25px 30px;
+  .dose-note {
+    padding-left: 25px;
+
+    padding-right: 25px;
   }
+
 }
