@@ -1242,3 +1242,28 @@ footer span {
   }
 
 }
+.repeat-message {
+  display: block;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 0.78rem;
+
+  letter-spacing: 0.8px;
+
+  color: #9b8673;
+
+  margin-bottom: 18px;
+}
+
+.original-message {
+  display: block;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 1.3rem;
+
+  line-height: 1.65;
+
+  color: #4b4038;
+}
