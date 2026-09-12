@@ -20,9 +20,9 @@ const messages = {
 
   comfort: [
 
-    "Hey. Whatever happened today, you don't have to carry all of it at once. Come here for a second. Breathe. I'm here.",
+    "Hey. Whatever happened today, you don't have to carry all of it at once. Come here for a second. Breathe. You know, I always here.",
 
-    "You don't have to be okay every second. Some days are just hard. Let this one be hard, and let yourself rest.",
+    "You don't have to be okay every second. Some days are just hard. Let this one be hard, and let yourself rest. Hard days happen for great person only. And you, one of them.",
 
     "Come here. No fixing, no explaining, no pretending. You can just exist beside me for a while.",
 
