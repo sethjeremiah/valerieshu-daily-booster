@@ -128,106 +128,109 @@ const messages = {
      ========================================================= */
 
   motivation: [
+      
+      "Hey, princess. You don't need to feel ready to start. Sometimes you just have to take the first step and let the confidence catch up later. Come on, I know you can. GET UP, GET UP!",
+      
+      "Come on, sayang. Stop overthinking it for five minutes and just start. You don't have to finish everything today. Just do the first thing: GET UP!",
+      
+      "Sayang, kalau kamu terus nunggu sampai semuanya sesuai mood kamu, kamu gak akan mulai-mulai. Gak harus sempurna kok, mulai aja dulu, nanti otomatis bakal kelar sendiri.",
+      
+      "One small step still counts. You don't have to make a huge move today. Just do one thing that gets you a little closer. That's already something.",
+      
+      "Princess, you don't need permission to believe in YOURself. You know what you're capable of. Now go prove it to yourself, not to anyone else. I'll be proud, always.",
+      
+      "Masih rebahan? Hmm, menarik. Ayo bangun dulu, adek cantik. Lima menit aja. Kalau masih males setelah itu, coba lagi lima menit. Kalau masih malas lagi, tunda aja lima menit sampai satu hari kelar.",
+      
+      "You don't have to be fearless to do something brave. You can be scared, uncertain, and still take the step anyway. Being scared doesn't mean you can't do it.",
+      
+      "Stop waiting for the perfect moment. It probably isn't coming. Make the moment you have right now count. Start messy, stay classy, because you are the princess.",
+      
+      "Adek sayang, kamu gak harus langsung jago. Gak harus langsung tahu semuanya. Coba dulu. Salah sedikit gak apa-apa, nanti bisa cari cara lain. Yang penting jangan berhenti sebelum mulai.",
+      
+      "Hey, look at you. You've already come this far. Don't let one difficult part convince you that you can't make it through the rest. You've got more in you than you think. Jiāyóu!",
+      
+      "You're allowed to take it slowly, but don't confuse slowly with stopping completely. Keep going, princess. One little step at a time. I'll be right here annoying you until you do.",
+      
+      "Kalau memang kamu pengen sesuatu, jangan keburu mundur cuma karena takut gagal. Gagal itu masih bisa dibenerin. Tapi kalau gak pernah nyoba, kamu gak akan pernah tahu kamu sebenarnya bisa sejauh apa. Kayak sekarang nih, sayangku udah jago dan hebat banget! Apalagi ke depannya?",
+      
+      "Whatever you're working on today, don't make it bigger in your head than it actually is. Start with the first thing. We'll worry about the rest later.",
+      
+      "Princess, I know you're capable of more than you give yourself credit for. So please stop being mean to yourself and give yourself a chance. You might surprise yourself.",
+      
+      "Udah, jangan kebanyakan mikir. Kadang kamu tuh bukan gak bisa, cuma kelamaan mikirin semua kemungkinan sampai akhirnya gak ngapa-ngapain. Ayo, satu dulu. Coba harus lakuin apa dulu? Gih pikirin. Udah? Oke, cepat lakuin satu dulu!",
+      
+      "Jangan nunggu mood bagus baru mulai. Mood itu kadang suka seenaknya sendiri. Kalau hari ini gak datang, ya coba jalan dulu tanpa dia. Nanti juga nyusul si mood-mood itu.",
+      
+      "Don't let fear make decisions for you. Fear can sit in the passenger seat, but it doesn't get to drive. You are the driver.",
+      
+      "Kamu boleh takut, boleh ragu, boleh deg-degan. Tapi jangan kasih rasa takut itu hak buat mutusin apa yang boleh dan gak boleh kamu lakuin ya, sayang. Kamu tetap yang pegang kendali.",
+      
+      "You're not incapable. You're probably just overwhelmed by how big everything looks right now. Break it into smaller pieces and start with one. That's all I'm asking.",
+      
+      "Adek sayang, kalau semuanya kelihatan berat, jangan dipikirin semuanya sekaligus, ya? Pilih, kerjain, dan selesaiin satu dulu. Baru pikirin yang berikutnya. Gampang kan, sayang? Iya lah. Kan sayangku hebat.",
+      
+      "You can do difficult things without doing them perfectly. Progress doesn't need to look pretty to be real. So stop waiting until you can do it perfectly and just do it.",
+      
+      "Maybe you don't need more motivation. Maybe you just need to stop negotiating with yourself and get started. Yes, I'm calling you out. Now get up.",
+      
+      "Kalau hari ini lagi males banget, yaudah. Malesnya boleh. Tapi jangan sampai rasa males itu nyolong satu hari penuh dari kamu. Bangun, mandi, minum air putih, terus mulai pelan-pelan.",
+      
+      "Five minutes. That's all I'm asking from you. Start for five minutes, and if you still hate it, you can complain to me about it. Deal?",
+      
+      "Kamu gak harus jadi orang paling hebat hari ini. Kamu cuma perlu jadi versi kamu yang sedikit lebih berani dari kemarin. Itu udah cukup.",
+      
+      "You're allowed to want something badly. You're allowed to work for it. And you're absolutely allowed to be proud of yourself when you get there. Don't be shy about celebrating yourself.",
+      
+      "Don't compare your beginning to someone else's middle. Your path is yours, princess. Keep your eyes on your own little race and stop looking sideways.",
+      
+      "Kalau kamu belum bisa lari, jalan aja. Kalau belum bisa jalan jauh, pelan-pelan aja. Aku gak peduli seberapa cepat kamu sampai, yang penting kamu tetap bergerak dan ngambil langkah untuk memulai.",
+      
+      "You've got more in you than you think. Don't waste all that potential worrying about whether you're good enough. Just give it a try. That's how you'll find out.",
+      
+      "Sayang, kamu boleh banget gagal. Serius. Gak akan ada drama cuma gara-gara satu kegagalan. Coba lagi, belajar sedikit, terus lanjut. Sesederhana itu.",
+      
+      "One bad attempt doesn't mean you can't do it. It just means you found one way that didn't work. Try again, differently this time.",
+      
+      "Princess, don't shrink yourself just because you're afraid of taking up space. You worked for this. Own it. You are allowed to be proud of how far you've come.",
+      
+      "Ayo, cantik. Jangan lihat semuanya sebagai satu gunung besar. Pecah jadi bukit-bukit kecil aja, coba naik satu dulu. Nanti pas sampai di atas, baru lihat mau ke bukit yang mana lagi.",
+      
+      "You're closer than you think. Keep going. Even if today's progress is tiny, tiny progress is still progress. Don't underestimate what small steps can do.",
+      
+      "You're allowed to have an off day, but don't let one lazy afternoon convince you that you've suddenly become incapable of doing anything. You're still you. You are always CAPABLE of DOING ANYTHING.",
+      
+      "Jangan takut sama sesuatu yang bahkan belum terjadi. Kamu belum tahu hasilnya bakal kayak apa. Jadi jangan hukum diri sendiri sekarang cuma karena kamu takut kemungkinan terburuknya.",
+      
+      "Hey, princess. You don't have to conquer the entire world today. That's a little dramatic, even for you. Just take care of the next thing in front of you.",
+      
+      "Kalau kamu lagi gak percaya sama diri sendiri, pinjam dulu kepercayaan dariku. Aku percaya kamu bisa. Nanti kalau kamu udah mulai percaya sama diri sendiri lagi, balikin ya. Deal?",
+      
+      "You can be nervous and still do it. You can doubt yourself and still try. You can be scared and still be brave. Those things can exist together, sayang.",
+      
+      "I know you're tired, but I also know that little spark in you is still there. Protect it. Feed it. And when you're ready, let it burn again. I'll be cheering for you.",
+      
+      "Jangan kebanyakan mikir sampai akhirnya kamu kalah sama pikiran sendiri. Kamu belum gagal. Kamu bahkan belum mulai. Jadi ayo, kasih dirimu kesempatan dulu.",
+      
+      "Don't wait until you feel motivated. Motivation comes and goes. Sometimes you just have to start anyway. The mood can catch up later.",
+      
+      "Sayang, kamu gak harus melakukan semuanya hari ini. Pilih yang paling penting, kerjain itu dulu. Sisanya bisa nunggu. Kamu bukan robot yang harus terus jalan tanpa berhenti.",
+      
+      "Still lying there? Interesting. I thought you had things to do. Come on, pretty girl. Sit up first. We'll negotiate the rest after you're out of bed.",
+      
+      "Okay, adek sayang. Enough staring at the task like it's going to magically disappear. It won't. Unfortunately, I checked. So let's get it over with together.",
+      
+      "Kalau kamu terus bilang 'nanti', hati-hati. Nanti bisa berubah jadi besok, besok jadi minggu depan, terus tiba-tiba udah lupa mau ngapain. Jadi, kerjain sekarang sedikit aja.",
+      
+      "Hey, pretty girl. I know sometimes you need a little push, so here it is: get up, fix yourself something to drink, put on your favorite song, and start. I'll consider this my contribution.",
+      
+      "你可以的，别怕！(You can do it, don't be afraid!)",
+      
+      "Sayang, kalau hari ini rasanya berat banget, gak usah mikirin semuanya. Cari satu hal kecil yang bisa kamu selesaikan sekarang. Setelah itu, baru lihat lagi. One thing at a time.",
+      
+      "你已经做得很好了，继续加油！(You're already doing great, keep going!)",
+      
+      "Come on, princess. You've got this. Not because everything will be easy, but because I know you. Now go make yourself proud. I'll be here when you come back."
 
-    "Get your ass up, sweetheart. You don't have to conquer the whole world today. Just do one thing. Then we'll see.",
-
-    "Okay, enough staring at the ceiling. Pick one tiny thing and go do it. I'll be annoying about this until you do.",
-
-    "You don't need motivation first. Move first. Motivation can catch up later.",
-
-    "Come on. Shoes on. Water first. Then one small task. That's the deal.",
-
-    "Your future self is going to be very grateful that you got up today. Go make them proud.",
-
-    "You can complain while doing it. I don't care. Just do the thing.",
-
-    "No dramatic speeches today. Just get up and start. Five minutes. That's all I'm asking.",
-
-    "Sweetheart, your bed is not going to build the life you keep dreaming about. Up you go.",
-
-    "You don't need a perfect plan. You need a first step.",
-
-    "Go do something your tomorrow-self will thank you for. Tiny counts.",
-
-    "I know you don't feel like it. That's precisely why I'm telling you to get moving.",
-
-    "One email. One page. One shower. One meal. One task. Start somewhere.",
-
-    "You are absolutely capable of more than today's laziness is trying to convince you.",
-
-    "Get up. Stretch. Drink water. Then decide what deserves your energy today.",
-
-    "You don't have to finish everything. You just have to stop doing absolutely nothing.",
-
-    "Come on, love. Let's turn 'I don't feel like it' into 'fine, I'll do one thing.'",
-
-    "Nobody is asking you to run a marathon. We're literally asking you to stand up.",
-
-    "Your to-do list isn't going to attack you. Open it. Pick one. Begin.",
-
-    "You can rest later. Right now, give yourself ten honest minutes of effort.",
-
-    "I believe in you, which unfortunately means I am not letting you get away with doing nothing.",
-
-    "Get your ass up. This is your lovingly aggressive reminder.",
-
-    "Start badly. Start slowly. Start annoyed. Just start.",
-
-    "You don't need to feel ready. Most worthwhile things begin before you feel ready.",
-
-    "Do one useful thing before you scroll again. Deal?",
-
-    "Sweetheart, momentum is built from tiny actions. Go make one.",
-
-    "Today doesn't need to be your most productive day ever. It just needs a little movement.",
-
-    "Stop waiting for the magical moment when you'll suddenly want to do everything. It may not come.",
-
-    "Go wash your face. Sometimes that's where the comeback starts.",
-
-    "You can absolutely be tired and still take one small step.",
-
-    "I know you can do hard things. But today, let's start with an easy one.",
-
-    "Put the phone down for five minutes and go handle one thing. I'll still be here when you return.",
-
-    "Your dream life is built on boring little actions. Congratulations, today's little action is waiting.",
-
-    "You don't have to impress anyone. Just keep your promise to yourself today.",
-
-    "Go. Move. Begin. We'll figure out the rest once you're already moving.",
-
-    "A tiny amount of progress is still progress. Stop disrespecting your tiny wins.",
-
-    "You're not lazy forever just because you're unmotivated today. Shake it off.",
-
-    "Do it scared. Do it tired. Do it imperfectly. Just don't keep talking yourself out of it.",
-
-    "Sweetheart, you have things to do and a life to live. Up.",
-
-    "Give yourself twenty minutes. If you still hate it after that, we can negotiate.",
-
-    "You don't need permission to start again. Just start again.",
-
-    "Today is not ruined because the morning was unproductive. You still have hours left.",
-
-    "One little win. That's the mission.",
-
-    "Your excuses are getting very creative lately. Cute. Now get up.",
-
-    "You can take it slow without standing still.",
-
-    "Do the annoying thing first. You'll feel so much better afterward.",
-
-    "Don't wait until you feel confident. Action is allowed to come before confidence.",
-
-    "Come on, sweetheart. Give today a chance before deciding it's a lost cause.",
-
-    "You don't need to fix your whole life today. Just move it forward a little.",
-
-    "Get up. I promise the world looks slightly less offensive after water and food.",
-
-    "This is your reminder: you're capable, you're loved, and now you're getting your ass up."
   ],
 
 
@@ -237,105 +240,107 @@ const messages = {
 
   missyou: [
 
-    "Miss me, huh? Well... I figured you might. Here's a little reminder that I'm thinking of you too.",
+  "Do you miss me, princess? I knew it. Come here, take your little dose of me. I hope this makes you smile, even just a little. Because no matter how busy I am, I will always miss you and keep you running through my mind.",
 
-    "If you're reading this because you miss me, congratulations. Your diagnosis is correct.",
+  "If you're opening this because you miss me, then congratulations. Your diagnosis is correct. You need a little bit of me. I miss you more, sayang.",
 
-    "I know you miss me. Don't deny it. It's cute.",
+  "I know I'm not there right now, but pretend I'm there with you, stealing your attention and bothering you with my silly jokes like I always do. Miss me even more? Then same.",
 
-    "Wish I were there? Yeah. Me too.",
+  "Adek sayang, kalau kamu lagi kangen aku, sini. Aku juga soalnya kangen banget sama kamu. Apa aku rusakin aja semua kesibukan ini, ya? Mending nemplokin sayangku lagi.",
 
-    "Here's your tiny substitute for having me beside you. Unfortunately, it doesn't come with hugs.",
+  "You know what? I miss you even more. So I guess we're both suffering from the same problem. Unfortunately, there's only one cure: we need to talk to each other soon. Wait for me, sayang.",
 
-    "If you could hear me right now, I'd probably say, 'come here.' So... come here.",
+  "Princess, if you miss me today, just remember that somewhere in my little corner of the world, there's someone thinking about you too. Me, myself, and I.",
 
-    "You know what's annoying? Missing someone when you can't just reach over and bother them.",
+  "Kangen aku, ya? Jangan pura-pura. Kamu buka jar ini aja udah ketahuan. Sayang, aslinya aku juga kangen banget sama kamu. Tapi gimana, ya? Semoga pill kecil ini bisa obatin rindu kamu dikit, ya? Biar aku aja yang rindunya banyak-banyak.",
 
-    "Consider this a tiny piece of me sneaking into your day.",
+  "Sayangku, you don't always have to say you miss me. Sometimes I can tell, because I do the same. I miss you like 38479241957139237980/7, countless times over.",
 
-    "I wonder how many times you've thought about me today. Be honest.",
+  "Hey, princess. Consider this your tiny reminder that you are loved, missed, and thought about more often than you probably realize by me.",
 
-    "Missing me already? You really are hopeless.",
+  "Kalau aku lagi diculik kesibukan-kesibukan gila, buka aja jar ini. Anggap aku lagi nitipin sedikit kehadiran aku buat nemenin kamu sampai aku muncul sendiri nantinya. Bentar lagi aku muncul, pasti. Hap!",
 
-    "I wish I could teleport. Mostly for selfish reasons.",
+  "Adek sayang, aku tahu kadang kamu cuma butuh aku ada. Jadi kalau hari ini rasanya sepi, baca-baca ulang dulu chat kita, ya? Tunggu sampai aku datang. Sayang tahu kan kalau aku kangennya gak pernah berhenti?",
 
-    "If I suddenly appeared beside you right now, what would you do first?",
+  "Miss me a little less, okay? Or don't. Actually, keep missing me like I miss you every second.",
 
-    "Here's your reminder that somewhere, someone is thinking about you with a very stupid smile.",
+  "Princess, distance can be annoying, but it doesn't change the fact that you're still my favorite person to think about. I miss you.",
 
-    "You don't have to miss me quietly. You can tell me. I like knowing.",
+  "You opened this jar because you wanted a little piece of me. So here it is: I love you, I miss you, and yes, I'm still thinking about you.",
 
-    "A little distance doesn't make me any less yours to bother.",
+  "Adek sayang, kalau kamu lagi sendirian dan tiba-tiba pengen cerita sesuatu ke aku, ceritain aja dalam hati atau spam di room chat kita. Aku mungkin slow response, tapi aku tetap mau jadi tempat kamu pulang.",
 
-    "If this note could hug you, it would. You'll have to imagine the rest.",
+  "If I could send you a hug through this jar, I would. For now, you'll have to imagine me wrapping my arms around you and saying, 'I miss you like I can't catch my breath anymore.'",
 
-    "I hope something small today reminds you of me and makes you smile.",
+  "Sometimes missing someone is just your heart reminding you how much they mean to you. So if you miss me today, let yourself miss me. I'll be missing you too.",
 
-    "You know I'm going to ask eventually: how much did you miss me?",
+  "Princess, this is your official reminder that no matter how busy the day gets, there is always a little part of it where I wish you were right here with me.",
 
-    "I miss your presence in all those tiny ways that are difficult to explain.",
+  "Kalau kamu buka ini karena kangen aku, berarti misi jar ini berhasil. Sekarang senyum dulu, sayangku. Karena koko juga kangen sejadi-jadinya kangen sama adek sayang.",
 
-    "If you're having a lonely moment, pretend I'm sitting next to you judging whatever you're doing.",
+  "Adek sayang, kadang aku berharap bisa habisin waktu sama kamu seharian, tapi emang kehidupan dewasa ini kadang nuntut waktu kita. Untuk itu, tunggu ya, sayang? Aku akan muncul sebentar lagi dan siap melepas rindu dengan sayangku lama-lama dan lama!",
 
-    "I wish I could steal five minutes with you right now. Maybe ten. Fine, the whole day.",
+  "If today feels a little lonelier because I'm not around, stay here for a moment. Take a breath. Imagine my hand in yours. I'm still right here in the ways I can be.",
 
-    "This jar is basically me saying, 'hey, I'm still here.'",
+  "Kangen aku itu nggak apa-apa. Malah boleh banget. Tapi setelah itu jangan lupa makan, minum, istirahat, dan senyum. Koko mau kamu baik-baik aja, adek sayang.",
 
-    "You opened the miss-me jar. Interesting choice. Suspiciously specific.",
+  "You know I would make time for you if I were there, right? So until I can, let this little jar keep you company. One tiny dose of me at a time, just to tell you how much I want to spend the day with you.",
 
-    "I hope you know that being away from you never makes you less important to me.",
+  "Miss me? Good. Because I miss you too. Now stop pretending you're not smiling at your screen. I love you.",
 
-    "I wonder if you smiled when you saw this jar. If you did, I'll count that as a win.",
+  "Princess, whenever you miss me, remember this: you don't have to chase me to find me. I'm already somewhere in your day, in your thoughts, in your heart, and of course, I will show up soon.",
 
-    "You could have picked another jar, but you picked this one. Hmm. Someone misses me.",
+  "Maybe I can't always be there when you want me, but that doesn't mean I won't want to be there. Sometimes timing gets in the way, but my love doesn't. I love you continuously.",
 
-    "If I were there, you'd probably be annoyed by how much attention I'd demand from you.",
+  "Kalau hari ini kamu cuma butuh satu hal dari aku, anggap pesan ini sebagai pelukan kecil. Nggak banyak, tapi cukup untuk bilang: aku sayang kamu dan akan selalu seperti itu.",
 
-    "Sometimes I miss you for no particular reason. I just do.",
+  "You don't have to wonder whether I miss you back. I do. Probably more than I tell you. So yes, princess, our feelings are always mutual.",
 
-    "I hope today gives you at least one moment where you wish I were there beside you.",
+  "One day, I hope you won't need this jar because I'll be right there with you instead. Until then, keep a little piece of me here whenever you need it.",
 
-    "Don't worry. I'll let you miss me a little. Builds character.",
+  "If you opened this because you miss me, then here's your answer: I miss you more than you'll ever know, princess. Now come here and give me a virtual hug.",
 
-    "This is your official permission to be clingy today.",
+  "Before you even opened this jar, I was probably already missing you. So technically, adek sayang, you didn't miss me first. I did.",
 
-    "If you need me, you know where to find me. If you just miss me, that's also acceptable.",
+  "You think you're the one missing me right now? Cute. But let me remind you: I probably started missing you long before you even reached for this jar.",
 
-    "I wonder what you're doing right now. And yes, I'm imagining myself interrupting it.",
+  "Kalau kamu buka ini karena kangen aku, ketahuilah satu hal: sebelum kamu sempat merasa kangen, koko mungkin sudah lebih dulu kangen sama kamu. Jadi jangan merasa paling kangen, ya, princess.",
 
-    "A tiny reminder: distance is just geography being annoying.",
+  "Sometimes I wonder if you know how often you cross my mind. You could be doing absolutely nothing, and somehow I'd still find a reason to miss you.",
 
-    "If missing me gets unbearable, you can always open this jar again. I won't complain.",
+  "Adek sayang, kamu mungkin baru sekarang bilang, 'aku kangen koko.' Tapi kalau boleh jujur, dari tadi aku juga udah kangen duluan. Kamu telat. Hehe.",
 
-    "I wish this note could carry my voice. You'd probably hear me teasing you.",
+  "If you're reading this because you miss me, just know that I was already missing you before you opened the jar. So technically, I win this round.",
 
-    "Some days I don't need a reason to think about you. You're just there in my head.",
+  "Sayangku, don't wait until you miss me to think of me. I don't need a reason to think about you. Sometimes you just appear in my head, and suddenly I miss you all over again.",
 
-    "You know what I like about missing you? Absolutely nothing. Zero stars. Would not recommend.",
+  "Aku tuh kayaknya nggak pernah punya jadwal khusus buat kangen kamu. Tiba-tiba aja bisa. Lagi kerja, lagi makan, lagi bengong, tahu-tahu, 'ih, kangen adek sayang.'",
 
-    "If I were there, I'd probably find an excuse to stay a little longer.",
+  "Princess, if you ever wonder who misses who more, don't bother counting. You'll lose. I've been missing you since before you even realized you missed me.",
 
-    "I hope you feel a little less alone after reading this.",
+  "Kamu buka jar ini karena kangen aku? Iya, iya, aku tahu. Tapi perlu kamu tahu juga, sebelum kamu kangen, aku udah duluan. Jadi sekarang kita sama-sama kangen, cuma aku start-nya lebih cepat.",
 
-    "Imagine me looking at you right now and saying, 'I miss you too, dummy.'",
+  "I don't think you realize how easily you become the person I want to talk to. Even on the busiest days, there are little moments when I think, 'I wish she were here.' And then I miss you again.",
 
-    "You are allowed to miss me. I happen to miss you quite a lot too.",
+  "Adek sayang, kalau kamu tiba-tiba merasa kangen tanpa alasan, mungkin itu karena aku lagi kangen kamu juga. Anggap aja hati kita lagi saling manggil dari jauh.",
 
-    "Here's a little reminder that you're never really far from my thoughts.",
+  "You opened this jar looking for me, but here's the funny part: I was already looking for you in my thoughts before you even got here.",
 
-    "If you smiled just now, I'm claiming responsibility.",
+  "Kalau aku lagi sibuk, bukan berarti aku berhenti kangen. Kadang justru di sela-sela kesibukan itu aku kepikiran kamu. Terus yaudah, senyum sendiri sambil bilang, 'kangen banget sama sayangku.'",
 
-    "I wish I could bottle up a hug and leave it here for you.",
+  "I miss your little stories, your random messages, your presence, even the things you do that make me shake my head and smile. So yes, princess, I miss you first.",
 
-    "Until I can actually be there, let this tiny note keep you company.",
+  "Sayangku, jangan pernah merasa kamu sendirian dalam rasa kangen ini. Kalau kamu sedang mencari aku, aku mungkin sedang mencari kamu juga, hanya dari sisi yang berbeda.",
 
-    "Sometimes I just want to hear your voice. No reason. Just because it's yours.",
+  "Maybe you opened this jar hoping to feel a little closer to me. But here's the truth: I made these because I already knew there would be days when I'd miss you before you even missed me.",
 
-    "I hope you know how easily you find your way into my thoughts.",
+  "Adek sayang, nanti kalau kita ketemu, jangan protes kalau koko jadi susah lepas. Soalnya semua rasa kangen yang ditahan selama ini harus dibayar lunas. Sekalian bunganya.",
 
-    "Miss me all you want, sweetheart. I'll be missing you right back.",
+  "So, you miss me, huh? Good. Keep that feeling for a little while. Because when I finally get to see you, I'm going to make sure you know just how much I missed you first.",
 
-    "Come back to me when you can. Until then, keep a little piece of me with you."
+  "Kalau hari ini kamu kangen aku, sini, ambil dosis kecil ini. Tapi ingat: rasa kangen kamu bukan yang pertama. Koko sudah lebih dulu kangen, jauh sebelum kamu membuka jar ini.",
+
+  "And if you ever ask me who missed who first, I'll always have the same answer: me. Always me. Now come here, princess. I miss you."
   ],
 
 
@@ -345,103 +350,107 @@ const messages = {
 
   love: [
 
-    "Just in case you forgot: Me, myself, and I are all completely, ridiculously, madly in love with you.",
+```js
+  "Just in case you forgot: Me, myself, and I are all completely, ridiculously, madly in love with you. Yes, all three of us (me) agree on this.",
 
-    "I love you. Annoyingly much, actually.",
+  "I love you. Annoyingly much, actually. The kind of much that makes me think about you at random times and smile for absolutely no reason. Crazy, right? I like it.",
 
-    "If loving you were a full-time job, I'd be dangerously overqualified.",
+  "If loving you were a full-time job, I'd be dangerously overqualified. I'd probably still ask for overtime, though, because apparently I never get tired of loving you.",
 
-    "You are one of my favorite things about this life.",
+  "You are one of my favorite things about this life. Thank you for existing in the same timeline as me. I will forever be grateful that, out of all the people in this world, I get to know and love you.",
 
-    "I hope you know how deeply, genuinely, and stupidly I adore you.",
+  "I hope you know how deeply, genuinely, and stupidly I adore you. Sometimes I think, 'How did I get this lucky?' And then I just fall for you all over again.",
 
-    "Sometimes I look at you and think, 'yeah, I really got lucky.'",
+  "Sayangku, kalau kamu pernah bertanya-tanya seberapa besar aku sayang sama kamu, jawabannya mungkin sesederhana ini: lebih besar dari yang bisa aku jelaskan, lebih dalam dari yang bisa aku tunjukkan, dan lebih banyak dari yang bisa masuk ke satu pesan kecil seperti ini.",
 
-    "I love the little things about you that you probably don't even realize I notice.",
+  "You're not just someone I love. You're someone I love choosing, again and again. On the easy days, the difficult ones, and all the ordinary days in between, I still want it to be you.",
 
-    "You're not just someone I love. You're someone I love choosing, again and again.",
+  "You make ordinary days feel a little more special just by existing in them. Somehow, knowing you're somewhere in my day makes even the most uneventful moments feel a little warmer.",
 
-    "If I had to choose one person to annoy for the foreseeable future, congratulations. It's you.",
+  "I love you in the quiet moments, the chaotic moments, and all the weird ones in between. I love every version of our days, because somehow you make all of them worth remembering.",
 
-    "You make ordinary days feel a little more special just by existing in them.",
+  "I hope you never doubt how wanted, appreciated, and loved you are. You deserve to feel those things not only when I say them, but in every little way I try to show you.",
 
-    "I love you in the quiet moments, the chaotic moments, and all the weird ones in between.",
+  "You have a permanent little corner of my heart. Unfortunately, no eviction notice exists. So congratulations, princess. You're stuck there.",
 
-    "You're ridiculously easy to love. Don't let it go to your head.",
+  "I love your presence. Even when you're doing absolutely nothing. You don't have to entertain me, impress me, or do anything special. Having you there is already enough.",
 
-    "I hope you never doubt how wanted, appreciated, and loved you are.",
+  "There are probably a thousand ways to say I love you. I'll probably keep trying all of them, because somehow none of them ever feel quite enough to explain how much I mean it.",
 
-    "You have a permanent little corner of my heart. Unfortunately, no eviction notice exists.",
+  "You make me want to keep becoming someone worthy of loving you well. Not because you ask me to, but because loving you makes me want to become better, kinder, and more thoughtful every day.",
 
-    "I love your presence. Even when you're doing absolutely nothing.",
+  "I love being able to call you mine. Not because I own you, but because I get to be the person who loves you, cares for you, and gets to share a little piece of this life with you.",
 
-    "There are probably a thousand ways to say I love you. I'll probably keep trying all of them.",
+  "If I could give you one thing today, it would be the ability to see yourself through my eyes. Maybe then you'd finally understand why I look at you and think you're absolutely wonderful.",
 
-    "You make me want to keep becoming someone worthy of loving you well.",
+  "You are, very inconveniently, one of the easiest people in the world for me to fall for. And somehow, every time I think I've reached the limit, you give me another reason to fall a little harder.",
 
-    "I love being able to call you mine.",
+  "You're my favorite notification, favorite distraction, and favorite person to think about. Somehow, even when I'm busy, my brain still finds a way to make room for you. Adek magic, I guess?",
 
-    "If I could give you one thing today, it would be the ability to see yourself through my eyes.",
+  "I don't need a special occasion to love you loudly. I can love you on random Tuesdays, during boring afternoons, in the middle of busy days, and every ordinary moment in between.",
 
-    "You are, very inconveniently, one of the easiest people in the world for me to fall for.",
+  "You make my heart do embarrassing things. Please take responsibility. I blame you for the random smiles, the sudden softness, and the way my mood somehow gets better just because I thought of you.",
 
-    "I love you more than this tiny piece of paper can possibly explain.",
+  "I love the version of me that exists when I'm with you. Somehow, being around you makes me softer, happier, sillier, and more myself all at once.",
 
-    "You're my favorite notification, favorite distraction, and favorite person to think about.",
+  "You're precious to me. More than I probably say out loud. So if I don't always find the perfect words, I hope you can still feel just how much you mean to me.",
 
-    "I don't need a special occasion to love you loudly.",
+  "I love you in ways that don't always need words. Sometimes it's in the way I remember little things about you, make time for you, worry about you, or simply want to know how your day went.",
 
-    "You make my heart do embarrassing things. Please take responsibility.",
+  "I love knowing that somewhere in this huge world, there's you. Out of billions of people, there's one particular girl who somehow became someone incredibly important to my heart.",
 
-    "I hope you know that I notice you. I see you. And I love you.",
+  "I hope today reminds you that you have someone in your corner who loves you very, very much. Someone who will cheer for you, listen to you, annoy you, and stay ridiculously fond of you through it all.",
 
-    "Even your little habits have somehow become things I adore.",
+  "You're one of the best things that ever happened to my heart. I don't take that for granted, and I hope you know how grateful I am that somehow, our paths crossed.",
 
-    "I love the version of me that exists when I'm with you.",
+  "There is something incredibly comforting about knowing you're you and I'm me and somehow we found each other. In a world this huge, I still think that's one of the sweetest things that ever happened to me.",
 
-    "You are one of those people who makes life feel warmer.",
+  "I don't need everything to be perfect. Having you makes imperfect days easier to love. Even when life feels messy, knowing I have you makes things feel a little less heavy.",
 
-    "If you ever wonder whether I still love you, open this jar. The answer is yes.",
+  "You're loved on your good days, your bad days, your sleepy days, and your grumpy days. You don't have to be at your best to deserve my love. You just have to be you.",
 
-    "I choose you with all your weirdness, softness, stubbornness, and everything in between.",
+  "I hope you never underestimate the space you occupy in my heart. You might not always see it from where you stand, but trust me, sayangku, you've taken up a very, very special place in there.",
 
-    "I don't think I'll ever get tired of finding new reasons to love you.",
+  "Kalau kamu tanya apa yang paling aku suka dari kamu, mungkin aku nggak akan bisa jawab cuma satu. Ada terlalu banyak hal kecil tentang kamu yang aku suka, sampai akhirnya jawabannya cuma: kamu. Karena kamu itu kamu.",
 
-    "You're precious to me. More than I probably say out loud.",
+  "Sayang, aku harap kamu tahu kalau kamu nggak perlu menjadi siapa-siapa selain dirimu sendiri untuk dicintai sebesar ini. Aku jatuh cinta sama kamu, bukan sama versi kamu yang sempurna.",
 
-    "I love you in ways that don't always need words.",
+  "Aku suka bagaimana kehadiran adek bisa mengubah suasana tanpa adek sadari. Kadang cuma ngobrol sebentar sama kamu aja udah cukup bikin hariku terasa lebih baik.",
 
-    "You deserve to be loved gently, loudly, consistently, and completely. I'm trying to give you all of that.",
+  "Kalau rasa sayangku bisa dihitung, mungkin dari awal aku udah nyerah ngitungnya. Sangat banyak. Lebih banyak dari yang bisa kamu bayangkan.",
 
-    "You make my world a little brighter without even trying.",
+  "Aku suka hal-hal kecil yang mungkin menurut adek biasa aja. Cara kamu cerita, cara kamu bereaksi, cara kamu tiba-tiba buat aku senyum senyum lebar. Entah kenapa, semuanya gampang banget bikin aku makin sayang.",
 
-    "I love knowing that somewhere in this huge world, there's you.",
+  "Sayangku, aku nggak butuh alasan besar buat mencintai kamu. Kadang cukup karena kamu muncul di chat, cukup karena aku dengar suara kamu, atau cukup karena tiba-tiba aku kepikiran kamu. Sesederhana itu.",
 
-    "You are my favorite kind of trouble.",
+  "Aku mungkin suka menggoda kamu, bikin kamu kesel, atau sengaja cari gara-gara kecil. Tapi di balik semua itu, ada satu hal yang serius banget: aku sayang kamu. Yang ini nggak pernah bercanda.",
 
-    "I would still choose you on the ordinary days. Especially the ordinary days.",
+  "Kalau suatu hari kamu merasa nggak cukup baik, sini, biar aku yang ingetin. Di mataku, kamu tetap seseorang yang sangat berharga. Aku nggak mencintai kamu karena kamu selalu sempurna, aku mencintai kamu karena kamu adalah kamu.",
 
-    "I hope today reminds you that you have someone in your corner who loves you very, very much.",
+  "Aku suka punya seseorang yang bisa aku cari setelah hari yang panjang. Dan entah kenapa, orang itu selalu kamu. Rasanya kayak ada satu tempat yang selalu terasa lebih nyaman ketika aku bisa cerita sama kamu.",
 
-    "You're one of the best things that ever happened to my heart.",
+  "Princess, kamu tahu nggak? Salah satu hal favoritku adalah melihat kamu jadi diri sendiri tanpa perlu mikirin pendapat orang lain. Ada sesuatu yang sangat cantik dari kamu saat kamu merasa nyaman menjadi dirimu sendiri.",
 
-    "I love your laugh. I love your thoughts. I love your existence. See? Ridiculous.",
+  "Aku sayang sama kamu bukan cuma saat kamu sedang manis. Aku juga sayang saat kamu bawel, keras kepala, ngambek, capek, atau lagi nggak tahu harus bagaimana. Semua versi kamu tetap punya tempat di hati aku.",
 
-    "There is something incredibly comforting about knowing you're you and I'm me and somehow we found each other.",
+  "Kadang aku suka mikir, dari sekian banyak kemungkinan dalam hidup, kok bisa aku ketemu kamu? Dan makin kupikirin, makin aku sadar kalau aku nggak mau mengganti satu pun bagian dari cerita yang akhirnya membawa aku ke kamu.",
 
-    "I don't need everything to be perfect. Having you makes imperfect days easier to love.",
+  "Ada banyak hal dalam hidup yang mungkin akan berubah seiring waktu. Tapi hari ini, dari sekian banyak hal yang bisa aku pikirkan, aku tetap paling suka punya kamu di dalamnya.",
 
-    "You make me want to say 'I love you' even when there is absolutely no reason to.",
+  "Aku nggak janji setiap hari akan jadi hari yang sempurna. Tapi aku bisa janji kalau rasa sayangku nggak cuma muncul ketika semuanya sedang baik-baik saja. Aku mau tetap sayang di hari yang biasa, berat, bahkan berantakan sekalipun.",
 
-    "If love could be folded into a tiny note, I'd fill this whole jar with it.",
+  "Kalau aku boleh memilih satu hal untuk selalu aku bawa ke mana pun aku pergi, mungkin aku akan pilih rasa sayang ini. Karena di mana pun aku berada, rasanya selalu ada sedikit bagian dari aku yang membawa kamu di dalamnya.",
 
-    "You're loved on your good days, your bad days, your sleepy days, and your grumpy days.",
+  "Kamu itu lucu. Bisa bikin aku kangen, bisa bikin aku senyum, bisa bikin aku kesel, dan entah bagaimana tetap jadi orang yang paling aku sayang di hari yang sama. Aku juga nggak tahu caranya kamu bisa begitu.",
 
-    "I hope you never underestimate the space you occupy in my heart.",
+  "Sayangku, jangan pernah berpikir kamu harus melakukan sesuatu yang luar biasa supaya aku tetap mencintai kamu. Kamu nggak perlu membuktikan apa-apa. Duduk di sampingku, cerita tentang harimu, atau bahkan diam bareng aku sudah lebih dari cukup.",
 
-    "I love you abundantly. More than I know how to fit into one little message.",
+  "Ada banyak hal dalam hidup yang mungkin akan berubah seiring waktu. Tapi kalau ada satu hal yang ingin terus aku pilih, aku ingin tetap memilih kamu. Lagi, lagi, dan lagi.",
 
-    "And if you somehow still haven't realized it: yes, sweetheart. I am very, very in love with you."
+  "Jadi kalau suatu hari adek bertanya, 'Koko sayang adek sebanyak apa?' mungkin aku cuma bisa jawab: sebanyak aku bisa, sebanyak yang aku tahu, dan mungkin lebih banyak lagi dari itu. Karena sampai sekarang pun aku masih terus menemukan banyak alasan untuk mencintai kamu.",
+
+ "And if you're wondering how much I love you today, the answer is still ridiculously much. As usual. Nothing new here, adek sayangku."
+
   ]
 
 };
