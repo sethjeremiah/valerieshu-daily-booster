@@ -222,9 +222,7 @@ const messages = {
     
     "Sayang, kalau hari ini rasanya berat banget, gak usah mikirin semuanya. Cari satu hal kecil yang bisa kamu selesaikan sekarang. Setelah itu, baru lihat lagi. One thing at a time.",
     
-    "你已经做得很好了，继续加油！(You're already doing great, keep going!)",
-    
-    "Come on, princess. You've got this. Not because everything will be easy, but because I know you. Now go make yourself proud. I'll be here when you come back."
+    "你已经做得很好了，继续加油！(You're already doing great, keep going!)"
 
   ],
 
@@ -514,7 +512,12 @@ function getUsedIndexes(jarId) {
 
   try {
 
-    return JSON.parse(saved);
+    const history =
+      JSON.parse(saved);
+
+    return Array.isArray(history)
+      ? history
+      : [];
 
   } catch (error) {
 
@@ -619,7 +622,7 @@ function getTodayMessage(jarId) {
 
 
   /* -------------------------------------------------------
-     PICK A RANDOM UNUSED MESSAGE
+     PICK RANDOM UNUSED MESSAGE
   ------------------------------------------------------- */
 
   const randomPosition =
@@ -687,6 +690,16 @@ function saveDose(
   localStorage.setItem(
     getStorageKey(jarId),
     JSON.stringify(doseData)
+  );
+
+
+  /* -------------------------------------------------------
+     SAVE MESSAGE TO HISTORY
+  ------------------------------------------------------- */
+
+  saveUsedIndex(
+    jarId,
+    messageData.index
   );
 
 }
@@ -766,7 +779,7 @@ const jarButtons =
 
 
 /* =========================================================
-   EMPTY JAR MESSAGES
+   DAY 51 / EMPTY JAR MESSAGES
 ========================================================= */
 
 const emptyMessages = {
@@ -892,6 +905,10 @@ function updateJarUI(jarId) {
   }
 
 
+  /* -------------------------------------------------------
+     TODAY'S DOSE TAKEN
+  ------------------------------------------------------- */
+
   if (hasTakenToday(jarId)) {
 
     card.classList.add(
@@ -902,6 +919,11 @@ function updateJarUI(jarId) {
       "You already took your dose today ♡";
 
   }
+
+
+  /* -------------------------------------------------------
+     ALL 50 DOSES USED
+  ------------------------------------------------------- */
 
   else if (
     isJarEmpty(jarId)
@@ -915,6 +937,11 @@ function updateJarUI(jarId) {
       "This jar needs a refill ♡";
 
   }
+
+
+  /* -------------------------------------------------------
+     STILL HAS DOSES
+  ------------------------------------------------------- */
 
   else {
 
@@ -984,8 +1011,7 @@ function takeDose(
   /* -------------------------------------------------------
      ALREADY TAKEN TODAY
 
-     Show the exact same dose.
-     Never generate another one.
+     Always show the exact same dose.
   ------------------------------------------------------- */
 
   if (hasTakenToday(jarId)) {
@@ -1009,7 +1035,7 @@ function takeDose(
 
 
   /* -------------------------------------------------------
-     CHECK IF ALL 50 MESSAGES HAVE BEEN USED
+     DAY 51 / JAR EMPTY
   ------------------------------------------------------- */
 
   if (isJarEmpty(jarId)) {
@@ -1069,11 +1095,6 @@ function takeDose(
     saveDose(
       jarId,
       messageData
-    );
-
-    saveUsedIndex(
-      jarId,
-      messageData.index
     );
 
     updateJarUI(
@@ -1172,6 +1193,181 @@ document.addEventListener(
 
   }
 );
+
+
+/* =========================================================
+   CONSOLE TESTING TOOLS
+========================================================= */
+
+/*
+   Buka browser console:
+   F12 → Console
+
+   Cek progress:
+   vijeminStatus("love")
+
+   Paksa satu jar menjadi habis:
+   vijeminFinishJar("love")
+
+   Reset satu jar:
+   vijeminResetJar("love")
+
+   Reset semua data:
+   vijeminReset()
+*/
+
+
+window.vijeminStatus = function (
+  jarId
+) {
+
+  if (!messages[jarId]) {
+
+    console.error(
+      `Unknown jar: ${jarId}`
+    );
+
+    return;
+
+  }
+
+  const used =
+    getUsedIndexes(jarId).length;
+
+  const total =
+    messages[jarId].length;
+
+  const result = {
+
+    jar:
+      jarId,
+
+    used:
+      used,
+
+    total:
+      total,
+
+    empty:
+      used >= total
+
+  };
+
+  console.log(
+    `${jarId}: ${used}/${total} doses used`
+  );
+
+  return result;
+
+};
+
+
+window.vijeminFinishJar = function (
+  jarId
+) {
+
+  if (!messages[jarId]) {
+
+    console.error(
+      `Unknown jar: ${jarId}`
+    );
+
+    return;
+
+  }
+
+  const allIndexes =
+    messages[jarId].map(
+      (_, index) =>
+        index
+    );
+
+  localStorage.setItem(
+    getHistoryKey(jarId),
+    JSON.stringify(allIndexes)
+  );
+
+  console.log(
+    `${jarId} is now marked as empty.`
+  );
+
+  location.reload();
+
+};
+
+
+window.vijeminResetJar = function (
+  jarId
+) {
+
+  if (!messages[jarId]) {
+
+    console.error(
+      `Unknown jar: ${jarId}`
+    );
+
+    return;
+
+  }
+
+  localStorage.removeItem(
+    getHistoryKey(jarId)
+  );
+
+
+  const prefix =
+    "vijemin-";
+
+  const suffix =
+    `-${jarId}`;
+
+
+  Object.keys(localStorage)
+    .filter(
+      key =>
+        key.startsWith(prefix) &&
+        key.endsWith(suffix)
+    )
+    .forEach(
+      key =>
+        localStorage.removeItem(
+          key
+        )
+    );
+
+
+  console.log(
+    `${jarId} has been reset.`
+  );
+
+  location.reload();
+
+};
+
+
+window.vijeminReset = function () {
+
+  Object.keys(localStorage)
+    .filter(
+      key =>
+        key.startsWith(
+          "vijemin-"
+        )
+    )
+    .forEach(
+      key =>
+        localStorage.removeItem(
+          key
+        )
+    );
+
+  console.log(
+    "All viJEMIn data has been reset."
+  );
+
+  location.reload();
+
+};
 
 
 /* =========================================================
