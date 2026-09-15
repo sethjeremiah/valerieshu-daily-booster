@@ -20,105 +20,106 @@ const messages = {
 
   comfort: [
 
-    "Hey. Whatever happened today, you don't have to carry all of it at once. Come here for a second. Breathe. You know, I always here.",
+      "Hey. Whatever happened today, you don't have to carry all of it at once. Breathe. You don't have to solve everything now. You already did your best, and I'm proud of you.",
+      
+      "You don't have to be okay every second. Some days are just hard, and that's okay. Let this one be hard. Let yourself rest. You don't have to pretend you're fine just because someone expects you to be.",
+      
+      "Come here. No fixing, no explaining, no pretending. You can just exist beside me for a while. You don't have to say anything. I'll keep you company, adek sayang.",
+      
+      "Whatever went wrong today, it doesn't make you a failure. One bad day is still just one day. Please don't let a painful moment control you. You are the one who can control how much power it has over you.",
+      
+      "Take a breath, sayang. The world can wait a little. You deserve a moment where nothing is expected from you. Put everything down for a while and just breathe. You already did your best.",
+      
+      "Kalau hari ini lagi gak baik-baik aja, biarin and let it be. Dunia emang kadang lakuin hal semaunya, jadi adek sayangku juga berhak lakuin apapun semaunya, gak harus ikutin apa maunya dunia jelek ini. Ayo kita hajar sama-sama, sayang?",
+      
+      "You don't have to figure everything out tonight. Some answers can wait until tomorrow. For now, let your tired mind be quiet. Not everything needs to be solved before you sleep.",
+      
+      "You're doing better than you think you are. I know it doesn't feel like it right now, but I see how much you've been carrying. So please be a little gentler with yourself. I'm always proud of you, wanita hebatku.",
+      
+      "You don't need to turn every difficult day into something productive. Sometimes being lazy and selfish for your own sanity is more than enough.",
+      
+      "Adek sayang, if today all the things feel so cruel to you, breathe in, breathe out. Throw it away, be angry about it. Release it to me, I'm all ears. Let someone care about you too, and let me be that someone, okay?",
+      
+      "Whatever you're feeling right now, you don't have to apologize for it. Feel it. Cry if you need to. Be quiet if you need to. I'll stay and wait for you.",
+      
+      "Bad days don't get to decide what your whole life looks like. Tomorrow is still waiting for you, and you don't have to know what it looks like yet. So live your life to the fullest, sayang.",
+      
+      "Hey, sayang. Consider this your tiny reminder that you are loved even on the days you don't feel particularly lovable. Especially on those days, you ARE more than enough.",
+      
+      "You are allowed to have messy days, tired days, angry days, quiet days, and days where you don't recognize yourself very much. You're still YOU through all of them.",
+      
+      "If today hurt, then let yourself admit that it hurt. You don't have to turn every wound into a lesson immediately. Sometimes it is enough to simply say, 'that really hurt.' And that's okay.",
+      
+      "Drink some water. Breathe slowly. Unclench your jaw. Yes, I'm bossing you around. It's because I care. And because apparently someone has to remind you to take care of yourself.",
+      
+      "You don't need to accomplish anything impressive to deserve kindness. You deserve it simply because you're you. Your worth was never supposed to depend on someone else. It depends on you knowing your worth and deciding whether someone else is worthy of your kindness or not.",
+      
+      "If everything feels too loud, make your world smaller for a moment. Just you, your breath, a quiet room, and this little reminder from me: sayang, everything's gonna be alright in the end. The rest can wait.",
+      
+      "Aku tau kamu bisa kendaliin semuanya. Tapi sayang, menjadi kuat bukan berarti kamu gak bisa ngandelin orang lain. Kamu boleh capek dan kuat di saat bersamaan, kamu boleh butuh bantuan kapanpun itu dan itu bukan suatu hal yang memalukan.",
+      
+      "You are not behind. You are not late. You're just moving through your own life at your own pace. Please don't punish yourself for not being somewhere you haven't reached yet.",
+      
+      "Whatever happened today, please don't let one moment convince you that everything is ruined. A bad chapter can still belong to a beautiful story.",
+      
+      "I'm proud of you for making it this far today. Even if nobody saw how hard it was, I hope you know that getting through something quietly still counts.",
+      
+      "Some days don't need productivity. Some days need food, water, sleep, a shower, and a little laziness. If today is one of those days, then that's enough.",
+      
+      "You don't have to make yourself smaller just because someone failed to appreciate you. Their inability to see your worth doesn't make your worth any smaller.",
+      
+      "Sayangku, a reminder: You survived every bad day you've had so far. This one doesn't need to be different. You don't have to conquer it today. Just let the day end.",
+      
+      "Please remember that being tired doesn't mean you're weak. It means you've been carrying things. So rest without feeling guilty about it, okay?",
+      
+      "Jangan dipaksa terus, ya. Kalau hari ini rasanya berat banget, istirahat dulu. Kamu nggak harus selalu kuat, dan kamu nggak harus selalu punya jawaban saat itu juga. Kamu cuman butuh istirahat dan lupain semuanya untuk sementara.",
+      
+      "Sometimes there is still so much good waiting for you beyond whatever is hurting right now. You don't have to see it yet. Just trust that this moment is not the whole story, it's just one part of your life.",
+      
+      "Don't make permanent conclusions about your life while you're having a terrible day. You're tired, you're hurting, and everything feels heavier right now. Give tomorrow a chance to feel different. It is waiting for you.",
+      
+      "Whatever you're blaming yourself for, take a breath before deciding you deserve all that blame. Maybe you made a mistake. Maybe things went wrong. That still doesn't mean you deserve to hate yourself for it.",
+      
+      "If today feels like too much, then let's make the goal smaller: Don't think about tomorrow, don't think about next week. Just get through this moment, then the next one. That's enough for now.",
+      
+      "Your feelings are real, but they are not always forecasts. What hurts today won't necessarily hurt forever. Let the feeling exist without letting it convince you that this is how everything will always be.",
+      
+      "God is close to the brokenhearted. Psalm 34:18. So if your heart feels a little broken today, remember that you are not sitting in that pain alone. He is there, go talk to Him.",
+      
+      "You are more than whatever went wrong today. Please don't let a bad moment become your whole identity. You are still the same precious person underneath all this exhaustion.",
+      
+      "Eat something. Rest a little. Drink some water. Then decide what actually needs your attention. Not everything deserves access to you all at once. You choose.",
+      
+      "If nobody told you today: you are doing enough. You are enough. You don't need to prove that by accomplishing one more thing before you let yourself rest.",
+      
+      "I wish I could give you one of those hugs that makes your shoulders finally drop. For now, consider this a tiny digital one. Close your eyes for a second and pretend I'm holding you while telling you that everything takes time, and that's okay.",
+      
+      "I'm rooting for you even when you're not particularly rooting for yourself. You don't need to be cheerful for me. You can show up exactly as you are. Happy, sad, quiet, irritated, exhausted. I don't need the polished version of you, I need you, in every version of yourself.",
+      
+      "Matthew 11:28 says, 'Come to me, all you who are weary.' So, rest for a little. You don't have to carry everything by yourself, especially when you're already tired.",
+      
+      "Sometimes the kindest thing you can do is stop fighting the fact that you're tired. Capek ya? Yaudah, istirahat dulu yuk, sayang. Dunia nggak akan runtuh cuma karena kamu berhenti sebentar.",
+      
+      "This hard or hurtful feeling is allowed to pass through you. You don't have to build a home inside it. Let it come, let it stay for a while, and eventually, let it go.",
+      
+      "Whatever today took from you, I hope in the end of the day it gives some of it back. A little peace. A little rest. A little softness. And maybe a reminder that you are more than enough, more than you realize.",
+      
+      "Come back to yourself, slowly. There's no rush. Tarik napas pelan-pelan. Kamu aman untuk berhenti sebentar. Kamu nggak harus figured it out everything hari ini.",
+      
+      "Psalm 23:4 — 'Even though I walk through the darkest valley, I will fear no evil, for you are with me.' You don't have to be afraid of this dark moment, sayang. God is still walking beside you.",
+      
+      "Isaiah 41:10 — 'Do not fear, for I am with you.' So when everything feels too heavy and you're scared of what comes next, remember that you don't have to face it alone. God is with you.",
+      
+      "Psalm 55:22 — 'Cast your cares on the Lord and he will sustain you.' You don't have to hold every worry in your hands tonight. Give some of it to Him and let yourself breathe.",
+      
+      "2 Corinthians 12:9 — 'My grace is sufficient for you, for my power is made perfect in weakness.' So it's okay to be weak sometimes. You don't have to hide every tired part of yourself.",
+      
+      "Lamentations 3:22–23 — 'His mercies never come to an end; they are new every morning.' Whatever today looked like, tomorrow gets to begin again. You don't have to carry today's weight into a new morning.",
+      
+      "Romans 8:38–39 reminds you that nothing can separate us from the love of God. Not your worst day, not your mistakes, not your sadness, not even the things you don't understand right now.",
+      
+      "Psalm 46:10 — 'Be still, and know that I am God.' So for a moment, stop trying to fix everything. Be still. Breathe. Let God handle the things that are too heavy for you tonight."
 
-    "You don't have to be okay every second. Some days are just hard. Let this one be hard, and let yourself rest. Hard days happen for great person only. And you, one of them.",
-
-    "Come here. No fixing, no explaining, no pretending. You can just exist beside me for a while.",
-
-    "Whatever went wrong today, it doesn't make you a failure. One bad day is still just one day.",
-
-    "Take a breath, sweetheart. The world can wait a little. You deserve a moment where nothing is expected from you.",
-
-    "I'm sorry today wasn't gentle with you. If I could, I'd steal you away somewhere quiet and make you forget about everything for a while.",
-
-    "You don't have to figure everything out tonight. Some answers can wait until tomorrow.",
-
-    "Hey, look at me. You're doing better than you think you are. I know it doesn't feel like it right now, but I see you.",
-
-    "It's okay if all you managed today was getting through the day. Sometimes that is more than enough.",
-
-    "You can put the weight down for a little while. You don't have to prove that you can carry everything alone.",
-
-    "Whatever you're feeling right now, you don't have to apologize for it. Feel it. I'll stay.",
-
-    "Bad days don't get to decide what your whole life looks like. Tomorrow is still yours.",
-
-    "Come closer. Consider this your tiny reminder that you are loved even on the days you don't feel particularly lovable.",
-
-    "You are allowed to have messy days, tired days, angry days, quiet days. You're still you through all of them.",
-
-    "If today hurt, then let yourself admit that it hurt. You don't have to turn every wound into a lesson immediately.",
-
-    "Drink some water. Breathe slowly. Unclench your jaw. Yes, I'm bossing you around. It's because I care.",
-
-    "You don't need to accomplish anything impressive to deserve kindness. You deserve it simply because you're you.",
-
-    "If everything feels too loud, make your world smaller for a moment. Just you, your breath, and this little reminder from me.",
-
-    "I know you can handle a lot. But sweetheart, being strong doesn't mean you never get to lean on someone.",
-
-    "You are not behind. You are not late. You're just moving through your own life at your own pace.",
-
-    "Whatever happened today, please don't let one moment convince you that everything is ruined.",
-
-    "I'm proud of you for making it this far today. Even if nobody saw how hard it was.",
-
-    "Some days don't need productivity. Some days need food, water, sleep, and a little tenderness.",
-
-    "You don't have to make yourself smaller just because someone failed to appreciate you.",
-
-    "If I were there right now, I'd probably just sit next to you quietly until your breathing felt a little easier.",
-
-    "Hey. You survived every bad day you've had so far. This one isn't getting special treatment.",
-
-    "Please remember that being tired doesn't mean you're weak. It means you've been carrying things.",
-
-    "You can cry. You can complain. You can be annoyed. You can even be dramatic. I'll allow it.",
-
-    "There is still so much good waiting for you beyond whatever is hurting right now.",
-
-    "Don't make permanent conclusions about your life while you're having a terrible day.",
-
-    "Whatever you're blaming yourself for, take a breath before deciding you deserve all that blame.",
-
-    "You are allowed to rest before you completely run out of yourself.",
-
-    "If today feels like too much, then let's make the goal smaller: get through the next hour. That's it.",
-
-    "I hope you remember that you don't have to earn my care by being happy, productive, or easy to love.",
-
-    "Your feelings are real, but they are not always forecasts. What hurts today won't necessarily hurt forever.",
-
-    "Hey, sweetheart. One thing at a time. One breath at a time. We don't need to solve the universe tonight.",
-
-    "You don't have to have the perfect words for what you're feeling. Sometimes 'I feel awful' is enough.",
-
-    "I'm still here. Even if today made you feel like everyone and everything was against you.",
-
-    "You are more than whatever went wrong today. Please don't let a bad moment become your whole identity.",
-
-    "Eat something. Rest a little. Then decide what actually needs your attention. Not everything deserves access to you.",
-
-    "If nobody told you today: you are doing enough. You are enough.",
-
-    "I wish I could give you one of those hugs that makes your shoulders finally drop. For now, consider this a tiny digital one.",
-
-    "You don't need to be cheerful for me. You can show up exactly as you are.",
-
-    "Tomorrow doesn't need you to be perfect either. It just needs you to show up again.",
-
-    "Sometimes the kindest thing you can do is stop fighting the fact that you're tired.",
-
-    "I'm rooting for you even when you're not particularly rooting for yourself.",
-
-    "This feeling is allowed to pass through you. You don't have to build a home inside it.",
-
-    "Whatever today took from you, I hope tonight gives some of it back.",
-
-    "Come back to yourself, slowly. There's no rush. I'm right here.",
-
-    "For tonight, let this be enough: you made it here, you're still trying, and you're loved."
   ],
 
 
